@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studihome - Solusi Pembelajaran & Layanan AI Modern</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Typography Fonts: Plus Jakarta Sans & Handwritten Accent (Caveat) -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #FF5E00;
+      --primary-hover: #E05200;
+      --bg-light: #FAFAFA;
+      --text-dark: #0F172A;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      background-image: radial-gradient(circle at 50% 0%, rgba(255, 94, 0, 0.05) 0%, transparent 60%);
+    }
+    .font-handwriting { font-family: 'Caveat', cursive; }
+    .floating-capsule {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .card-featured {
+      border: 2px solid #FF5E00 !important;
+      box-shadow: 0 20px 30px -10px rgba(255, 94, 0, 0.12);
+    }
+    .transition-all-fast {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Modal Fallback Khusus Google Sites & Iframe Engine */
+    .modal-hidden { display: none !important; }
+    .modal-visible { display: flex !important; }
+
+    /* Refined & Smooth Ambient Radiant Rotating Logo */
+    @keyframes subtleRadiantSpin {
+      0% { transform: rotate(0deg); box-shadow: 0 0 10px rgba(255, 94, 0, 0.35); }
+      50% { box-shadow: 0 0 18px rgba(255, 94, 0, 0.65); }
+      100% { transform: rotate(360deg); box-shadow: 0 0 10px rgba(255, 94, 0, 0.35); }
+    }
+    .radiant-logo-container {
+      width: 38px; height: 38px; border-radius: 9999px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FF5E00, #FFA200); animation: subtleRadiantSpin 6s linear infinite;
+    }
+    .radiant-logo-inner {
+      width: 30px; height: 30px; background: #0F172A; border-radius: 9999px; display: flex; align-items: center; justify-content: center; color: #FF5E00; font-weight: 900; font-size: 16px;
+    }
+
+    /* Smooth Floating Animation */
+    @keyframes smoothFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .animate-float { animation: smoothFloat 4s ease-in-out infinite; }
+
+    /* Continuous Horizontal Marquee */
+    @keyframes marqueeLeftToRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
+    }
+    .marquee-ltr-track { display: flex; width: max-content; animation: marqueeLeftToRight 35s linear infinite; }
+    .marquee-ltr-track:hover { animation-play-state: paused; }
+
+    /* Single Testimonial Ticker Upward Keyframes */
+    @keyframes singleTestiScroll {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+    .single-testi-ticker { animation: singleTestiScroll 90s linear infinite; }
+    .single-testi-ticker:hover { animation-play-state: paused; }
+
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #F1F5F9; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 9999px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-orange-100 selection:text-orange-600">
+
+  <header class="sticky top-4 z-40 max-w-5xl mx-auto px-4 w-full">
+    <div class="floating-capsule border border-slate-200/80 rounded-full py-2.5 px-5 shadow-sm flex items-center justify-between gap-3">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-3 cursor-pointer group" onclick="navigateTo('catalog')">
+        <div class="radiant-logo-container group-hover:scale-105 transition-transform">
+          <div class="radiant-logo-inner">✦</div>
+        </div>
+        <span class="font-extrabold text-xl tracking-tight text-slate-900">Studihome</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-xs md:text-sm font-semibold text-slate-600">
+        <a href="#teras" onclick="navigateTo('catalog')" class="hover:text-[#FF5E00] transition-colors">Teras</a>
+        <button onclick="openConsultModal()" class="hover:text-[#FF5E00] transition-colors font-semibold">Konsultasi</button>
+        
+        <!-- TikTok LIVE Button -->
+        <a href="https://www.tiktok.com/@studihome" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-all shadow-sm">
+          <svg class="w-3.5 h-3.5 fill-current text-cyan-400" viewBox="0 0 24 24">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.33a6.33 6.33 0 0 0-1-.08 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9a8.16 8.16 0 0 0 4.92 1.63V7.18a4.85 4.85 0 0 1-1-.49z"/>
+          </svg>
+          <span>LIVE</span>
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+        </a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="handleAuthNavClick()" id="btn-auth-nav" class="bg-[#FF5E00] hover:bg-[#E05200] active:scale-95 text-white text-xs font-bold px-5 py-2 rounded-full shadow-sm transition-all-fast">
+          Masuk
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow container mx-auto px-4 py-6 max-w-6xl">
+
+    <section id="view-catalog" class="spa-view space-y-12">
+      
+      <!-- HERO SECTION: Special Webinar Information Banner -->
+      <div id="teras" class="pt-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
+        <div class="lg:col-span-7 space-y-4 text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100/90 text-[#FF5E00] text-xs font-extrabold uppercase tracking-wider">
+            <span id="hero-tag-display" class="flex items-center gap-1.5"><span class="animate-pulse">🔴</span> WEBINAR SPESIAL INTERAKTIF 2026</span>
+          </div>
+          
+          <h1 id="hero-title-display" class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            Kuasai <span class="text-[#FF5E00] underline decoration-wavy decoration-orange-300">Otomasi AI</span> untuk Produktivitas Tanpa Batas!
+          </h1>
+          
+          <p id="hero-desc-display" class="text-slate-600 text-sm md:text-base leading-relaxed">
+            Dapatkan strategi rahasia menyusun prompt presisi tinggi, membangun web app otomatisasi tanpa server, hingga konsultasi privat bersama tim pakar <span class="font-bold text-slate-900">Studihome</span>.
+          </p>
+
+          <div class="flex items-center gap-3 pt-1">
+            <span id="hero-badge-display" class="font-handwriting text-2xl md:text-3xl text-orange-600 font-bold -rotate-2 transform">
+              ✍️ "Selesai kerjaan 10x lebih cepat dari rumah!"
+            </span>
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-bold text-slate-600">
+            <span id="hero-date-display" class="inline-flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-xl">📅 Sabtu Ini | ⏰ 19.30 WIB via Zoom</span>
+            <span id="hero-cert-display" class="inline-flex items-center gap-1.5 bg-green-100 text-green-700 px-3 py-1.5 rounded-xl">🎟️ Gratis Sertifikat & File Template</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col items-center">
+          <div class="relative w-full max-w-sm">
+            <div class="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_40px_-15px_rgba(255,94,0,0.3)] border-4 border-white bg-slate-900 animate-float">
+              <img id="hero-img-display" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Webinar AI Studihome Banner Flyer" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent flex flex-col justify-end p-5 text-white">
+                <span class="text-[10px] font-black uppercase tracking-widest text-amber-300">LIMITED SEATS</span>
+                <h3 class="font-extrabold text-base md:text-lg leading-snug">Masterclass AI Automation & App Integration</h3>
+                <p class="text-xs text-slate-300 mt-1">Live Demo + Q&A Interaktif dengan Expert</p>
+              </div>
+            </div>
+            <div class="w-3/4 h-3 mx-auto bg-slate-950/20 rounded-full blur-md mt-2 transition-all"></div>
+          </div>
+
+          <div class="pt-5 w-full flex justify-center">
+            <a id="hero-btn-link" href="#" target="_blank" class="w-full max-w-sm inline-flex items-center justify-center gap-2.5 bg-[#FF5E00] hover:bg-[#E05200] active:scale-95 text-white font-extrabold px-7 py-3.5 rounded-full shadow-lg text-sm transition-all">
+              <span id="hero-btn-text">Amankan Kursi ➔</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories Filter -->
+      <div class="flex flex-wrap justify-center items-center gap-2.5 my-6 pt-4">
+        <button onclick="filterCategory('Belajar Apa?')" id="btn-cat-Belajar-Apa-" class="cat-pill active px-5 py-2 rounded-full font-bold text-xs md:text-sm transition-all-fast bg-[#FF5E00] text-white shadow-sm">
+          Belajar Apa?
+        </button>
+        <button onclick="filterCategory('Event')" id="btn-cat-Event" class="cat-pill px-5 py-2 rounded-full font-bold text-xs md:text-sm transition-all-fast bg-white text-slate-600 border border-slate-200 hover:border-[#FF5E00] hover:text-[#FF5E00]">
+          Event <span class="ml-1 text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 font-extrabold">Hot</span>
+        </button>
+        <button onclick="filterCategory('Bikin Apa?')" id="btn-cat-Bikin-Apa-" class="cat-pill px-5 py-2 rounded-full font-bold text-xs md:text-sm transition-all-fast bg-white text-slate-600 border border-slate-200 hover:border-[#FF5E00] hover:text-[#FF5E00]">
+          Bikin Apa?
+        </button>
+      </div>
+
+      <!-- Catalog Cards Grid -->
+      <div id="catalog-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-2 items-stretch"></div>
+
+      <!-- B2B Section -->
+      <div class="pt-12 max-w-5xl mx-auto space-y-8">
+        <div class="text-center space-y-2">
+          <span class="px-3.5 py-1 rounded-full bg-orange-100 text-[#FF5E00] font-extrabold text-xs uppercase tracking-wider">🤝 B2B & Partnership Solution</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Penawaran Khusus Corporate, Instansi, Lembaga, & Komunitas</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-orange-50 text-[#FF5E00] font-black text-xl flex items-center justify-center">🏢</div>
+            <h3 class="font-bold text-slate-900 text-base">In-House AI Training & Workshop</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Pelatihan intensif privat khusus karyawan/staf perusahaan Anda untuk menguasai otomasi AI & workflow digital.</p>
+            <button onclick="openConsultModal()" class="text-xs font-bold text-[#FF5E00] hover:underline pt-2 block">Konsultasikan Program ➔</button>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-orange-50 text-[#FF5E00] font-black text-xl flex items-center justify-center">⚙️</div>
+            <h3 class="font-bold text-slate-900 text-base">Custom System & Automation Setup</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Pengembangan sistem web app custom, database spreadsheet, dan bot otomasi khusus kebutuhan instansi Anda.</p>
+            <button onclick="openConsultModal()" class="text-xs font-bold text-[#FF5E00] hover:underline pt-2 block">Minta Penawaran ➔</button>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-orange-50 text-[#FF5E00] font-black text-xl flex items-center justify-center">🎓</div>
+            <h3 class="font-bold text-slate-900 text-base">Bulk Partner Licensing & Support</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Akses modul pembelajaran & lisensi e-book berskala besar dengan potongan harga khusus lisensi komunitas/kampus.</p>
+            <button onclick="openConsultModal()" class="text-xs font-bold text-[#FF5E00] hover:underline pt-2 block">Hubungi Tim Partnership ➔</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni Section -->
+      <div id="testimoni" class="pt-12 max-w-3xl mx-auto space-y-6">
+        <div class="text-center"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Apa Kata Mereka??</h2></div>
+        <div class="relative bg-transparent rounded-3xl p-2 md:p-3 h-[92px] overflow-hidden w-full max-w-3xl mx-auto">
+          <div class="single-testi-ticker space-y-3">
+            <div id="testi-stream-container" class="space-y-3"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee AI Platform Logos -->
+      <div id="didukung-oleh" class="pt-12 max-w-4xl mx-auto space-y-6 text-center">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Didukung Oleh Technology AI Terkemuka</h2>
+        <div class="relative w-full overflow-hidden py-3">
+          <div class="marquee-ltr-track flex gap-4 md:gap-6 items-center">
+            <div class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs text-slate-900 font-extrabold text-sm md:text-base">Google Gemini</div>
+            <div class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs text-slate-900 font-black text-sm md:text-base uppercase">OpenAI</div>
+            <div class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs text-slate-900 font-serif font-bold text-sm md:text-base">Claude</div>
+            <div class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs text-slate-900 font-bold italic text-sm md:text-base">Canva</div>
+            <div class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs text-slate-900 font-mono font-extrabold text-sm md:text-base">Suno</div>
+            <div class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs text-slate-900 font-serif font-medium text-sm md:text-base">Midjourney</div>
+            <div class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs text-slate-900 font-black text-sm md:text-base">DeepSeek</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD VIEW (MEMBER & ADMIN) -->
+    <section id="view-dashboard" class="spa-view hidden space-y-8">
+      <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200 flex flex-wrap justify-between items-center gap-4">
+        <div>
+          <h2 id="dash-user-name" class="text-2xl font-extrabold text-slate-900">Halo, User!</h2>
+          <p id="dash-user-email" class="text-slate-500 text-xs md:text-sm mt-0.5">user@email.com</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <span id="admin-badge" class="hidden bg-orange-100 text-[#FF5E00] text-xs font-extrabold px-3 py-1.5 rounded-full border border-orange-200">
+            ⚡ Administrator Access
+          </span>
+          <button onclick="handleLogout()" class="px-5 py-2.5 rounded-full text-xs font-bold border border-red-200 text-red-600 hover:bg-red-50">
+            Keluar (Logout)
+          </button>
+        </div>
+      </div>
+
+      <div class="flex border-b border-slate-200 overflow-x-auto">
+        <button onclick="switchDashTab('orders')" id="tab-btn-orders" class="dash-tab-btn border-b-2 border-[#FF5E00] text-[#FF5E00] font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap">
+          🛒 Pesanan Saya
+        </button>
+        <button onclick="switchDashTab('realtime-transactions')" id="tab-btn-realtime-transactions" class="dash-tab-btn hidden border-b-2 border-transparent text-slate-500 font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap">
+          📑 Daftar Transaksi
+        </button>
+        <button onclick="switchDashTab('catalog-admin')" id="tab-btn-catalog-admin" class="dash-tab-btn hidden border-b-2 border-transparent text-slate-500 font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap">
+          📦 Kelola Produk
+        </button>
+      </div>
+
+      <!-- TAB 1: User Orders -->
+      <div id="dash-content-orders" class="dash-tab-content space-y-4">
+        <div id="user-orders-list" class="space-y-4"></div>
+      </div>
+
+      <!-- TAB 2: Realtime Transactions (Admin Only) -->
+      <div id="dash-content-realtime-transactions" class="dash-tab-content hidden space-y-6">
+        <div class="bg-slate-900 text-white p-6 rounded-3xl shadow-lg flex justify-between items-center">
+          <div><h3 class="text-xl font-bold">📑 Daftar Transaksi Realtime</h3><p class="text-xs text-slate-400">Verifikasi bukti transfer pembeli.</p></div>
+          <button onclick="loadAdminOrders()" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-full text-xs font-semibold">🔄 Refresh</button>
+        </div>
+        <div id="admin-orders-list" class="space-y-4"></div>
+      </div>
+
+      <!-- TAB 3: Admin Catalog Management -->
+      <div id="dash-content-catalog-admin" class="dash-tab-content hidden space-y-6">
+        <div class="bg-slate-900 text-white p-6 rounded-3xl shadow-lg flex justify-between items-center">
+          <h3 class="text-xl font-bold">📦 Kelola Produk Katalog</h3>
+          <button onclick="openProductModal()" class="bg-[#FF5E00] text-white px-5 py-2.5 rounded-full font-bold text-xs shadow-md">+ Tambah Produk</button>
+        </div>
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs md:text-sm">
+            <thead>
+              <tr class="bg-slate-50 text-slate-600 border-b border-slate-200">
+                <th class="p-3">Judul Produk</th>
+                <th class="p-3">Kategori</th>
+                <th class="p-3">Tipe</th>
+                <th class="p-3">Harga</th>
+                <th class="p-3 text-right">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="admin-products-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALS -->
+
+    <!-- CONSULTATION FORM MODAL -->
+    <div id="consult-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 modal-hidden items-center justify-center p-4">
+      <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl border border-slate-100">
+        <div class="flex justify-between items-center mb-4 pb-3 border-b">
+          <h3 class="text-xl font-extrabold text-slate-900">Form Konsultasi Privat</h3>
+          <button onclick="closeConsultModal()" class="text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+        </div>
+        <form onsubmit="handleConsultSubmit(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nama Lengkap *</label>
+            <input type="text" id="consult-name" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border border-slate-200" placeholder="Nama Anda">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email *</label>
+            <input type="email" id="consult-email" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border border-slate-200" placeholder="email@domain.com">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Pesan / Pertanyaan Konsultasi *</label>
+            <textarea id="consult-message" rows="4" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border border-slate-200" placeholder="Tuliskan kebutuhan Anda..."></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 rounded-xl bg-green-600 text-white font-bold text-xs md:text-sm shadow-md">
+            💬 Kirim via WhatsApp (085111581115)
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- AUTH MODAL -->
+    <div id="auth-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 modal-hidden items-center justify-center p-4">
+      <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl border border-slate-100">
+        <div class="flex justify-between items-center mb-6">
+          <h3 id="auth-modal-title" class="text-xl font-extrabold text-slate-900">Masuk Akun Studihome</h3>
+          <button onclick="closeAuthModal()" class="text-slate-400 text-2xl font-bold">&times;</button>
+        </div>
+
+        <form id="auth-form" onsubmit="handleAuthSubmit(event)" class="space-y-4">
+          <input type="hidden" id="auth-mode" value="login">
+          <div id="field-fullname" class="hidden">
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nama Lengkap *</label>
+            <input type="text" id="auth-fullname" class="w-full px-4 py-2.5 text-sm rounded-xl border" placeholder="Nama Lengkap Anda">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email *</label>
+            <input type="text" id="auth-email" required class="w-full px-4 py-2.5 text-sm rounded-xl border" placeholder="admin atau user@email.com">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Kata Sandi *</label>
+            <input type="password" id="auth-password" required class="w-full px-4 py-2.5 text-sm rounded-xl border" placeholder="••••••••">
+          </div>
+          <div id="field-phone" class="hidden">
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nomor WhatsApp *</label>
+            <input type="text" id="auth-phone" class="w-full px-4 py-2.5 text-sm rounded-xl border" placeholder="081234567890">
+          </div>
+          <button type="submit" id="btn-auth-submit" class="w-full py-3 rounded-xl bg-[#FF5E00] text-white font-bold">
+            Masuk Sekarang
+          </button>
+        </form>
+
+        <div class="mt-4 text-center text-xs text-slate-500">
+          <span id="auth-toggle-text">Belum punya akun?</span>
+          <button onclick="toggleAuthMode()" id="btn-auth-toggle" class="text-[#FF5E00] font-bold underline ml-1">Daftar Baru</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div id="checkout-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 modal-hidden items-center justify-center p-4">
+      <div class="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center mb-4 pb-3 border-b">
+          <h3 class="text-xl font-extrabold text-slate-900">Checkout & Pembayaran</h3>
+          <button onclick="closeCheckoutModal()" class="text-slate-400 text-2xl font-bold">&times;</button>
+        </div>
+        <div id="checkout-product-details" class="bg-slate-50 p-4 rounded-2xl mb-4 font-bold text-xs text-[#FF5E00]"></div>
+
+        <div class="p-3.5 bg-white border border-slate-200 rounded-2xl text-xs space-y-2 mb-4">
+          <p class="font-bold text-slate-800">Metode Pembayaran (Kode QRIS & DANA):</p>
+          <p class="text-slate-600 font-mono">DANA / QRIS: 0812-3456-7890 (a/n Studihome)</p>
+        </div>
+
+        <form onsubmit="handleCheckoutSubmit(event)" class="space-y-4">
+          <input type="text" id="chk-full-name" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border" placeholder="Nama Lengkap Pembeli">
+          <input type="text" id="chk-phone" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border" placeholder="Nomor WhatsApp">
+          <input type="email" id="chk-email" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border" placeholder="pembeli@email.com">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Unggah Foto Bukti Transfer Pendaftaran *</label>
+            <input type="file" id="proof-file-input" required accept="image/*" class="w-full text-xs text-slate-500 file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-orange-50 file:text-[#FF5E00] border rounded-xl p-1">
+          </div>
+          <button type="submit" class="w-full py-3 rounded-xl bg-[#FF5E00] text-white font-bold text-xs shadow-md">Kirim & Konfirmasi Pesanan</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- PRODUCT MODAL -->
+    <div id="product-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 modal-hidden items-center justify-center p-4">
+      <div class="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center mb-4 border-b pb-3">
+          <h3 id="product-modal-title" class="text-xl font-bold text-slate-900">Kelola Produk</h3>
+          <button onclick="closeProductModal()" class="text-slate-400 text-2xl font-bold">&times;</button>
+        </div>
+        <form id="product-form" onsubmit="handleSaveProduct(event)" class="space-y-4">
+          <input type="hidden" id="prod-form-id">
+          <input type="text" id="prod-form-title" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border" placeholder="Judul Produk">
+          <select id="prod-form-category" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border">
+            <option value="Belajar Apa?">Belajar Apa?</option>
+            <option value="Event">Event</option>
+            <option value="Bikin Apa?">Bikin Apa?</option>
+          </select>
+          <select id="prod-form-type" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border">
+            <option value="ALAT AI">ALAT AI</option>
+            <option value="KELAS">KELAS</option>
+            <option value="JASA">JASA</option>
+          </select>
+          <input type="number" id="prod-form-price-current" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border" placeholder="Harga Saat Ini (Rp)">
+          <input type="number" id="prod-form-price-promo" class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border" placeholder="Harga Promo (Rp)">
+          <input type="url" id="prod-form-access-link" required class="w-full px-4 py-2.5 text-xs md:text-sm rounded-xl border" placeholder="Tautan / Link Akses Produk">
+          <label class="flex items-center gap-2 text-xs font-bold text-slate-700">
+            <input type="checkbox" id="prod-form-popular" class="w-4 h-4 text-[#FF5E00] rounded"> Tandai Produk Populer (Terpopuler Badge)
+          </label>
+          <button type="submit" class="w-full py-3 rounded-xl bg-[#FF5E00] text-white font-bold text-xs shadow-md">Simpan Produk</button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <footer class="bg-white border-t border-slate-200/80 py-8 text-center text-xs text-slate-400 mt-12">
+    <p>2026 © Studihome. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const AppState = {
+      user: JSON.parse(localStorage.getItem('studihome_user')) || null,
+      token: localStorage.getItem('studihome_token') || null,
+      selectedCategory: 'Belajar Apa?',
+      catalogData: [],
+      adminOrders: [],
+      selectedProductForCheckout: null
+    };
+
+    const testimonialsList = [
+      { name: "Rina S.", role: "Ibu Rumah Tangga", text: "Asli bantu banget buat kelola olshop dari rumah! Modulnya santai dan gampang dicerna.", rating: 5, time: "2m lalu" },
+      { name: "Budi P.", role: "Freelance Dev", text: "Gokil parah prompt AI-nya! Pengerjaan project client yang biasanya seminggu sekarang kelar 2 hari.", rating: 5, time: "5m lalu" },
+      { name: "Sarah A.", role: "Mahasiswa", text: "Jujur ngebantu bgt buat nyusun skripsi & olah data riset.", rating: 5, time: "8m lalu" }
+    ];
+
+    window.onload = function() {
+      updateAuthUi();
+      renderTestimonials();
+      loadCatalogData();
+    };
+
+    function renderTestimonials() {
+      const container = document.getElementById('testi-stream-container');
+      if (!container) return;
+      const items = [...testimonialsList, ...testimonialsList];
+      container.innerHTML = items.map(item => `
+        <div class="bg-slate-50 rounded-2xl p-3.5 border border-slate-100 text-left">
+          <p class="text-xs text-slate-600 font-medium mb-1">"${item.text}"</p>
+          <div class="flex justify-between items-center text-[10px]">
+            <span class="font-bold text-slate-800">${item.name} (${item.role})</span>
+            <span class="text-amber-500">★★★★★</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterCategory(catName) {
+      AppState.selectedCategory = catName;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.classList.remove('bg-slate-900', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+      });
+      const activePill = document.getElementById('btn-cat-' + catName.replace(/[^a-zA-Z0-9]/g, '-'));
+      if (activePill) {
+        activePill.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+        activePill.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
+      }
+      renderCatalog();
+    }
+
+    function loadCatalogData() {
+      apiRequest('getCatalog').then(res => {
+        if (res && res.success && Array.isArray(res.data)) {
+          AppState.catalogData = res.data;
+        } else {
+          AppState.catalogData = [];
+        }
+        renderCatalog();
+      }).catch(() => {
+        AppState.catalogData = [];
+        renderCatalog();
+      });
+    }
+
+    function renderCatalog() {
+      const container = document.getElementById('catalog-container');
+      if (!container) return;
+
+      const filtered = AppState.catalogData.filter(p => String(p.category).trim() === String(AppState.selectedCategory).trim());
+      
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="col-span-full text-center py-10 text-slate-400">Belum ada produk di kategori ini.</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(prod => {
+        const isPopular = prod.popular === true || String(prod.popular).toUpperCase() === 'TRUE';
+        const priceCurrent = Number(prod.price_current || prod.price) || 0;
+        const pricePromo = Number(prod.promo_price || prod.price_promo) || 0;
+        const hasPromo = pricePromo > 0 && pricePromo < priceCurrent;
+
+        return `
+          <div class="bg-white rounded-3xl p-6 border ${isPopular ? 'card-featured' : 'border-slate-200'} shadow-sm flex flex-col justify-between relative">
+            ${isPopular ? `<span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FF5E00] text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">✦ Terpopuler</span>` : ''}
+            <div class="space-y-3">
+              <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-bold">${prod.type || 'DIGITAL'}</span>
+              <h3 class="font-extrabold text-lg leading-snug">${prod.title}</h3>
+              <div class="pt-2">
+                ${hasPromo ? `<div class="text-xs line-through text-slate-400">Rp ${priceCurrent.toLocaleString('id-ID')}</div><div class="text-xl font-black text-[#FF5E00]">Rp ${pricePromo.toLocaleString('id-ID')}</div>` : `<div class="text-xl font-black text-slate-900">Rp ${priceCurrent.toLocaleString('id-ID')}</div>`}
+              </div>
+            </div>
+            <button onclick="openCheckoutModal('${prod.id}')" class="mt-6 w-full py-3 rounded-full ${isPopular ? 'bg-[#FF5E00] text-white' : 'bg-slate-900 text-white'} font-bold text-xs">Beli Sekarang</button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Explicit Modal Handler Functions
+    function openConsultModal() {
+      const modal = document.getElementById('consult-modal');
+      modal.classList.remove('modal-hidden');
+      modal.classList.add('modal-visible');
+    }
+    function closeConsultModal() {
+      const modal = document.getElementById('consult-modal');
+      modal.classList.add('modal-hidden');
+      modal.classList.remove('modal-visible');
+    }
+    function openAuthModal() {
+      const modal = document.getElementById('auth-modal');
+      modal.classList.remove('modal-hidden');
+      modal.classList.add('modal-visible');
+    }
+    function closeAuthModal() {
+      const modal = document.getElementById('auth-modal');
+      modal.classList.add('modal-hidden');
+      modal.classList.remove('modal-visible');
+    }
+    function openCheckoutModal(prodId) {
+      const prod = AppState.catalogData.find(p => String(p.id) === String(prodId));
+      if (!prod) return;
+      AppState.selectedProductForCheckout = prod;
+      const price = (prod.promo_price > 0 && prod.promo_price < prod.price_current) ? prod.promo_price : (prod.price_current || prod.price);
+      document.getElementById('checkout-product-details').innerText = `Produk: ${prod.title} - Rp${Number(price).toLocaleString('id-ID')}`;
+      const modal = document.getElementById('checkout-modal');
+      modal.classList.remove('modal-hidden');
+      modal.classList.add('modal-visible');
+    }
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkout-modal');
+      modal.classList.add('modal-hidden');
+      modal.classList.remove('modal-visible');
+    }
+    function openProductModal() {
+      const modal = document.getElementById('product-modal');
+      modal.classList.remove('modal-hidden');
+      modal.classList.add('modal-visible');
+    }
+    function closeProductModal() {
+      const modal = document.getElementById('product-modal');
+      modal.classList.add('modal-hidden');
+      modal.classList.remove('modal-visible');
+    }
+
+    function toggleAuthMode() {
+      const mode = document.getElementById('auth-mode');
+      if (mode.value === 'login') {
+        mode.value = 'register';
+        document.getElementById('auth-modal-title').innerText = 'Daftar Akun Baru';
+        document.getElementById('field-fullname').classList.remove('hidden');
+        document.getElementById('field-phone').classList.remove('hidden');
+        document.getElementById('btn-auth-submit').innerText = 'Daftar Sekarang';
+        document.getElementById('btn-auth-toggle').innerText = 'Masuk';
+      } else {
+        mode.value = 'login';
+        document.getElementById('auth-modal-title').innerText = 'Masuk ke Studihome';
+        document.getElementById('field-fullname').classList.add('hidden');
+        document.getElementById('field-phone').classList.add('hidden');
+        document.getElementById('btn-auth-submit').innerText = 'Masuk';
+        document.getElementById('btn-auth-toggle').innerText = 'Daftar Sekarang';
+      }
+    }
+
+    function navigateTo(view) {
+      document.querySelectorAll('.spa-view').forEach(v => v.classList.add('hidden'));
+      document.getElementById('view-'+view).classList.remove('hidden');
+      window.scrollTo(0,0);
+    }
+    
+    function switchDashTab(tab) {
+      document.querySelectorAll('.dash-tab-btn').forEach(b => { b.classList.remove('border-[#FF5E00]', 'text-[#FF5E00]'); b.classList.add('border-transparent', 'text-slate-500'); });
+      document.getElementById('tab-btn-'+tab).classList.add('border-[#FF5E00]', 'text-[#FF5E00]');
+      document.querySelectorAll('.dash-tab-content').forEach(c => c.classList.add('hidden'));
+      document.getElementById('dash-content-'+tab).classList.remove('hidden');
+      if (tab === 'realtime-transactions') loadAdminOrders();
+      if (tab === 'catalog-admin') loadAdminProducts();
+    }
+    
+    function handleAuthNavClick() {
+      if (AppState.user) {
+        navigateTo('dashboard');
+      } else {
+        openAuthModal();
+      }
+    }
+    
+    function handleAuthSubmit(e) {
+      e.preventDefault();
+      const mode = document.getElementById('auth-mode').value;
+      const email = document.getElementById('auth-email').value;
+      const password = document.getElementById('auth-password').value;
+
+      if (email === 'admin' && password === 'admin') {
+        AppState.user = { full_name: 'Administrator', email: 'admin', is_admin: true };
+        localStorage.setItem('studihome_user', JSON.stringify(AppState.user));
+        closeAuthModal();
+        updateAuthUi();
+        navigateTo('dashboard');
+        showToast('Login Admin Berhasil!', 'success');
+        return;
+      }
+
+      const action = mode === 'login' ? 'login' : 'register';
+      const payload = {
+        email: email,
+        password: password,
+        full_name: document.getElementById('auth-fullname')?.value || '',
+        phone: document.getElementById('auth-phone')?.value || ''
+      };
+
+      apiRequest(action, payload).then(res => {
+        if (res && res.success && res.data) {
+          AppState.user = res.data;
+          AppState.token = res.data.session_token;
+          localStorage.setItem('studihome_user', JSON.stringify(res.data));
+          localStorage.setItem('studihome_token', res.data.session_token);
+          closeAuthModal();
+          updateAuthUi();
+          navigateTo('dashboard');
+          showToast(res.message || 'Berhasil!', 'success');
+        } else {
+          showToast(res ? res.message : 'Gagal.', 'error');
+        }
+      }).catch(err => {
+        showToast('Error: ' + err.message, 'error');
+      });
+    }
+    
+    function handleLogout() {
+      AppState.user = null;
+      localStorage.removeItem('studihome_user');
+      localStorage.removeItem('studihome_token');
+      updateAuthUi();
+      navigateTo('catalog');
+      showToast('Keluar akun berhasil.');
+    }
+    
+    function updateAuthUi() {
+      const btn = document.getElementById('btn-auth-nav');
+      if (AppState.user) {
+        btn.innerText = AppState.user.is_admin ? '⚡ Panel Admin' : '👤 Akun Saya';
+        document.getElementById('dash-user-name').innerText = 'Halo, ' + (AppState.user.full_name || AppState.user.email);
+        document.getElementById('dash-user-email').innerText = AppState.user.email;
+        if (AppState.user.is_admin) {
+          document.getElementById('admin-badge').classList.remove('hidden');
+          document.getElementById('tab-btn-realtime-transactions').classList.remove('hidden');
+          document.getElementById('tab-btn-catalog-admin').classList.remove('hidden');
+        } else {
+          document.getElementById('admin-badge').classList.add('hidden');
+          document.getElementById('tab-btn-realtime-transactions').classList.add('hidden');
+          document.getElementById('tab-btn-catalog-admin').classList.add('hidden');
+        }
+      } else {
+        btn.innerText = 'Masuk';
+      }
+    }
+
+    function handleConsultSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('consult-name').value;
+      const msg = document.getElementById('consult-message').value;
+      window.open(`https://wa.me/6285111581115?text=${encodeURIComponent('Halo Studihome, Saya ' + name + '. ' + msg)}`, '_blank');
+      closeConsultModal();
+    }
+
+    function handleCheckoutSubmit(e) {
+      e.preventDefault();
+      if (!AppState.selectedProductForCheckout) return;
+      const fileInput = document.getElementById('proof-file-input');
+      if (!fileInput.files || fileInput.files.length === 0) {
+        showToast('Unggah bukti transfer wajib diisi!', 'error');
+        return;
+      }
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const payload = {
+          user_name: document.getElementById('chk-full-name').value,
+          user_phone: document.getElementById('chk-phone').value,
+          user_email: document.getElementById('chk-email').value,
+          product_id: AppState.selectedProductForCheckout.id,
+          product_title: AppState.selectedProductForCheckout.title,
+          amount: (AppState.selectedProductForCheckout.promo_price > 0 && AppState.selectedProductForCheckout.promo_price < AppState.selectedProductForCheckout.price_current) ? AppState.selectedProductForCheckout.promo_price : (AppState.selectedProductForCheckout.price_current || AppState.selectedProductForCheckout.price),
+          proof_base64: evt.target.result
+        };
+        apiRequest('createOrder', payload).then(res => {
+          if (res && res.success) {
+            showToast('Pesanan berhasil dikirim & masuk sistem!', 'success');
+            closeCheckoutModal();
+            navigateTo('dashboard');
+            switchDashTab('orders');
+            loadUserOrders();
+          } else {
+            showToast(res ? res.message : 'Gagal buat pesanan', 'error');
+          }
+        }).catch(err => {
+          showToast('Error: ' + err.message, 'error');
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function loadUserOrders() {
+      apiRequest('getUserOrders', { email: AppState.user ? AppState.user.email : '' }).then(res => {
+        const list = document.getElementById('user-orders-list');
+        if (!res || !res.success || !res.data || res.data.length === 0) {
+          list.innerHTML = `<div class="text-center py-8 text-xs text-slate-400">Belum ada riwayat pesanan.</div>`;
+          return;
+        }
+        list.innerHTML = res.data.map(ord => `
+          <div class="bg-white border rounded-2xl p-4 shadow-sm space-y-2 text-xs">
+            <div class="flex justify-between font-bold"><span>${ord.product_title || 'Produk Studihome'}</span><span>${ord.status}</span></div>
+            <div class="text-slate-500">Total: Rp${Number(ord.amount).toLocaleString('id-ID')}</div>
+            ${ord.status === 'PAID' && ord.access_link ? `<a href="${ord.access_link}" target="_blank" class="inline-block mt-2 px-4 py-2 bg-green-600 text-white font-bold rounded-xl">🚀 Akses Produk / Unduh File</a>` : ''}
+          </div>
+        `).join('');
+      });
+    }
+
+    function loadAdminOrders() {
+      apiRequest('getAdminOrders').then(res => {
+        const list = document.getElementById('admin-orders-list');
+        if (!res || !res.success || !res.data) return;
+        list.innerHTML = res.data.map(ord => `
+          <div class="bg-slate-50 border rounded-2xl p-4 text-xs space-y-2">
+            <div><b>${ord.id}</b> - ${ord.product_title || 'Produk'} (${ord.status})</div>
+            <div>Pembeli: ${ord.user_name} (${ord.user_email})</div>
+            <div><a href="${ord.proof_url}" target="_blank" class="text-orange-600 underline font-bold">🔎 Lihat Bukti Transfer</a></div>
+            <div class="flex gap-2 pt-2">
+              <button onclick="updateOrderStatus('${ord.id}', 'PAID')" class="px-3 py-1 bg-green-600 text-white font-bold rounded-lg">Setujui (PAID)</button>
+              <button onclick="updateOrderStatus('${ord.id}', 'REJECTED')" class="px-3 py-1 bg-red-600 text-white font-bold rounded-lg">Tolak</button>
+            </div>
+          </div>
+        `).join('');
+      });
+    }
+
+    function updateOrderStatus(orderId, status) {
+      apiRequest('updateOrderStatusAdmin', { order_id: orderId, status: status }).then(res => {
+        showToast(res.message || 'Status diperbarui', 'success');
+        loadAdminOrders();
+      });
+    }
+
+    function loadAdminProducts() {
+      apiRequest('getCatalog').then(res => {
+        const tbody = document.getElementById('admin-products-table');
+        if (!res || !res.success || !res.data) return;
+        tbody.innerHTML = res.data.map(p => `
+          <tr class="border-b"><td class="p-3 font-bold">${p.title}</td><td class="p-3">${p.category}</td><td class="p-3">${p.type}</td><td class="p-3">Rp${Number(p.price_current || p.price).toLocaleString('id-ID')}</td><td class="p-3 text-right"><button onclick="openProductModal()" class="px-3 py-1 bg-slate-900 text-white rounded-lg">Edit</button></td></tr>
+        `).join('');
+      });
+    }
+
+    function handleSaveProduct(e) {
+      e.preventDefault();
+      const payload = {
+        title: document.getElementById('prod-form-title').value,
+        category: document.getElementById('prod-form-category').value,
+        type: document.getElementById('prod-form-type').value,
+        price: Number(document.getElementById('prod-form-price-current').value),
+        promo_price: Number(document.getElementById('prod-form-price-promo').value) || 0,
+        access_link: document.getElementById('prod-form-access-link').value,
+        popular: document.getElementById('prod-form-popular').checked
+      };
+      apiRequest('saveProductAdmin', payload).then(res => {
+        showToast(res.message || 'Produk disimpan', 'success');
+        closeProductModal();
+        loadCatalogData();
+      });
+    }
+
+    function showToast(msg, type='info') {
+      const cont = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = `px-5 py-3 rounded-xl text-xs font-bold text-white shadow-lg ${type==='success'?'bg-green-600':'bg-slate-800'}`;
+      toast.innerText = msg;
+      cont.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
+    }
+
+    function apiRequest(action, payload = {}) {
+      return new Promise((resolve, reject) => {
+        if (typeof google !== 'undefined' && google.script && google.script.run) {
+          google.script.run
+            .withSuccessHandler(res => {
+              try { resolve(typeof res === 'string' ? JSON.parse(res) : res); } catch (e) { resolve(res); }
+            })
+            .withFailureHandler(err => reject(err))
+            .dispatchApiRequest({ action: action, payload: payload });
+        } else {
+          resolve({ success: true, message: 'Mock success' });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
