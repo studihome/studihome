@@ -235,20 +235,10 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-amber-50/90 border border-amber-200/80 p-6 rounded-3xl shadow-xs space-y-4 hover:border-[#f1b32b] transition-all flex flex-col justify-between">
             <div class="space-y-2">
-              <h3 class="font-bold text-[#0b1a48] text-base">In-House AI Training & Workshop</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">Pelatihan intensif privat khusus karyawan/staf perusahaan Anda untuk menguasai otomasi AI & workflow digital.</p>
-            </div>
-            <button onclick="openConsultModal('In-House AI Training & Workshop')" class="w-full text-center px-4 py-3 rounded-xl bg-[#f1b32b] hover:bg-[#d99b1c] text-[#0b1a48] font-extrabold text-xs transition-all shadow-xs min-h-[42px]">
-              Konsultasikan Program
-            </button>
-          </div>
-
-          <div class="bg-amber-50/90 border border-amber-200/80 p-6 rounded-3xl shadow-xs space-y-4 hover:border-[#f1b32b] transition-all flex flex-col justify-between">
-            <div class="space-y-2">
-              <h3 class="font-bold text-[#0b1a48] text-base">Pengembangan Sistem & Otomasi Kustom</h3>
+              <h3 class="font-bold text-[#0b1a48] text-base">Pengembangan Sistem Otomasi</h3>
               <p class="text-xs text-slate-600 leading-relaxed">Pengembangan sistem web app custom, database spreadsheet, dan bot otomasi khusus kebutuhan instansi Anda.</p>
             </div>
-            <button onclick="openConsultModal('Pengembangan Sistem & Otomasi Kustom')" class="w-full text-center px-4 py-3 rounded-xl bg-[#f1b32b] hover:bg-[#d99b1c] text-[#0b1a48] font-extrabold text-xs transition-all shadow-xs min-h-[42px]">
+            <button onclick="openConsultModal('Pengembangan Sistem Otomasi')" class="w-full text-center px-4 py-3 rounded-xl bg-[#f1b32b] hover:bg-[#d99b1c] text-[#0b1a48] font-extrabold text-xs transition-all shadow-xs min-h-[42px]">
               Minta Penawaran
             </button>
           </div>
@@ -594,10 +584,13 @@
             <p class="text-[10px] text-slate-500 font-semibold mt-1.5">Scan menggunakan DANA, GoPay, OVO, ShopeePay, BCA, Mandiri, atau m-Banking.</p>
           </div>
 
-          <!-- Custom Buy Link Button -->
-          <div id="checkout-custom-buy-container" class="pt-2 border-t border-slate-100 hidden">
-            <a id="checkout-custom-buy-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-xs transition-all active:scale-95">
-              <span>🛒 Beli via Link Direct / Payment Gateway</span>
+          <!-- Custom Buy Link Buttons: lynk.id & WhatsApp -->
+          <div id="checkout-custom-buy-container" class="pt-2 border-t border-slate-100 flex flex-col sm:flex-row gap-2">
+            <a id="checkout-custom-buy-btn" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all active:scale-95 text-center">
+              <span>🛒 Beli di lynk.id</span>
+            </a>
+            <a id="checkout-wa-buy-btn" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all active:scale-95 text-center">
+              <span>💬 Beli di WhatsApp</span>
             </a>
           </div>
         </div>
@@ -619,7 +612,7 @@
             <label for="proof-file-input" class="block text-xs font-bold text-slate-700 uppercase mb-1">Unggah Foto Bukti Transfer Pembayaran *</label>
             <input type="file" id="proof-file-input" required accept="image/*" class="w-full text-xs text-slate-500 file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-blue-50 file:text-[#1b5df0] border border-blue-200 rounded-xl p-1">
           </div>
-          <button type="submit" class="w-full py-3.5 rounded-xl bg-[#1b5df0] hover:bg-[#1246c7] text-white font-bold text-xs shadow-md transition-all active:scale-95 min-h-[48px]">Kirim & Konfirmasi Pesanan</button>
+          <button type="submit" id="chk-submit-btn" class="w-full py-3.5 rounded-xl bg-[#1b5df0] hover:bg-[#1246c7] text-white font-bold text-xs shadow-md transition-all active:scale-95 min-h-[48px] disabled:opacity-50 disabled:cursor-not-allowed">Kirim & Konfirmasi Pesanan</button>
         </form>
       </div>
     </div>
@@ -752,7 +745,7 @@
 
   <script>
     // Explicit Google Apps Script Deployment Web App URL
-    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzO4nE63B4cdzC2e2UrZ02mmKXFGe804CS-Yd15e6Ii3dU1jl-5KyTqoI3eCZLszpeE/exec";
+    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzG23fAeBiC7rUOHuz26H71n-8-HmQYYvhHOUKleD42nBwisrPtvUj0u33XhEeVpGaz/exec";
 
     // Central App State with defensive parsing
     const AppState = {
@@ -1198,7 +1191,7 @@
 
               <div class="pt-6">
                 <button onclick="openCheckoutModal('${prod.id}')" class="w-full py-3.5 rounded-full bg-[#1b5df0] hover:bg-[#1246c7] text-white font-extrabold text-xs transition-all shadow-md active:scale-95 min-h-[48px]">
-                  Beli / Akses Sekarang
+                  Dapatkan Sekarang!
                 </button>
               </div>
             </div>
@@ -1241,7 +1234,7 @@
 
               <div class="pt-6">
                 <button onclick="openCheckoutModal('${prod.id}')" class="w-full py-3 rounded-full bg-[#1b5df0] hover:bg-[#1246c7] text-white font-extrabold text-xs transition-all shadow-xs active:scale-95 min-h-[44px]">
-                  Beli / Akses Sekarang
+                  Dapatkan Sekarang!
                 </button>
               </div>
             </div>
@@ -1536,103 +1529,227 @@
     }
 
     function openCheckoutModal(prodId) {
-      const prod = AppState.catalogData.find(p => String(p.id) === String(prodId));
-      if (!prod) return;
-      AppState.selectedProductForCheckout = prod;
-      const priceCurrent = Number(prod.price_current) || Number(prod.price) || 0;
-      const pricePromo = Number(prod.promo_price || prod.price_promo) || 0;
-      const finalPrice = (pricePromo > 0 && pricePromo < priceCurrent) ? pricePromo : priceCurrent;
-
-      const detailsContainer = document.getElementById('checkout-product-details');
-      if (detailsContainer) {
-        detailsContainer.innerText = `Produk: ${prod.title || ''} - ${formatIDR(finalPrice)}`;
-      }
-
-      // QRIS Image setup
-      const qrisImg = document.getElementById('checkout-qris-img');
-      if (qrisImg) {
-        if (prod.qris_url && prod.qris_url.trim() !== '') {
-          qrisImg.src = prod.qris_url;
-        } else {
-          qrisImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=00020101021126580014ID.LINKAJA.WWW01189360091100220088010215200812345678905204581253033605802ID5909STUDIHOME6007JAKARTA61051234562070703A0163041A2B";
+      try {
+        const prod = AppState.catalogData.find(p => String(p.id) === String(prodId));
+        if (!prod) {
+          showToast('Produk tidak ditemukan.', 'error');
+          return;
         }
-      }
+        AppState.selectedProductForCheckout = prod;
+        const priceCurrent = Number(prod.price_current) || Number(prod.price) || 0;
+        const pricePromo = Number(prod.promo_price || prod.price_promo) || 0;
+        const finalPrice = (pricePromo > 0 && pricePromo < priceCurrent) ? pricePromo : priceCurrent;
 
-      // Custom Buy Link Button Setup
-      const buyContainer = document.getElementById('checkout-custom-buy-container');
-      const buyBtn = document.getElementById('checkout-custom-buy-btn');
-      if (buyContainer && buyBtn) {
-        if (prod.buy_link && prod.buy_link.trim() !== '') {
-          buyBtn.href = prod.buy_link;
+        const detailsContainer = document.getElementById('checkout-product-details');
+        if (detailsContainer) {
+          detailsContainer.innerText = `Produk: ${prod.title || ''} - ${formatIDR(finalPrice)}`;
+        }
+
+        // QRIS Image setup
+        const qrisImg = document.getElementById('checkout-qris-img');
+        if (qrisImg) {
+          qrisImg.src = (prod.qris_url && prod.qris_url.trim() !== '') 
+            ? prod.qris_url 
+            : "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=00020101021126580014ID.LINKAJA.WWW01189360091100220088010215200812345678905204581253033605802ID5909STUDIHOME6007JAKARTA61051234562070703A0163041A2B";
+        }
+
+        // Custom Buy Links Setup
+        const buyContainer = document.getElementById('checkout-custom-buy-container');
+        const buyBtn = document.getElementById('checkout-custom-buy-btn');
+        const waBtn = document.getElementById('checkout-wa-buy-btn');
+
+        if (buyContainer) {
           buyContainer.classList.remove('hidden');
-        } else {
-          buyContainer.classList.add('hidden');
         }
-      }
 
-      if (AppState.user) {
-        const chkName = document.getElementById('chk-full-name');
-        const chkPhone = document.getElementById('chk-phone');
-        const chkEmail = document.getElementById('chk-email');
-        if (chkName) chkName.value = AppState.user.full_name || '';
-        if (chkPhone) chkPhone.value = AppState.user.phone || '';
-        if (chkEmail) chkEmail.value = AppState.user.email || '';
-      }
+        if (buyBtn) {
+          buyBtn.href = (prod.buy_link && prod.buy_link.trim() !== '') ? prod.buy_link : 'https://lynk.id/studihome';
+        }
 
-      toggleModal('checkout-modal', true);
+        if (waBtn) {
+          const waMsg = encodeURIComponent(`Halo Studihome, saya ingin membeli: ${prod.title || 'Produk'} (${formatIDR(finalPrice)}). Mohon bantuan instruksi pembayarannya.`);
+          waBtn.href = `https://wa.me/6285111581115?text=${waMsg}`;
+        }
+
+        if (AppState.user) {
+          const chkName = document.getElementById('chk-full-name');
+          const chkPhone = document.getElementById('chk-phone');
+          const chkEmail = document.getElementById('chk-email');
+          if (chkName) chkName.value = AppState.user.full_name || '';
+          if (chkPhone) chkPhone.value = AppState.user.phone || '';
+          if (chkEmail) chkEmail.value = AppState.user.email || '';
+        }
+
+        toggleModal('checkout-modal', true);
+      } catch (err) {
+        console.error('Error opening checkout modal:', err);
+        showToast('Gagal membuka modal checkout', 'error');
+      }
     }
 
-    function handleConsultSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('consult-name').value;
-      const msg = document.getElementById('consult-message').value;
-      window.open(`https://wa.me/6285111581115?text=${encodeURIComponent('Halo Studihome, Saya ' + name + '. ' + msg)}`, '_blank', 'noopener,noreferrer');
-      closeModal('consult-modal');
-    }
+    let isSubmittingCheckout = false;
 
     function handleCheckoutSubmit(e) {
       e.preventDefault();
-      if (!AppState.selectedProductForCheckout) return;
-      const fileInput = document.getElementById('proof-file-input');
-      if (!fileInput.files || fileInput.files.length === 0) {
-        showToast('Unggah bukti transfer wajib diisi!', 'error');
-        return;
-      }
-
-      const file = fileInput.files[0];
-      const reader = new FileReader();
-      reader.onload = function(evt) {
-        const payload = {
-          user_name: document.getElementById('chk-full-name').value,
-          user_phone: document.getElementById('chk-phone').value,
-          user_email: document.getElementById('chk-email').value,
-          product_id: AppState.selectedProductForCheckout.id,
-          product_title: AppState.selectedProductForCheckout.title,
-          amount: (AppState.selectedProductForCheckout.promo_price > 0 && AppState.selectedProductForCheckout.promo_price < AppState.selectedProductForCheckout.price_current) ? AppState.selectedProductForCheckout.promo_price : (AppState.selectedProductForCheckout.price_current || AppState.selectedProductForCheckout.price),
-          proof_base64: evt.target.result
-        };
-
-        if (!AppState.user) {
-          AppState.pendingGuestOrder = payload;
-          closeModal('checkout-modal');
-          showToast('Silakan selesaikan pendaftaran akun baru terlebih dahulu!', 'info');
-          
-          const regMode = document.getElementById('auth-mode');
-          if (regMode) regMode.value = 'register';
-          document.getElementById('auth-modal-title').innerText = 'Daftar Akun Baru';
-          document.getElementById('field-fullname').classList.remove('hidden');
-          document.getElementById('field-phone').classList.remove('hidden');
-          document.getElementById('auth-fullname').value = payload.user_name;
-          document.getElementById('auth-phone').value = payload.user_phone;
-          document.getElementById('auth-email').value = payload.user_email;
-          document.getElementById('btn-auth-submit').innerText = 'Daftar & Lanjutkan Pesanan';
-          openAuthModal();
+      try {
+        if (isSubmittingCheckout) return;
+        if (!AppState.selectedProductForCheckout) {
+          showToast('Pilih produk terlebih dahulu.', 'error');
           return;
         }
 
+        const fileInput = document.getElementById('proof-file-input');
+        if (!fileInput || !fileInput.files || fileInput.files.length === 0) {
+          showToast('Unggah bukti transfer wajib diisi!', 'error');
+          return;
+        }
+
+        const submitBtn = document.getElementById('chk-submit-btn');
+        isSubmittingCheckout = true;
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerText = '⏳ Memproses Pesanan...';
+        }
+
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          try {
+            const priceCurrent = Number(AppState.selectedProductForCheckout.price_current) || Number(AppState.selectedProductForCheckout.price) || 0;
+            const pricePromo = Number(AppState.selectedProductForCheckout.promo_price || AppState.selectedProductForCheckout.price_promo) || 0;
+            const finalAmount = (pricePromo > 0 && pricePromo < priceCurrent) ? pricePromo : priceCurrent;
+
+            const payload = {
+              user_name: document.getElementById('chk-full-name').value,
+              user_phone: document.getElementById('chk-phone').value,
+              user_email: document.getElementById('chk-email').value,
+              product_id: AppState.selectedProductForCheckout.id,
+              product_title: AppState.selectedProductForCheckout.title,
+              amount: finalAmount,
+              proof_base64: evt.target.result
+            };
+
+            if (!AppState.user) {
+              AppState.pendingGuestOrder = payload;
+              closeModal('checkout-modal');
+              resetCheckoutButton();
+              showToast('Silakan selesaikan pendaftaran akun baru terlebih dahulu!', 'info');
+              
+              const regMode = document.getElementById('auth-mode');
+              if (regMode) regMode.value = 'register';
+              document.getElementById('auth-modal-title').innerText = 'Daftar Akun Baru';
+              document.getElementById('field-fullname').classList.remove('hidden');
+              document.getElementById('field-phone').classList.remove('hidden');
+              document.getElementById('auth-fullname').value = payload.user_name;
+              document.getElementById('auth-phone').value = payload.user_phone;
+              document.getElementById('auth-email').value = payload.user_email;
+              document.getElementById('btn-auth-submit').innerText = 'Daftar & Lanjutkan Pesanan';
+              openAuthModal();
+              return;
+            }
+
+            executeOrderCreation(payload);
+          } catch (err) {
+            console.error('Error processing proof image:', err);
+            resetCheckoutButton();
+            showToast('Gagal memproses foto bukti transfer.', 'error');
+          }
+        };
+
+        reader.onerror = function() {
+          resetCheckoutButton();
+          showToast('Gagal membaca file bukti transfer.', 'error');
+        };
+
+        reader.readAsDataURL(file);
+      } catch (err) {
+        console.error('Error submitting checkout:', err);
+        resetCheckoutButton();
+        showToast('Terjadi kesalahan saat memproses checkout.', 'error');
+      }
+    }
+
+    function resetCheckoutButton() {
+      isSubmittingCheckout = false;
+      const submitBtn = document.getElementById('chk-submit-btn');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Kirim & Konfirmasi Pesanan';
+      }
+    }
+
+    function executePendingCheckout() {
+      try {
+        if (!AppState.pendingGuestOrder) return;
+        const payload = AppState.pendingGuestOrder;
+        AppState.pendingGuestOrder = null;
         executeOrderCreation(payload);
-      };
-      reader.readAsDataURL(file);
+      } catch (err) {
+        console.error('Error executing pending checkout:', err);
+      }
+    }
+
+    function executeOrderCreation(payload) {
+      try {
+        const orderId = 'ORD-' + Date.now().toString().slice(-6);
+        const finalAmount = payload.amount || 0;
+        const localOrderObj = {
+          order_id: orderId,
+          id: orderId,
+          user_name: payload.user_name || '-',
+          user_phone: payload.user_phone || '-',
+          user_email: payload.user_email || '-',
+          product_id: payload.product_id || '',
+          product_title: payload.product_title || 'Produk Studihome',
+          amount: finalAmount,
+          total_amount: finalAmount,
+          status: 'PENDING',
+          payment_status: 'PENDING',
+          proof_url: payload.proof_base64 || '',
+          access_link: AppState.selectedProductForCheckout ? (AppState.selectedProductForCheckout.access_link || DEFAULT_PAID_DOWNLOAD_LINK) : DEFAULT_PAID_DOWNLOAD_LINK,
+          created_at: new Date().toISOString()
+        };
+
+        if (!AppState.userOrders) AppState.userOrders = [];
+        AppState.userOrders.unshift(localOrderObj);
+
+        // Persistent local storage per user email to ensure purchases stay stored permanently
+        try {
+          const userKey = 'studihome_user_orders_' + (payload.user_email || 'user').toLowerCase();
+          const existingUserOrders = JSON.parse(localStorage.getItem(userKey)) || [];
+          existingUserOrders.unshift(localOrderObj);
+          localStorage.setItem(userKey, JSON.stringify(existingUserOrders));
+
+          // Global order cache for offline/local admin verification sync
+          const globalOrders = JSON.parse(localStorage.getItem('studihome_global_orders')) || [];
+          globalOrders.unshift(localOrderObj);
+          localStorage.setItem('studihome_global_orders', JSON.stringify(globalOrders));
+        } catch (e) {
+          console.warn('Failed to persist user orders locally:', e);
+        }
+
+        // Realtime sync to Google Apps Script / Google Sheets
+        apiRequest('createOrder', payload).then(res => {
+          if (res && res.success) {
+            showToast('Pesanan berhasil dikirim & tersimpan di sistem!', 'success');
+          } else {
+            showToast('Pesanan berhasil dicatat!', 'info');
+          }
+        }).catch((err) => {
+          console.warn('Realtime backend order creation warning:', err);
+          showToast('Pesanan berhasil dicatat!', 'info');
+        }).finally(() => {
+          resetCheckoutButton();
+          closeModal('checkout-modal');
+          navigateTo('dashboard');
+          switchDashTab('orders');
+          loadUserOrders();
+        });
+      } catch (err) {
+        console.error('Error in executeOrderCreation:', err);
+        resetCheckoutButton();
+        showToast('Terjadi kesalahan saat menyimpan pesanan.', 'error');
+      }
     }
 
     function executePendingCheckout() {
@@ -1671,6 +1788,7 @@
       }).catch(() => {
         showToast('Pesanan dicatat di sistem!', 'info');
       }).finally(() => {
+        resetCheckoutButton();
         closeModal('checkout-modal');
         navigateTo('dashboard');
         switchDashTab('orders');
