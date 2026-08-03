@@ -217,7 +217,7 @@
             <p class="text-xs md:text-sm text-blue-100 leading-relaxed">Proses pengerjaan cepat dan revisi sampai tuntas dengan hasil berkualitas!</p>
           </div>
           <button onclick="openConsultModal('Pesan Khusus Konten Digital')" class="shrink-0 px-6 py-3.5 rounded-full bg-[#f1b32b] hover:bg-[#d99b1c] text-[#0b1a48] font-black text-sm shadow-md transition-all active:scale-95 min-h-[48px]">
-            Pesan Khusus
+            Konsultasi
           </button>
         </div>
       </div>
@@ -233,6 +233,16 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-amber-50/90 border border-amber-200/80 p-6 rounded-3xl shadow-xs space-y-4 hover:border-[#f1b32b] transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <h3 class="font-bold text-[#0b1a48] text-base">In-House AI Training & Workshop</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Pelatihan intensif privat khusus karyawan/staf perusahaan Anda untuk menguasai otomasi AI & workflow digital.</p>
+            </div>
+            <button onclick="openConsultModal('In-House AI Training & Workshop')" class="w-full text-center px-4 py-3 rounded-xl bg-[#f1b32b] hover:bg-[#d99b1c] text-[#0b1a48] font-extrabold text-xs transition-all shadow-xs min-h-[42px]">
+              Konsultasikan Program
+            </button>
+          </div>
+
           <div class="bg-amber-50/90 border border-amber-200/80 p-6 rounded-3xl shadow-xs space-y-4 hover:border-[#f1b32b] transition-all flex flex-col justify-between">
             <div class="space-y-2">
               <h3 class="font-bold text-[#0b1a48] text-base">Pengembangan Sistem Otomasi</h3>
@@ -257,7 +267,7 @@
 
       <div id="testimoni" class="pt-12 max-w-3xl mx-auto space-y-6">
         <div class="text-center"><h2 class="text-2xl md:text-3xl font-extrabold text-[#0b1a48]">Apa Kata Mereka??</h2></div>
-        <div class="relative bg-transparent rounded-3xl p-2 md:p-3 h-[90px] overflow-hidden w-full max-w-3xl mx-auto border border-blue-200/60 bg-white/40 backdrop-blur-xs">
+        <div class="relative bg-transparent rounded-3xl p-2 md:p-3 h-[90px] overflow-hidden w-full max-w-3xl mx-auto border-none">
           <div class="single-testi-ticker space-y-3">
             <div id="testi-stream-container" class="space-y-3"></div>
           </div>
@@ -301,10 +311,10 @@
           </div>
         </div>
 
-        <!-- Mentors Speech Bubble Banner -->
+        <!-- Mentors Speech Bubble Banner (Regular Font Weight) -->
         <div class="pt-2 text-center">
           <div class="inline-block px-6 py-2.5 rounded-full bg-white border border-[#1b5df0]/40 shadow-sm animate-pulse">
-            <span class="font-extrabold text-xs md:text-sm tracking-tight text-slate-900">🔎 Temukan Mentor Anda yang Tersebar di 38 Provinsi dan 400+ Kabupaten/Kota</span>
+            <span class="font-semibold text-xs md:text-sm tracking-tight text-slate-900">✦ Temukan Mentor Anda yang Tersebar di 38 Provinsi dan 400+ Kabupaten/Kota ✦</span>
           </div>
         </div>
       </div>
@@ -586,10 +596,10 @@
 
           <!-- Custom Buy Link Buttons: lynk.id & WhatsApp -->
           <div id="checkout-custom-buy-container" class="pt-2 border-t border-slate-100 flex flex-col sm:flex-row gap-2">
-            <a id="checkout-custom-buy-btn" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all active:scale-95 text-center">
+            <a id="checkout-custom-buy-btn" href="https://lynk.id/studihome" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all active:scale-95 text-center">
               <span>🛒 Beli di lynk.id</span>
             </a>
-            <a id="checkout-wa-buy-btn" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all active:scale-95 text-center">
+            <a id="checkout-wa-buy-btn" href="https://wa.me/6285111581115" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all active:scale-95 text-center">
               <span>💬 Beli di WhatsApp</span>
             </a>
           </div>
@@ -745,7 +755,7 @@
 
   <script>
     // Explicit Google Apps Script Deployment Web App URL
-    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzG23fAeBiC7rUOHuz26H71n-8-HmQYYvhHOUKleD42nBwisrPtvUj0u33XhEeVpGaz/exec";
+    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzO4nE63B4cdzC2e2UrZ02mmKXFGe804CS-Yd15e6Ii3dU1jl-5KyTqoI3eCZLszpeE/exec";
 
     // Central App State with defensive parsing
     const AppState = {
@@ -780,7 +790,7 @@
 
     // Initial Fallback Dummy Products
     const initialDummyProducts = [
-      { id: 'PRD-001', title: 'E-Book Prompt AI Mastery 2026', category: 'Belajar Apa?', type: 'TOOLS', price_current: 100000, promo_price: 80000, access_link: DEFAULT_PAID_DOWNLOAD_LINK, buy_link: 'https://checkout.studihome.id/prd-001', qris_url: '', popular: true, show_on_hero: true, description: "E-Book PDF & EPUB Full Edition (350+ Halaman)\n500+ Master Prompts Siap Pakai (Copy-Paste)\nCheatsheet Prompt Engineering Midjourney & DALL-E\nScript Otomasi Copywriting Marketing & Ads\nGuide Monetisasi AI untuk Content Creator\nTemplate Workflow Prompt Google Gemini & Claude\nModul Framework DeepSeek untuk Data Analysis\nAkses Update Materi Gratis Selamanya\nKomunitas VIP Telegram Diskusi AI\nSertifikat Digital Completion Studihome" },
+      { id: 'PRD-001', title: 'E-Book Prompt AI Mastery 2026', category: 'Belajar Apa?', type: 'TOOLS', price_current: 100000, promo_price: 80000, access_link: DEFAULT_PAID_DOWNLOAD_LINK, buy_link: 'https://lynk.id/studihome', qris_url: '', popular: true, show_on_hero: true, description: "E-Book PDF & EPUB Full Edition (350+ Halaman)\n500+ Master Prompts Siap Pakai (Copy-Paste)\nCheatsheet Prompt Engineering Midjourney & DALL-E\nScript Otomasi Copywriting Marketing & Ads\nGuide Monetisasi AI untuk Content Creator\nTemplate Workflow Prompt Google Gemini & Claude\nModul Framework DeepSeek untuk Data Analysis\nAkses Update Materi Gratis Selamanya\nKomunitas VIP Telegram Diskusi AI\nSertifikat Digital Completion Studihome" },
       { id: 'PRD-002', title: 'E-Book Modern Web App Architecture', category: 'Belajar Apa?', type: 'LESSON', price_current: 120000, promo_price: 95000, access_link: DEFAULT_PAID_DOWNLOAD_LINK, buy_link: '', qris_url: '', popular: false, show_on_hero: true, description: "Modul Panduan Arsitektur Serverless $0 Cost\nSource Code SPA HTML/JS Clean Architecture\nPanduan Integrasi Google Apps Script REST API\nTemplate Database Relasional Google Sheets\nScript Keamanan Hash Password Salt + SHA-256\nGuide Deployment Vercel & Netlify Hosting\nModul Handling CORS & Webhook WhatsApp\nDokumentasi Lengkap & Diagram Sistem\nAkses Repository GitHub Private\nSesi Konsultasi Q&A via Group Komunitas" },
       { id: 'PRD-003', title: 'Playbook Otomasi Spreadsheet & GAS', category: 'Belajar Apa?', type: 'LESSON', price_current: 150000, promo_price: 110000, access_link: DEFAULT_PAID_DOWNLOAD_LINK, buy_link: '', qris_url: '', popular: false, show_on_hero: true, description: "50+ Script Snippet Google Apps Script Siap Pakai\nTemplate Otomasi Kasir & Stok Barang\nScript Auto Send Email HTML & WhatsApp Webhook\nTutorial Mengunci Thread dengan LockService\nModul Optimalisasi CacheService 15 Menit\nTemplate Form Checkout & Upload Bukti Transfer\nPanduan Custom Menu & Trigger Automated Event\nVideo Tutorial Step-by-Step Bahasa Indonesia\nE-Book Playbook Otomasi Spreadsheet PDF\nGroup Diskusi Eksklusif Komunitas GAS" },
       { id: 'PRD-004', title: 'Workshop AI Prompt Engineering Live', category: 'Event', type: 'LESSON', price_current: 200000, promo_price: 160000, access_link: 'https://zoom.us/j/sample1', buy_link: '', qris_url: '', popular: true, show_on_hero: true, description: "Sesi Live Zoom Interactive 2 Jam bersama Expert\nAkses Rekaman HD Video Replay Tanpa Batas\nModul Hands-On Demo Pembuatan AI Agent\nFile Template Prompt & Framework Kerja\nSertifikat Digital Resmi dari Studihome\nAkses Q&A Langsung saat Sesi Live\nE-Book Panduan Pendamping Workshop\nGratis Akses Tool Kit Prompt Siap Pakai\nUndangan Komunitas Exclusive Network\nDiskon Khusus 50% untuk Event Selanjutnya" },
@@ -804,19 +814,27 @@
     ];
 
     function formatIDR(amount) {
-      const num = (typeof amount === 'number' && !isNaN(amount)) ? amount : (Number(amount) || 0);
-      return 'Rp ' + num.toLocaleString('id-ID');
+      try {
+        const num = (typeof amount === 'number' && !isNaN(amount)) ? amount : (Number(amount) || 0);
+        return 'Rp ' + num.toLocaleString('id-ID');
+      } catch (err) {
+        return 'Rp 0';
+      }
     }
 
     function toggleModal(modalId, show = true) {
-      const modal = document.getElementById(modalId);
-      if (!modal) return;
-      if (show) {
-        modal.classList.remove('modal-hidden');
-        modal.classList.add('modal-visible');
-      } else {
-        modal.classList.add('modal-hidden');
-        modal.classList.remove('modal-visible');
+      try {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+        if (show) {
+          modal.classList.remove('modal-hidden');
+          modal.classList.add('modal-visible');
+        } else {
+          modal.classList.add('modal-hidden');
+          modal.classList.remove('modal-visible');
+        }
+      } catch (err) {
+        console.error('Error toggling modal:', err);
       }
     }
 
@@ -830,46 +848,58 @@
     }
 
     window.onload = function() {
-      updateAuthUi();
-      renderTestimonials();
-      loadCatalogData();
-      loadModulesData();
-      
-      // Global Escape Key Listener
-      window.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeAllModals();
-      });
+      try {
+        updateAuthUi();
+        renderTestimonials();
+        loadCatalogData();
+        loadModulesData();
+        
+        // Global Escape Key Listener
+        window.addEventListener('keydown', function(e) {
+          if (e && e.key === 'Escape') closeAllModals();
+        });
+      } catch (err) {
+        console.error('Error on window.onload initialization:', err);
+      }
     };
 
     function toggleHeroWebinarBanner(isActive) {
-      AppState.heroBannerActive = Boolean(isActive);
-      const teras = document.getElementById('teras');
-      if (teras) {
-        if (AppState.heroBannerActive) {
-          teras.classList.remove('hidden');
-        } else {
-          teras.classList.add('hidden');
+      try {
+        AppState.heroBannerActive = Boolean(isActive);
+        const teras = document.getElementById('teras');
+        if (teras) {
+          if (AppState.heroBannerActive) {
+            teras.classList.remove('hidden');
+          } else {
+            teras.classList.add('hidden');
+          }
         }
+      } catch (err) {
+        console.error('Error toggling hero banner:', err);
       }
     }
 
-    /* UNBROKEN SEAMLESS SCROLLING TESTIMONIAL TICKER */
+    /* UNBROKEN SEAMLESS SCROLLING TESTIMONIAL TICKER (CLEAN BACKGROUND) */
     function renderTestimonials() {
-      const container = document.getElementById('testi-stream-container');
-      if (!container) return;
-      const items = [...testimonialsList, ...testimonialsList];
-      container.innerHTML = items.map(item => `
-        <div class="bg-white/95 rounded-2xl p-3.5 space-y-1 shadow-xs border border-blue-100">
-          <div class="flex justify-between items-center text-xs">
-            <div class="flex items-center gap-2">
-              <span class="font-bold text-[#0b1a48]">${item.name}</span>
-              <span class="text-[10px] text-slate-500 bg-blue-50 px-2 py-0.5 rounded-full font-semibold">${item.role}</span>
+      try {
+        const container = document.getElementById('testi-stream-container');
+        if (!container) return;
+        const items = [...testimonialsList, ...testimonialsList, ...testimonialsList];
+        container.innerHTML = items.map(item => `
+          <div class="bg-white/90 backdrop-blur-xs rounded-2xl p-3.5 space-y-1 shadow-2xs border border-blue-100/80 transition-all">
+            <div class="flex justify-between items-center text-xs">
+              <div class="flex items-center gap-2">
+                <span class="font-extrabold text-[#0b1a48]">${item.name || 'Member'}</span>
+                <span class="text-[10px] text-slate-500 bg-blue-50 px-2 py-0.5 rounded-full font-semibold">${item.role || 'Pengguna'}</span>
+              </div>
+              <span class="text-[10px] text-slate-400 font-mono">${item.time || 'baru saja'}</span>
             </div>
-            <span class="text-[10px] text-slate-400 font-mono">${item.time}</span>
+            <p class="text-xs text-slate-600 leading-relaxed font-normal font-sans">"${item.text || ''}"</p>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed font-normal">"${item.text}"</p>
-        </div>
-      `).join('');
+        `).join('');
+      } catch (err) {
+        console.error('Error rendering testimonials:', err);
+      }
     }
 
     function saveHeroSettingsAdmin() {
@@ -917,37 +947,43 @@
     }
 
     function openModuleModal(moduleId = null) {
-      const prodSelect = document.getElementById('mod-form-product-id');
-      const titleModal = document.getElementById('module-modal-title');
+      try {
+        const prodSelect = document.getElementById('mod-form-product-id');
+        const titleModal = document.getElementById('module-modal-title');
 
-      if (prodSelect) {
-        let opts = `<option value="">-- Empty (Tanpa Produk / Umum) --</option>`;
-        opts += AppState.catalogData.map(p => `<option value="${p.id}">${p.title} (${p.id})</option>`).join('');
-        prodSelect.innerHTML = opts;
-      }
-
-      if (moduleId) {
-        const mod = AppState.modulesData.find(m => String(m.id) === String(moduleId));
-        if (mod) {
-          if (titleModal) titleModal.innerText = 'Edit Lesson Studihome';
-          document.getElementById('mod-form-id').value = mod.id;
-          if (prodSelect) prodSelect.value = mod.product_id || '';
-          document.getElementById('mod-form-title').value = mod.title || '';
-          document.getElementById('mod-form-media-url').value = mod.media_url || '';
-          document.getElementById('mod-form-content').value = mod.content || '';
+        if (prodSelect) {
+          let opts = `<option value="">-- Empty (Tanpa Produk / Umum) --</option>`;
+          if (Array.isArray(AppState.catalogData)) {
+            opts += AppState.catalogData.map(p => `<option value="${p.id}">${p.title || 'Untitled'} (${p.id})</option>`).join('');
+          }
+          prodSelect.innerHTML = opts;
         }
-      } else {
-        if (titleModal) titleModal.innerText = 'Tambah Lesson Studihome Baru';
-        document.getElementById('mod-form-id').value = '';
-        const modForm = document.getElementById('module-form');
-        if (modForm) modForm.reset();
-      }
 
-      toggleModal('module-modal', true);
+        if (moduleId) {
+          const mod = AppState.modulesData.find(m => String(m.id) === String(moduleId));
+          if (mod) {
+            if (titleModal) titleModal.innerText = 'Edit Lesson Studihome';
+            document.getElementById('mod-form-id').value = mod.id;
+            if (prodSelect) prodSelect.value = mod.product_id || '';
+            document.getElementById('mod-form-title').value = mod.title || '';
+            document.getElementById('mod-form-media-url').value = mod.media_url || '';
+            document.getElementById('mod-form-content').value = mod.content || '';
+          }
+        } else {
+          if (titleModal) titleModal.innerText = 'Tambah Lesson Studihome Baru';
+          document.getElementById('mod-form-id').value = '';
+          const modForm = document.getElementById('module-form');
+          if (modForm) modForm.reset();
+        }
+
+        toggleModal('module-modal', true);
+      } catch (err) {
+        console.error('Error opening module modal:', err);
+      }
     }
 
     function handleSaveModule(e) {
-      e.preventDefault();
+      if (e && typeof e.preventDefault === 'function') e.preventDefault();
       try {
         const modId = document.getElementById('mod-form-id').value;
         const prodId = document.getElementById('mod-form-product-id').value;
@@ -989,78 +1025,94 @@
     }
 
     function renderAdminModulesList() {
-      const container = document.getElementById('admin-modules-list');
-      if (!container) return;
-      if (!AppState.modulesData || AppState.modulesData.length === 0) {
-        container.innerHTML = `<div class="text-center py-6 text-xs text-slate-400">Belum ada modul.</div>`;
-        return;
-      }
-      container.innerHTML = AppState.modulesData.map(mod => `
-        <div class="bg-white p-4 rounded-2xl border border-blue-200 shadow-sm space-y-2 text-xs flex flex-col md:flex-row md:items-center justify-between gap-3">
-          <div class="space-y-1">
-            <div class="flex items-center gap-2 font-bold text-[#0b1a48]">
-              <span>${mod.title || 'Untitled Module'}</span>
-              <span class="px-2 py-0.5 rounded-md bg-blue-50 text-[#1b5df0] text-[10px]">Ref: ${mod.product_id || 'General'}</span>
+      try {
+        const container = document.getElementById('admin-modules-list');
+        if (!container) return;
+        if (!AppState.modulesData || AppState.modulesData.length === 0) {
+          container.innerHTML = `<div class="text-center py-6 text-xs text-slate-400">Belum ada modul.</div>`;
+          return;
+        }
+        container.innerHTML = AppState.modulesData.map(mod => `
+          <div class="bg-white p-4 rounded-2xl border border-blue-200 shadow-sm space-y-2 text-xs flex flex-col md:flex-row md:items-center justify-between gap-3">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2 font-bold text-[#0b1a48]">
+                <span>${mod.title || 'Untitled Module'}</span>
+                <span class="px-2 py-0.5 rounded-md bg-blue-50 text-[#1b5df0] text-[10px]">Ref: ${mod.product_id || 'General'}</span>
+              </div>
+              <p class="text-slate-500 truncate max-w-xl">${mod.content || ''}</p>
             </div>
-            <p class="text-slate-500 truncate max-w-xl">${mod.content || ''}</p>
+            <div class="flex items-center gap-2 shrink-0">
+              <button onclick="openModuleViewer('${mod.product_id || mod.id}')" class="px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-[#1b5df0] rounded-xl font-bold text-xs transition-all shadow-xs active:scale-95">
+                👁️ View
+              </button>
+              <button onclick="copyModuleLink('${mod.id}')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-xs transition-all shadow-xs active:scale-95">
+                🔗 Tautan
+              </button>
+              <button onclick="openModuleModal('${mod.id}')" class="px-3.5 py-1.5 bg-[#1b5df0] hover:bg-[#1246c7] text-white rounded-xl font-bold text-xs transition-all shadow-xs active:scale-95">
+                ✏️ Edit
+              </button>
+            </div>
           </div>
-          <div class="flex items-center gap-2 shrink-0">
-            <button onclick="openModuleViewer('${mod.product_id || mod.id}')" class="px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-[#1b5df0] rounded-xl font-bold text-xs transition-all shadow-xs active:scale-95">
-              👁️ View
-            </button>
-            <button onclick="copyModuleLink('${mod.id}')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-xs transition-all shadow-xs active:scale-95">
-              🔗 Tautan
-            </button>
-            <button onclick="openModuleModal('${mod.id}')" class="px-3.5 py-1.5 bg-[#1b5df0] hover:bg-[#1246c7] text-white rounded-xl font-bold text-xs transition-all shadow-xs active:scale-95">
-              ✏️ Edit
-            </button>
-          </div>
-        </div>
-      `).join('');
+        `).join('');
+      } catch (err) {
+        console.error('Error rendering admin modules list:', err);
+      }
     }
 
     function copyToClipboard(text) {
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.select();
-      textarea.setSelectionRange(0, 99999);
-      
-      let successful = false;
       try {
-        successful = document.execCommand('copy');
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        textarea.setSelectionRange(0, 99999);
+        
+        let successful = false;
+        try {
+          successful = document.execCommand('copy');
+        } catch (err) {
+          successful = false;
+        }
+        document.body.removeChild(textarea);
+        return successful;
       } catch (err) {
-        successful = false;
+        return false;
       }
-      document.body.removeChild(textarea);
-      return successful;
     }
 
     function copyModuleLink(modId) {
-      const shareUrl = window.location.origin + window.location.pathname + '?mod=' + modId;
-      if (copyToClipboard(shareUrl)) {
-        showToast('Link tautan modul disalin ke clipboard!', 'success');
-      } else {
-        showToast('Tautan Modul: ' + shareUrl, 'info');
+      try {
+        const shareUrl = window.location.origin + window.location.pathname + '?mod=' + modId;
+        if (copyToClipboard(shareUrl)) {
+          showToast('Link tautan modul disalin ke clipboard!', 'success');
+        } else {
+          showToast('Tautan Modul: ' + shareUrl, 'info');
+        }
+      } catch (err) {
+        console.error('Error copying module link:', err);
       }
     }
 
     function filterCategory(catName) {
-      AppState.selectedCategory = catName;
-      document.querySelectorAll('.cat-pill').forEach(btn => {
-        btn.classList.remove('bg-gradient-to-r', 'from-[#1b5df0]', 'to-[#1246c7]', 'text-white', 'shadow-md', 'border-[#1b5df0]');
-        btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-blue-200/90');
-        btn.setAttribute('aria-selected', 'false');
-      });
-      const activePill = document.getElementById('btn-cat-' + catName.replace(/[^a-zA-Z0-9]/g, '-'));
-      if (activePill) {
-        activePill.classList.remove('bg-white', 'text-slate-700', 'border-blue-200/90');
-        activePill.classList.add('bg-gradient-to-r', 'from-[#1b5df0]', 'to-[#1246c7]', 'text-white', 'shadow-md', 'border-[#1b5df0]');
-        activePill.setAttribute('aria-selected', 'true');
+      try {
+        AppState.selectedCategory = catName;
+        document.querySelectorAll('.cat-pill').forEach(btn => {
+          btn.classList.remove('bg-gradient-to-r', 'from-[#1b5df0]', 'to-[#1246c7]', 'text-white', 'shadow-md', 'border-[#1b5df0]');
+          btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-blue-200/90');
+          btn.setAttribute('aria-selected', 'false');
+        });
+        const activePill = document.getElementById('btn-cat-' + catName.replace(/[^a-zA-Z0-9]/g, '-'));
+        if (activePill) {
+          activePill.classList.remove('bg-white', 'text-slate-700', 'border-blue-200/90');
+          activePill.classList.add('bg-gradient-to-r', 'from-[#1b5df0]', 'to-[#1246c7]', 'text-white', 'shadow-md', 'border-[#1b5df0]');
+          activePill.setAttribute('aria-selected', 'true');
+        }
+        renderCatalog();
+      } catch (err) {
+        console.error('Error filtering category:', err);
       }
-      renderCatalog();
     }
 
     function loadCatalogData() {
@@ -1112,142 +1164,150 @@
     }
 
     function renderCatalog() {
-      const container = document.getElementById('catalog-container');
-      if (!container) return;
+      try {
+        const container = document.getElementById('catalog-container');
+        if (!container) return;
 
-      if (!Array.isArray(AppState.catalogData)) {
-        AppState.catalogData = [];
-      }
-
-      const selectedCat = String(AppState.selectedCategory || '').trim();
-
-      const filtered = AppState.catalogData.filter(p => {
-        if (!p || typeof p !== 'object') return false;
-        const catMatch = String(p.category || '').trim() === selectedCat;
-        const activeMatch = p.is_active === undefined || p.is_active === 'TRUE' || p.is_active === true;
-        const heroMatch = p.show_on_hero === undefined || p.show_on_hero === 'TRUE' || p.show_on_hero === true;
-        return catMatch && activeMatch && heroMatch;
-      });
-
-      if (filtered.length === 0) {
-        container.innerHTML = `
-          <div class="col-span-full text-center py-12 text-slate-400 bg-white rounded-3xl border border-dashed border-blue-200">
-            <p class="text-base font-bold text-slate-600">Belum ada produk pada kategori "${selectedCat}"</p>
-            <p class="text-xs mt-1">Silakan pilih kategori lain.</p>
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = filtered.map((prod) => {
-        if (!prod || typeof prod !== 'object') return '';
-
-        const isPopular = prod.popular === true || String(prod.popular || '').toUpperCase() === 'TRUE';
-        const priceCurrent = (typeof prod.price_current === 'number' && !isNaN(prod.price_current)) ? prod.price_current : (Number(prod.price_current || prod.price) || 0);
-        const pricePromo = (typeof prod.promo_price === 'number' && !isNaN(prod.promo_price)) ? prod.promo_price : (Number(prod.promo_price || prod.price_promo) || 0);
-        const hasPromo = pricePromo > 0 && pricePromo < priceCurrent;
-
-        const rawDesc = typeof prod.description === 'string' ? prod.description : '';
-        const rawFacilities = rawDesc ? rawDesc.split('\n').map(f => f.trim()).filter(Boolean) : [];
-        const facilities = rawFacilities.slice(0, 10);
-
-        if (isPopular) {
-          // POPULAR PRODUCT CARD: LIGHT YELLOW BACKGROUND (bg-amber-50/95) WITH TALLER PROPORTION
-          return `
-            <div class="bg-amber-50/95 rounded-3xl p-6 md:py-8 border-2 border-amber-300/90 shadow-md hover:shadow-xl md:scale-[1.03] transition-all flex flex-col justify-between relative text-[#0b1a48] z-10 my-2">
-              <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#1b5df0] text-[#f1b32b] text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">✦ TERPOPULER</span>
-
-              <div class="space-y-4 pt-1">
-                <div class="flex justify-between items-start gap-2">
-                  <span class="px-3 py-1 rounded-full bg-[#1b5df0] text-[#f1b32b] font-extrabold text-[10px] uppercase tracking-wider">${prod.type || 'TOOLS'}</span>
-                  <span class="text-[11px] font-black text-amber-800 uppercase">${prod.category || ''}</span>
-                </div>
-
-                <div>
-                  <h3 class="font-extrabold text-[#1b5df0] text-xl leading-tight">${prod.title || 'Produk Studihome'}</h3>
-                </div>
-
-                <div class="py-2.5 border-y border-amber-200/80">
-                  ${hasPromo ? `
-                    <div class="text-xs text-slate-500 line-through font-bold">${formatIDR(priceCurrent)}</div>
-                    <div class="text-3xl font-black text-[#1b5df0]">${formatIDR(pricePromo)}</div>
-                  ` : `
-                    <div class="text-3xl font-black text-[#1b5df0]">${formatIDR(priceCurrent)}</div>
-                  `}
-                </div>
-
-                <div class="space-y-2 pt-1">
-                  <p class="text-[11px] font-black text-[#1b5df0] uppercase tracking-wider">Fasilitas Utama:</p>
-                  <ul class="space-y-1.5 text-xs text-slate-800 font-medium">
-                    ${facilities.map(feat => `
-                      <li class="flex items-start gap-2 leading-snug">
-                        <span class="font-black text-[#1b5df0] shrink-0" aria-hidden="true">✓</span>
-                        <span>${feat}</span>
-                      </li>
-                    `).join('')}
-                  </ul>
-                </div>
-              </div>
-
-              <div class="pt-6">
-                <button onclick="openCheckoutModal('${prod.id}')" class="w-full py-3.5 rounded-full bg-[#1b5df0] hover:bg-[#1246c7] text-white font-extrabold text-xs transition-all shadow-md active:scale-95 min-h-[48px]">
-                  Dapatkan Sekarang!
-                </button>
-              </div>
-            </div>
-          `;
-        } else {
-          // REGULAR PRODUCT CARD: LIGHT BLUE BACKGROUND (bg-sky-50/90)
-          return `
-            <div class="bg-sky-50/90 text-[#0b1a48] rounded-3xl p-6 border border-sky-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative my-2">
-              <div class="space-y-4">
-                <div class="flex justify-between items-start gap-2">
-                  <span class="px-3 py-1 rounded-full bg-sky-200/80 text-[#1b5df0] font-extrabold text-[10px] uppercase tracking-wider">${prod.type || 'TOOLS'}</span>
-                  <span class="text-[11px] font-bold text-sky-800">${prod.category || ''}</span>
-                </div>
-
-                <div>
-                  <h3 class="font-extrabold text-slate-900 text-lg leading-tight">${prod.title || 'Produk Studihome'}</h3>
-                </div>
-
-                <div class="py-2 border-y border-sky-200/70">
-                  ${hasPromo ? `
-                    <div class="text-xs text-slate-400 line-through font-semibold">${formatIDR(priceCurrent)}</div>
-                    <div class="text-2xl font-extrabold text-[#1b5df0]">${formatIDR(pricePromo)}</div>
-                  ` : `
-                    <div class="text-2xl font-extrabold text-[#1b5df0]">${formatIDR(priceCurrent)}</div>
-                  `}
-                </div>
-
-                <div class="space-y-2 pt-1">
-                  <p class="text-[11px] font-extrabold text-[#1b5df0] uppercase tracking-wider">Fasilitas Utama:</p>
-                  <ul class="space-y-1.5 text-slate-700 text-xs">
-                    ${facilities.map(feat => `
-                      <li class="flex items-start gap-2 leading-snug">
-                        <span class="text-[#1b5df0] font-extrabold shrink-0" aria-hidden="true">✓</span>
-                        <span>${feat}</span>
-                      </li>
-                    `).join('')}
-                  </ul>
-                </div>
-              </div>
-
-              <div class="pt-6">
-                <button onclick="openCheckoutModal('${prod.id}')" class="w-full py-3 rounded-full bg-[#1b5df0] hover:bg-[#1246c7] text-white font-extrabold text-xs transition-all shadow-xs active:scale-95 min-h-[44px]">
-                  Dapatkan Sekarang!
-                </button>
-              </div>
-            </div>
-          `;
+        if (!Array.isArray(AppState.catalogData)) {
+          AppState.catalogData = [];
         }
-      }).join('');
+
+        const selectedCat = String(AppState.selectedCategory || '').trim();
+
+        const filtered = AppState.catalogData.filter(p => {
+          if (!p || typeof p !== 'object') return false;
+          const catMatch = String(p.category || '').trim() === selectedCat;
+          const activeMatch = p.is_active === undefined || p.is_active === 'TRUE' || p.is_active === true;
+          const heroMatch = p.show_on_hero === undefined || p.show_on_hero === 'TRUE' || p.show_on_hero === true;
+          return catMatch && activeMatch && heroMatch;
+        });
+
+        if (filtered.length === 0) {
+          container.innerHTML = `
+            <div class="col-span-full text-center py-12 text-slate-400 bg-white rounded-3xl border border-dashed border-blue-200">
+              <p class="text-base font-bold text-slate-600">Belum ada produk pada kategori "${selectedCat}"</p>
+              <p class="text-xs mt-1">Silakan pilih kategori lain.</p>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = filtered.map((prod) => {
+          if (!prod || typeof prod !== 'object') return '';
+
+          const isPopular = prod.popular === true || String(prod.popular || '').toUpperCase() === 'TRUE';
+          const priceCurrent = (typeof prod.price_current === 'number' && !isNaN(prod.price_current)) ? prod.price_current : (Number(prod.price_current || prod.price) || 0);
+          const pricePromo = (typeof prod.promo_price === 'number' && !isNaN(prod.promo_price)) ? prod.promo_price : (Number(prod.promo_price || prod.price_promo) || 0);
+          const hasPromo = pricePromo > 0 && pricePromo < priceCurrent;
+
+          const rawDesc = typeof prod.description === 'string' ? prod.description : '';
+          const rawFacilities = rawDesc ? rawDesc.split('\n').map(f => f.trim()).filter(Boolean) : [];
+          const facilities = rawFacilities.slice(0, 10);
+
+          if (isPopular) {
+            // POPULAR PRODUCT CARD: LIGHT YELLOW BACKGROUND (bg-amber-50/95) WITH TALLER PROPORTION
+            return `
+              <div class="bg-amber-50/95 rounded-3xl p-6 md:py-8 border-2 border-amber-300/90 shadow-md hover:shadow-xl md:scale-[1.03] transition-all flex flex-col justify-between relative text-[#0b1a48] z-10 my-2">
+                <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#1b5df0] text-[#f1b32b] text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">✦ TERPOPULER</span>
+
+                <div class="space-y-4 pt-1">
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-3 py-1 rounded-full bg-[#1b5df0] text-[#f1b32b] font-extrabold text-[10px] uppercase tracking-wider">${prod.type || 'TOOLS'}</span>
+                    <span class="text-[11px] font-black text-amber-800 uppercase">${prod.category || ''}</span>
+                  </div>
+
+                  <div>
+                    <h3 class="font-extrabold text-[#1b5df0] text-xl leading-tight">${prod.title || 'Produk Studihome'}</h3>
+                  </div>
+
+                  <div class="py-2.5 border-y border-amber-200/80">
+                    ${hasPromo ? `
+                      <div class="text-xs text-slate-500 line-through font-bold">${formatIDR(priceCurrent)}</div>
+                      <div class="text-3xl font-black text-[#1b5df0]">${formatIDR(pricePromo)}</div>
+                    ` : `
+                      <div class="text-3xl font-black text-[#1b5df0]">${formatIDR(priceCurrent)}</div>
+                    `}
+                  </div>
+
+                  <div class="space-y-2 pt-1">
+                    <p class="text-[11px] font-black text-[#1b5df0] uppercase tracking-wider">Fasilitas Utama:</p>
+                    <ul class="space-y-1.5 text-xs text-slate-800 font-medium">
+                      ${facilities.map(feat => `
+                        <li class="flex items-start gap-2 leading-snug">
+                          <span class="font-black text-[#1b5df0] shrink-0" aria-hidden="true">✓</span>
+                          <span>${feat}</span>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="pt-6">
+                  <button onclick="openCheckoutModal('${prod.id}')" class="w-full py-3.5 rounded-full bg-[#1b5df0] hover:bg-[#1246c7] text-white font-extrabold text-xs transition-all shadow-md active:scale-95 min-h-[48px]">
+                    Dapatkan Sekarang!
+                  </button>
+                </div>
+              </div>
+            `;
+          } else {
+            // REGULAR PRODUCT CARD: LIGHT BLUE BACKGROUND (bg-sky-50/90)
+            return `
+              <div class="bg-sky-50/90 text-[#0b1a48] rounded-3xl p-6 border border-sky-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative my-2">
+                <div class="space-y-4">
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-3 py-1 rounded-full bg-sky-200/80 text-[#1b5df0] font-extrabold text-[10px] uppercase tracking-wider">${prod.type || 'TOOLS'}</span>
+                    <span class="text-[11px] font-bold text-sky-800">${prod.category || ''}</span>
+                  </div>
+
+                  <div>
+                    <h3 class="font-extrabold text-slate-900 text-lg leading-tight">${prod.title || 'Produk Studihome'}</h3>
+                  </div>
+
+                  <div class="py-2 border-y border-sky-200/70">
+                    ${hasPromo ? `
+                      <div class="text-xs text-slate-400 line-through font-semibold">${formatIDR(priceCurrent)}</div>
+                      <div class="text-2xl font-extrabold text-[#1b5df0]">${formatIDR(pricePromo)}</div>
+                    ` : `
+                      <div class="text-2xl font-extrabold text-[#1b5df0]">${formatIDR(priceCurrent)}</div>
+                    `}
+                  </div>
+
+                  <div class="space-y-2 pt-1">
+                    <p class="text-[11px] font-extrabold text-[#1b5df0] uppercase tracking-wider">Fasilitas Utama:</p>
+                    <ul class="space-y-1.5 text-slate-700 text-xs">
+                      ${facilities.map(feat => `
+                        <li class="flex items-start gap-2 leading-snug">
+                          <span class="text-[#1b5df0] font-extrabold shrink-0" aria-hidden="true">✓</span>
+                          <span>${feat}</span>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="pt-6">
+                  <button onclick="openCheckoutModal('${prod.id}')" class="w-full py-3 rounded-full bg-[#1b5df0] hover:bg-[#1246c7] text-white font-extrabold text-xs transition-all shadow-xs active:scale-95 min-h-[44px]">
+                    Dapatkan Sekarang!
+                  </button>
+                </div>
+              </div>
+            `;
+          }
+        }).join('');
+      } catch (err) {
+        console.error('Error rendering catalog:', err);
+      }
     }
 
     function navigateTo(viewName) {
-      document.querySelectorAll('.spa-view').forEach(el => el.classList.add('hidden'));
-      const target = document.getElementById('view-' + viewName);
-      if (target) target.classList.remove('hidden');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      try {
+        document.querySelectorAll('.spa-view').forEach(el => el.classList.add('hidden'));
+        const target = document.getElementById('view-' + viewName);
+        if (target) target.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error('Error navigating view:', err);
+      }
     }
 
     function handleAuthNavClick() {
@@ -1259,7 +1319,7 @@
     }
 
     function handleAuthSubmit(event) {
-      event.preventDefault();
+      if (event && typeof event.preventDefault === 'function') event.preventDefault();
       try {
         const mode = document.getElementById('auth-mode').value;
         const email = document.getElementById('auth-email').value.trim().toLowerCase();
@@ -1441,50 +1501,58 @@
     }
 
     function handleLogout() {
-      AppState.user = null;
-      localStorage.removeItem('studihome_user');
-      localStorage.removeItem('studihome_token');
-      updateAuthUi();
-      navigateTo('catalog');
-      showToast('Keluar akun berhasil.');
+      try {
+        AppState.user = null;
+        localStorage.removeItem('studihome_user');
+        localStorage.removeItem('studihome_token');
+        updateAuthUi();
+        navigateTo('catalog');
+        showToast('Keluar akun berhasil.');
+      } catch (err) {
+        console.error('Error handling logout:', err);
+      }
     }
 
     function updateAuthUi() {
-      const btn = document.getElementById('btn-auth-nav');
-      if (!btn) return;
+      try {
+        const btn = document.getElementById('btn-auth-nav');
+        if (!btn) return;
 
-      if (AppState.user) {
-        btn.innerText = AppState.user.is_admin ? '⚡ Panel Admin' : '👤 Akun Saya';
-        const dashName = document.getElementById('dash-user-name');
-        const dashEmail = document.getElementById('dash-user-email');
-        if (dashName) dashName.innerText = 'Halo, Sobat Studihome!';
-        if (dashEmail) dashEmail.innerText = AppState.user.email || '';
-        
-        const idName = document.getElementById('id-card-name');
-        const idEmail = document.getElementById('id-card-email');
-        const idPass = document.getElementById('id-card-pass');
-        if (idName) idName.innerText = AppState.user.full_name || 'Member Studihome';
-        if (idEmail) idEmail.innerText = AppState.user.email || '-';
-        if (idPass) idPass.innerText = AppState.user.plain_pass || '••••••••';
+        if (AppState.user) {
+          btn.innerText = AppState.user.is_admin ? '⚡ Panel Admin' : '👤 Akun Saya';
+          const dashName = document.getElementById('dash-user-name');
+          const dashEmail = document.getElementById('dash-user-email');
+          if (dashName) dashName.innerText = 'Halo, Sobat Studihome!';
+          if (dashEmail) dashEmail.innerText = AppState.user.email || '';
+          
+          const idName = document.getElementById('id-card-name');
+          const idEmail = document.getElementById('id-card-email');
+          const idPass = document.getElementById('id-card-pass');
+          if (idName) idName.innerText = AppState.user.full_name || 'Member Studihome';
+          if (idEmail) idEmail.innerText = AppState.user.email || '-';
+          if (idPass) idPass.innerText = AppState.user.plain_pass || '••••••••';
 
-        const adminBadge = document.getElementById('admin-badge');
-        const tabTx = document.getElementById('tab-btn-realtime-transactions');
-        const tabCat = document.getElementById('tab-btn-catalog-admin');
-        const tabMod = document.getElementById('tab-btn-modules-admin');
+          const adminBadge = document.getElementById('admin-badge');
+          const tabTx = document.getElementById('tab-btn-realtime-transactions');
+          const tabCat = document.getElementById('tab-btn-catalog-admin');
+          const tabMod = document.getElementById('tab-btn-modules-admin');
 
-        if (AppState.user.is_admin) {
-          if (adminBadge) adminBadge.classList.remove('hidden');
-          if (tabTx) tabTx.classList.remove('hidden');
-          if (tabCat) tabCat.classList.remove('hidden');
-          if (tabMod) tabMod.classList.remove('hidden');
+          if (AppState.user.is_admin) {
+            if (adminBadge) adminBadge.classList.remove('hidden');
+            if (tabTx) tabTx.classList.remove('hidden');
+            if (tabCat) tabCat.classList.remove('hidden');
+            if (tabMod) tabMod.classList.remove('hidden');
+          } else {
+            if (adminBadge) adminBadge.classList.add('hidden');
+            if (tabTx) tabTx.classList.add('hidden');
+            if (tabCat) tabCat.classList.add('hidden');
+            if (tabMod) tabMod.classList.add('hidden');
+          }
         } else {
-          if (adminBadge) adminBadge.classList.add('hidden');
-          if (tabTx) tabTx.classList.add('hidden');
-          if (tabCat) tabCat.classList.add('hidden');
-          if (tabMod) tabMod.classList.add('hidden');
+          btn.innerText = 'Masuk';
         }
-      } else {
-        btn.innerText = 'Masuk';
+      } catch (err) {
+        console.error('Error updating auth UI:', err);
       }
     }
 
@@ -1499,32 +1567,36 @@
     }
 
     function toggleAuthMode() {
-      const modeInput = document.getElementById('auth-mode');
-      const title = document.getElementById('auth-modal-title');
-      const fieldName = document.getElementById('field-fullname');
-      const fieldPhone = document.getElementById('field-phone');
-      const btnSubmit = document.getElementById('btn-auth-submit');
-      const toggleText = document.getElementById('auth-toggle-text');
-      const btnToggle = document.getElementById('btn-auth-toggle');
+      try {
+        const modeInput = document.getElementById('auth-mode');
+        const title = document.getElementById('auth-modal-title');
+        const fieldName = document.getElementById('field-fullname');
+        const fieldPhone = document.getElementById('field-phone');
+        const btnSubmit = document.getElementById('btn-auth-submit');
+        const toggleText = document.getElementById('auth-toggle-text');
+        const btnToggle = document.getElementById('btn-auth-toggle');
 
-      if (!modeInput) return;
+        if (!modeInput) return;
 
-      if (modeInput.value === 'login') {
-        modeInput.value = 'register';
-        if (title) title.innerText = 'Daftar Akun Baru';
-        if (fieldName) fieldName.classList.remove('hidden');
-        if (fieldPhone) fieldPhone.classList.remove('hidden');
-        if (btnSubmit) btnSubmit.innerText = 'Daftar Sekarang';
-        if (toggleText) toggleText.innerText = 'Sudah punya akun?';
-        if (btnToggle) btnToggle.innerText = 'Masuk';
-      } else {
-        modeInput.value = 'login';
-        if (title) title.innerText = 'Masuk Akun Studihome';
-        if (fieldName) fieldName.classList.add('hidden');
-        if (fieldPhone) fieldPhone.classList.add('hidden');
-        if (btnSubmit) btnSubmit.innerText = 'Masuk Sekarang';
-        if (toggleText) toggleText.innerText = 'Belum punya akun?';
-        if (btnToggle) btnToggle.innerText = 'Daftar Baru';
+        if (modeInput.value === 'login') {
+          modeInput.value = 'register';
+          if (title) title.innerText = 'Daftar Akun Baru';
+          if (fieldName) fieldName.classList.remove('hidden');
+          if (fieldPhone) fieldPhone.classList.remove('hidden');
+          if (btnSubmit) btnSubmit.innerText = 'Daftar Sekarang';
+          if (toggleText) toggleText.innerText = 'Sudah punya akun?';
+          if (btnToggle) btnToggle.innerText = 'Masuk';
+        } else {
+          modeInput.value = 'login';
+          if (title) title.innerText = 'Masuk Akun Studihome';
+          if (fieldName) fieldName.classList.add('hidden');
+          if (fieldPhone) fieldPhone.classList.add('hidden');
+          if (btnSubmit) btnSubmit.innerText = 'Masuk Sekarang';
+          if (toggleText) toggleText.innerText = 'Belum punya akun?';
+          if (btnToggle) btnToggle.innerText = 'Daftar Baru';
+        }
+      } catch (err) {
+        console.error('Error toggling auth mode:', err);
       }
     }
 
@@ -1553,7 +1625,7 @@
             : "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=00020101021126580014ID.LINKAJA.WWW01189360091100220088010215200812345678905204581253033605802ID5909STUDIHOME6007JAKARTA61051234562070703A0163041A2B";
         }
 
-        // Custom Buy Links Setup
+        // Custom Buy Links Setup: lynk.id & WhatsApp Integration
         const buyContainer = document.getElementById('checkout-custom-buy-container');
         const buyBtn = document.getElementById('checkout-custom-buy-btn');
         const waBtn = document.getElementById('checkout-wa-buy-btn');
@@ -1590,7 +1662,7 @@
     let isSubmittingCheckout = false;
 
     function handleCheckoutSubmit(e) {
-      e.preventDefault();
+      if (e && typeof e.preventDefault === 'function') e.preventDefault();
       try {
         if (isSubmittingCheckout) return;
         if (!AppState.selectedProductForCheckout) {
@@ -1752,283 +1824,316 @@
       }
     }
 
-    function executePendingCheckout() {
-      if (!AppState.pendingGuestOrder) return;
-      const payload = AppState.pendingGuestOrder;
-      AppState.pendingGuestOrder = null;
-      executeOrderCreation(payload);
-    }
-
-    function executeOrderCreation(payload) {
-      const localOrderObj = {
-        order_id: 'ORD-' + Date.now().toString().slice(-6),
-        id: 'ORD-' + Date.now().toString().slice(-6),
-        user_name: payload.user_name,
-        user_phone: payload.user_phone,
-        user_email: payload.user_email,
-        product_id: payload.product_id,
-        product_title: payload.product_title,
-        amount: payload.amount,
-        status: 'PENDING',
-        payment_status: 'PENDING',
-        proof_url: payload.proof_base64,
-        access_link: AppState.selectedProductForCheckout ? AppState.selectedProductForCheckout.access_link : DEFAULT_PAID_DOWNLOAD_LINK,
-        created_at: new Date().toISOString()
-      };
-
-      if (!AppState.userOrders) AppState.userOrders = [];
-      AppState.userOrders.unshift(localOrderObj);
-
-      apiRequest('createOrder', payload).then(res => {
-        if (res && res.success) {
-          showToast('Pesanan berhasil dikirim & masuk sistem!', 'success');
-        } else {
-          showToast('Pesanan dicatat di sistem!', 'info');
-        }
-      }).catch(() => {
-        showToast('Pesanan dicatat di sistem!', 'info');
-      }).finally(() => {
-        resetCheckoutButton();
-        closeModal('checkout-modal');
-        navigateTo('dashboard');
-        switchDashTab('orders');
-        loadUserOrders();
-      });
-    }
-
     function switchDashTab(tabName) {
-      document.querySelectorAll('.dash-tab-btn').forEach(b => {
-        b.classList.remove('border-[#1b5df0]', 'text-[#1b5df0]');
-        b.classList.add('border-transparent', 'text-slate-500');
-        b.setAttribute('aria-selected', 'false');
-      });
-      const activeBtn = document.getElementById('tab-btn-' + tabName);
-      if (activeBtn) {
-        activeBtn.classList.remove('border-transparent', 'text-slate-500');
-        activeBtn.classList.add('border-[#1b5df0]', 'text-[#1b5df0]');
-        activeBtn.setAttribute('aria-selected', 'true');
-      }
-      document.querySelectorAll('.dash-tab-content').forEach(c => c.classList.add('hidden'));
-      const target = document.getElementById('dash-content-' + tabName);
-      if (target) target.classList.remove('hidden');
+      try {
+        document.querySelectorAll('.dash-tab-btn').forEach(b => {
+          b.classList.remove('border-[#1b5df0]', 'text-[#1b5df0]');
+          b.classList.add('border-transparent', 'text-slate-500');
+          b.setAttribute('aria-selected', 'false');
+        });
+        const activeBtn = document.getElementById('tab-btn-' + tabName);
+        if (activeBtn) {
+          activeBtn.classList.remove('border-transparent', 'text-slate-500');
+          activeBtn.classList.add('border-[#1b5df0]', 'text-[#1b5df0]');
+          activeBtn.setAttribute('aria-selected', 'true');
+        }
+        document.querySelectorAll('.dash-tab-content').forEach(c => c.classList.add('hidden'));
+        const target = document.getElementById('dash-content-' + tabName);
+        if (target) target.classList.remove('hidden');
 
-      if (tabName === 'orders') loadUserOrders();
-      if (tabName === 'realtime-transactions') loadAdminOrders();
-      if (tabName === 'catalog-admin') loadAdminProducts();
-      if (tabName === 'modules-admin') renderAdminModulesList();
+        if (tabName === 'orders') loadUserOrders();
+        if (tabName === 'realtime-transactions') loadAdminOrders();
+        if (tabName === 'catalog-admin') loadAdminProducts();
+        if (tabName === 'modules-admin') renderAdminModulesList();
+      } catch (err) {
+        console.error('Error switching dashboard tab:', err);
+      }
     }
 
     function loadUserOrders() {
-      const list = document.getElementById('user-orders-list');
-      if (!list) return;
+      try {
+        const list = document.getElementById('user-orders-list');
+        if (!list) return;
 
-      apiRequest('getUserOrders', { email: AppState.user ? AppState.user.email : '' }).then(res => {
-        let orders = (res && res.success && Array.isArray(res.data) && res.data.length > 0) ? res.data : (AppState.userOrders || []);
-        renderUserOrdersList(orders);
-      }).catch(() => {
-        renderUserOrdersList(AppState.userOrders || []);
-      });
+        const userEmail = AppState.user ? AppState.user.email.toLowerCase() : '';
+        let localPersistentOrders = [];
+        if (userEmail) {
+          try {
+            localPersistentOrders = JSON.parse(localStorage.getItem('studihome_user_orders_' + userEmail)) || [];
+          } catch (e) {
+            localPersistentOrders = [];
+          }
+        }
+
+        apiRequest('getUserOrders', { email: AppState.user ? AppState.user.email : '' }).then(res => {
+          let serverOrders = (res && res.success && Array.isArray(res.data) && res.data.length > 0) ? res.data : [];
+          
+          // Merge local and server orders seamlessly
+          const mergedMap = new Map();
+          [...localPersistentOrders, ...(AppState.userOrders || []), ...serverOrders].forEach(ord => {
+            if (ord && (ord.order_id || ord.id)) {
+              mergedMap.set(ord.order_id || ord.id, ord);
+            }
+          });
+          const mergedList = Array.from(mergedMap.values());
+          renderUserOrdersList(mergedList);
+        }).catch(() => {
+          const mergedMap = new Map();
+          [...localPersistentOrders, ...(AppState.userOrders || [])].forEach(ord => {
+            if (ord && (ord.order_id || ord.id)) {
+              mergedMap.set(ord.order_id || ord.id, ord);
+            }
+          });
+          renderUserOrdersList(Array.from(mergedMap.values()));
+        });
+      } catch (err) {
+        console.error('Error loading user orders:', err);
+      }
     }
 
     function renderUserOrdersList(orders) {
-      const list = document.getElementById('user-orders-list');
-      if (!list) return;
-
-      const userEmail = AppState.user ? AppState.user.email.toLowerCase() : '';
-      const myOrders = orders.filter(o => !userEmail || String(o.user_email || '').toLowerCase() === userEmail || (AppState.user && AppState.user.is_admin));
-
-      if (myOrders.length === 0) {
-        list.innerHTML = `<div class="text-center py-8 text-xs text-slate-400">Belum ada riwayat pesanan.</div>`;
-        return;
-      }
-
-      list.innerHTML = myOrders.map(ord => {
-        const isPaid = ord.status === 'PAID' || ord.payment_status === 'PAID';
-        const displayStatus = isPaid ? '✅ PAID (Akses Penuh)' : (ord.status || 'PENDING (Menunggu Verifikasi)');
-        const statusColor = isPaid ? 'text-emerald-600 bg-emerald-50 border-emerald-200' : 'text-amber-600 bg-amber-50 border-amber-200';
-
-        return `
-          <div class="bg-white border rounded-2xl p-4 shadow-sm space-y-3 text-xs">
-            <div class="flex flex-wrap justify-between items-center gap-2 border-b border-slate-100 pb-2">
-              <span class="font-extrabold text-[#0b1a48] text-sm">${ord.product_title || 'Produk Studihome'}</span>
-              <span class="px-3 py-1 rounded-full font-extrabold text-[10px] border ${statusColor}">${displayStatus}</span>
-            </div>
-            
-            <div class="flex justify-between text-slate-500">
-              <span>ID Order: <strong class="font-mono text-slate-800">${ord.order_id || ord.id}</strong></span>
-              <span>Total: <strong class="text-[#1b5df0] font-bold">${formatIDR(ord.amount || ord.total_amount)}</strong></span>
-            </div>
-
-            ${isPaid ? `
-              <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100">
-                <a href="${ord.access_link || DEFAULT_PAID_DOWNLOAD_LINK}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-xs transition-all active:scale-95">⬇️ Unduh</a>
-                <button onclick="openModuleViewer('${ord.product_id}')" class="px-4 py-2 bg-[#1b5df0] hover:bg-[#1246c7] text-white font-extrabold rounded-xl shadow-xs transition-all active:scale-95">📖 Buka Fitur dan Fasilitas</button>
-              </div>
-            ` : `
-              <div class="text-[11px] text-slate-400 italic pt-1">
-                ⏳ Pesanan Anda sedang ditinjau admin. Akses unduh & modul akan aktif otomatis setelah disetujui.
-              </div>
-            `}
-          </div>
-        `;
-      }).join('');
-    }
-
-    function loadAdminOrders() {
-      apiRequest('getAdminOrders').then(res => {
-        const list = document.getElementById('admin-orders-list');
+      try {
+        const list = document.getElementById('user-orders-list');
         if (!list) return;
 
-        let orders = (res && res.success && Array.isArray(res.data)) ? res.data : (AppState.userOrders || []);
-        AppState.adminOrders = orders;
+        const userEmail = AppState.user ? AppState.user.email.toLowerCase() : '';
+        const myOrders = orders.filter(o => !userEmail || String(o.user_email || '').toLowerCase() === userEmail || (AppState.user && AppState.user.is_admin));
 
-        const pendingOrders = orders.filter(o => o.status === 'PENDING' || o.payment_status === 'PENDING' || o.payment_status === 'WAITING_VERIFICATION');
-        const paidOrders = orders.filter(o => o.status === 'PAID' || o.payment_status === 'PAID');
-        
-        const pendingSum = pendingOrders.reduce((sum, o) => sum + (Number(o.amount || o.total_amount) || 0), 0);
-        const approvedSum = paidOrders.reduce((sum, o) => sum + (Number(o.amount || o.total_amount) || 0), 0);
-        const totalRevenue = approvedSum;
-
-        const elPendingCnt = document.getElementById('stat-pending-count');
-        const elPendingSum = document.getElementById('stat-pending-sum');
-        const elApprCnt = document.getElementById('stat-approved-count');
-        const elApprSum = document.getElementById('stat-approved-sum');
-        const elTotRevGen = document.getElementById('stat-total-revenue');
-        const elMthRev = document.getElementById('stat-month-revenue');
-
-        if (elPendingCnt) elPendingCnt.innerText = pendingOrders.length + ' Pesanan';
-        if (elPendingSum) elPendingSum.innerText = formatIDR(pendingSum);
-        if (elApprCnt) elApprCnt.innerText = paidOrders.length + ' Pesanan';
-        if (elApprSum) elApprSum.innerText = formatIDR(approvedSum);
-        if (elTotRevGen) elTotRevGen.innerText = formatIDR(totalRevenue);
-        if (elMthRev) elMthRev.innerText = formatIDR(totalRevenue);
-
-        if (orders.length === 0) {
-          list.innerHTML = `<div class="text-center py-8 text-xs text-slate-400">Belum ada transaksi masuk.</div>`;
+        if (myOrders.length === 0) {
+          list.innerHTML = `<div class="text-center py-8 text-xs text-slate-400">Belum ada riwayat pesanan.</div>`;
           return;
         }
 
-        list.innerHTML = orders.map(ord => {
+        list.innerHTML = myOrders.map(ord => {
           const isPaid = ord.status === 'PAID' || ord.payment_status === 'PAID';
-          const statusBadge = isPaid
-            ? '<span class="px-3 py-1 rounded-full text-[10px] font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-300">✅ PAID</span>'
-            : '<span class="px-3 py-1 rounded-full text-[10px] font-extrabold bg-amber-100 text-amber-800 border border-amber-300">⏳ PENDING</span>';
+          const displayStatus = isPaid ? '✅ PAID (Akses Penuh)' : (ord.status || 'PENDING (Menunggu Verifikasi)');
+          const statusColor = isPaid ? 'text-emerald-600 bg-emerald-50 border-emerald-200' : 'text-amber-600 bg-amber-50 border-amber-200';
 
           return `
-            <div class="bg-blue-50/50 border border-blue-200/80 rounded-2xl p-4 text-xs space-y-3 shadow-xs">
-              <div class="flex justify-between items-center font-bold">
-                <span class="text-[#0b1a48] text-sm font-extrabold">${ord.order_id || ord.id} - ${ord.product_title || 'Produk'}</span>
-                ${statusBadge}
+            <div class="bg-white border border-blue-100 rounded-2xl p-4 shadow-sm space-y-3 text-xs">
+              <div class="flex flex-wrap justify-between items-center gap-2 border-b border-slate-100 pb-2">
+                <span class="font-extrabold text-[#0b1a48] text-sm">${ord.product_title || 'Produk Studihome'}</span>
+                <span class="px-3 py-1 rounded-full font-extrabold text-[10px] border ${statusColor}">${displayStatus}</span>
               </div>
-              <div class="text-slate-600">Pembeli: <strong class="text-slate-800">${ord.user_name || '-'}</strong> (${ord.user_email || '-'})</div>
               
-              ${ord.proof_url ? `
-                <div>
-                  <button onclick="openProofModal('${ord.proof_url}', '${ord.order_id || ord.id}')" class="px-4 py-2 bg-[#1b5df0] hover:bg-[#1246c7] text-white rounded-xl font-extrabold text-xs transition-all shadow-xs active:scale-95 flex items-center gap-1.5">
-                    🔎 Lihat Bukti Transfer
-                  </button>
-                </div>
-              ` : ''}
-
-              <!-- STATUS BADGE MOVED DIRECTLY ABOVE ACTION BUTTONS -->
-              <div class="pt-2 border-t border-blue-100/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div class="flex items-center gap-2">
-                  <span class="font-extrabold text-slate-500">Status Pembayaran:</span>
-                  ${statusBadge}
-                </div>
-                <div class="flex gap-2">
-                  <button onclick="updateOrderStatus('${ord.order_id || ord.id}', 'PAID')" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl transition-all shadow-xs active:scale-95">Setujui (PAID)</button>
-                  <button onclick="updateOrderStatus('${ord.order_id || ord.id}', 'REJECTED')" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl transition-all shadow-xs active:scale-95">Tolak</button>
-                </div>
+              <div class="flex justify-between text-slate-500">
+                <span>ID Order: <strong class="font-mono text-slate-800">${ord.order_id || ord.id}</strong></span>
+                <span>Total: <strong class="text-[#1b5df0] font-bold">${formatIDR(ord.amount || ord.total_amount)}</strong></span>
               </div>
+
+              ${isPaid ? `
+                <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100">
+                  <a href="${ord.access_link || DEFAULT_PAID_DOWNLOAD_LINK}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-xs transition-all active:scale-95">⬇️ Unduh</a>
+                  <button onclick="openModuleViewer('${ord.product_id}')" class="px-4 py-2 bg-[#1b5df0] hover:bg-[#1246c7] text-white font-extrabold rounded-xl shadow-xs transition-all active:scale-95">📖 Buka Fitur dan Fasilitas</button>
+                </div>
+              ` : `
+                <div class="text-[11px] text-slate-400 italic pt-1">
+                  ⏳ Pesanan Anda sedang ditinjau admin. Akses unduh & modul akan aktif otomatis setelah disetujui.
+                </div>
+              `}
             </div>
           `;
         }).join('');
-      });
+      } catch (err) {
+        console.error('Error rendering user orders list:', err);
+      }
+    }
+
+    function loadAdminOrders() {
+      try {
+        let globalCachedOrders = [];
+        try {
+          globalCachedOrders = JSON.parse(localStorage.getItem('studihome_global_orders')) || [];
+        } catch (e) {
+          globalCachedOrders = [];
+        }
+
+        apiRequest('getAdminOrders').then(res => {
+          const list = document.getElementById('admin-orders-list');
+          if (!list) return;
+
+          let serverOrders = (res && res.success && Array.isArray(res.data)) ? res.data : [];
+          
+          const orderMap = new Map();
+          [...globalCachedOrders, ...(AppState.userOrders || []), ...serverOrders].forEach(o => {
+            if (o && (o.order_id || o.id)) orderMap.set(o.order_id || o.id, o);
+          });
+
+          const orders = Array.from(orderMap.values());
+          AppState.adminOrders = orders;
+
+          const pendingOrders = orders.filter(o => o.status === 'PENDING' || o.payment_status === 'PENDING' || o.payment_status === 'WAITING_VERIFICATION');
+          const paidOrders = orders.filter(o => o.status === 'PAID' || o.payment_status === 'PAID');
+          
+          const pendingSum = pendingOrders.reduce((sum, o) => sum + (Number(o.amount || o.total_amount) || 0), 0);
+          const approvedSum = paidOrders.reduce((sum, o) => sum + (Number(o.amount || o.total_amount) || 0), 0);
+          const totalRevenue = approvedSum;
+
+          const elPendingCnt = document.getElementById('stat-pending-count');
+          const elPendingSum = document.getElementById('stat-pending-sum');
+          const elApprCnt = document.getElementById('stat-approved-count');
+          const elApprSum = document.getElementById('stat-approved-sum');
+          const elTotRevGen = document.getElementById('stat-total-revenue');
+          const elMthRev = document.getElementById('stat-month-revenue');
+
+          if (elPendingCnt) elPendingCnt.innerText = pendingOrders.length + ' Pesanan';
+          if (elPendingSum) elPendingSum.innerText = formatIDR(pendingSum);
+          if (elApprCnt) elApprCnt.innerText = paidOrders.length + ' Pesanan';
+          if (elApprSum) elApprSum.innerText = formatIDR(approvedSum);
+          if (elTotRevGen) elTotRevGen.innerText = formatIDR(totalRevenue);
+          if (elMthRev) elMthRev.innerText = formatIDR(totalRevenue);
+
+          if (orders.length === 0) {
+            list.innerHTML = `<div class="text-center py-8 text-xs text-slate-400">Belum ada transaksi masuk.</div>`;
+            return;
+          }
+
+          list.innerHTML = orders.map(ord => {
+            const isPaid = ord.status === 'PAID' || ord.payment_status === 'PAID';
+            const statusBadge = isPaid
+              ? '<span class="px-3 py-1 rounded-full text-[10px] font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-300">✅ PAID</span>'
+              : '<span class="px-3 py-1 rounded-full text-[10px] font-extrabold bg-amber-100 text-amber-800 border border-amber-300">⏳ PENDING</span>';
+
+            return `
+              <div class="bg-blue-50/50 border border-blue-200/80 rounded-2xl p-4 text-xs space-y-3 shadow-xs">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-[#0b1a48] text-sm font-extrabold">${ord.order_id || ord.id} - ${ord.product_title || 'Produk'}</span>
+                  ${statusBadge}
+                </div>
+                <div class="text-slate-600">Pembeli: <strong class="text-slate-800">${ord.user_name || '-'}</strong> (${ord.user_email || '-'})</div>
+                
+                ${ord.proof_url ? `
+                  <div>
+                    <button onclick="openProofModal('${ord.proof_url}', '${ord.order_id || ord.id}')" class="px-4 py-2 bg-[#1b5df0] hover:bg-[#1246c7] text-white rounded-xl font-extrabold text-xs transition-all shadow-xs active:scale-95 flex items-center gap-1.5">
+                      🔎 Lihat Bukti Transfer
+                    </button>
+                  </div>
+                ` : ''}
+
+                <div class="pt-2 border-t border-blue-100/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div class="flex items-center gap-2">
+                    <span class="font-extrabold text-slate-500">Status Pembayaran:</span>
+                    ${statusBadge}
+                  </div>
+                  <div class="flex gap-2">
+                    <button onclick="updateOrderStatus('${ord.order_id || ord.id}', 'PAID')" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl transition-all shadow-xs active:scale-95">Setujui (PAID)</button>
+                    <button onclick="updateOrderStatus('${ord.order_id || ord.id}', 'REJECTED')" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl transition-all shadow-xs active:scale-95">Tolak</button>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }).catch(err => {
+          console.error('Error loading admin orders:', err);
+        });
+      } catch (err) {
+        console.error('Error in loadAdminOrders:', err);
+      }
     }
 
     function openProofModal(imgUrl, orderId) {
-      const orderIdEl = document.getElementById('proof-modal-order-id');
-      const imgEl = document.getElementById('proof-modal-img');
-      const dlEl = document.getElementById('proof-modal-download');
+      try {
+        const orderIdEl = document.getElementById('proof-modal-order-id');
+        const imgEl = document.getElementById('proof-modal-img');
+        const dlEl = document.getElementById('proof-modal-download');
 
-      if (orderIdEl) orderIdEl.innerText = orderId || 'ORD-000000';
-      if (imgEl) imgEl.src = imgUrl || '';
-      if (dlEl) dlEl.href = imgUrl || '#';
-      
-      toggleModal('proof-modal', true);
+        if (orderIdEl) orderIdEl.innerText = orderId || 'ORD-000000';
+        if (imgEl) imgEl.src = imgUrl || '';
+        if (dlEl) dlEl.href = imgUrl || '#';
+        
+        toggleModal('proof-modal', true);
+      } catch (err) {
+        console.error('Error opening proof modal:', err);
+      }
     }
 
     function updateOrderStatus(orderId, status) {
-      if (AppState.userOrders) {
-        const localOrd = AppState.userOrders.find(o => String(o.id) === String(orderId) || String(o.order_id) === String(orderId));
-        if (localOrd) localOrd.status = status;
-      }
+      try {
+        if (AppState.userOrders) {
+          const localOrd = AppState.userOrders.find(o => String(o.id) === String(orderId) || String(o.order_id) === String(orderId));
+          if (localOrd) localOrd.status = status;
+        }
 
-      apiRequest('updateOrderStatus', { order_id: orderId, status: status }).then(res => {
-        showToast(res.message || 'Status diperbarui', 'success');
-        loadAdminOrders();
-        loadUserOrders();
-      }).catch(() => {
-        showToast('Status diperbarui di sistem!', 'success');
-        loadAdminOrders();
-        loadUserOrders();
-      });
+        if (AppState.adminOrders) {
+          const adminOrd = AppState.adminOrders.find(o => String(o.id) === String(orderId) || String(o.order_id) === String(orderId));
+          if (adminOrd) adminOrd.status = status;
+        }
+
+        apiRequest('updateOrderStatus', { order_id: orderId, status: status }).then(res => {
+          showToast((res && res.message) ? res.message : 'Status diperbarui', 'success');
+          loadAdminOrders();
+          loadUserOrders();
+        }).catch(() => {
+          showToast('Status diperbarui di sistem!', 'success');
+          loadAdminOrders();
+          loadUserOrders();
+        });
+      } catch (err) {
+        console.error('Error updating order status:', err);
+      }
     }
 
     function loadAdminProducts() {
-      apiRequest('getCatalog').then(res => {
-        const tbody = document.getElementById('admin-products-table');
-        if (!tbody) return;
-        const prods = (res && res.success && Array.isArray(res.data)) ? res.data : AppState.catalogData;
-        tbody.innerHTML = prods.map(p => `
-          <tr class="border-b">
-            <td class="p-3 font-bold">${p.title}</td>
-            <td class="p-3">${p.category}</td>
-            <td class="p-3">${p.type}</td>
-            <td class="p-3">${formatIDR(p.price_current || p.price)}</td>
-            <td class="p-3">${(p.popular === true || String(p.popular).toUpperCase() === 'TRUE') ? '⭐ Populer' : '-'}</td>
-            <td class="p-3">${(p.show_on_hero === true || String(p.show_on_hero).toUpperCase() === 'TRUE') ? '✅ Teras' : '❌ Hidden'}</td>
-            <td class="p-3 text-right">
-              <button onclick="openProductModal('${p.id}')" class="px-3 py-1 bg-slate-900 text-white rounded-lg active:scale-95">Edit</button>
-            </td>
-          </tr>
-        `).join('');
-      });
+      try {
+        apiRequest('getCatalog').then(res => {
+          const tbody = document.getElementById('admin-products-table');
+          if (!tbody) return;
+          const prods = (res && res.success && Array.isArray(res.data)) ? res.data : AppState.catalogData;
+          tbody.innerHTML = prods.map(p => `
+            <tr class="border-b border-slate-100">
+              <td class="p-3 font-bold text-[#0b1a48]">${p.title || 'Untitled'}</td>
+              <td class="p-3">${p.category || '-'}</td>
+              <td class="p-3">${p.type || '-'}</td>
+              <td class="p-3">${formatIDR(p.price_current || p.price)}</td>
+              <td class="p-3">${(p.popular === true || String(p.popular).toUpperCase() === 'TRUE') ? '⭐ Populer' : '-'}</td>
+              <td class="p-3">${(p.show_on_hero === true || String(p.show_on_hero).toUpperCase() === 'TRUE') ? '✅ Teras' : '❌ Hidden'}</td>
+              <td class="p-3 text-right">
+                <button onclick="openProductModal('${p.id}')" class="px-3.5 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold text-xs transition-all active:scale-95">Edit</button>
+              </td>
+            </tr>
+          `).join('');
+        });
+      } catch (err) {
+        console.error('Error loading admin products:', err);
+      }
     }
 
     function openProductModal(productId = null) {
-      const titleEl = document.getElementById('product-modal-title');
+      try {
+        const titleEl = document.getElementById('product-modal-title');
 
-      if (productId) {
-        const prod = AppState.catalogData.find(p => String(p.id) === String(productId));
-        if (prod) {
-          if (titleEl) titleEl.innerText = 'Edit Produk: ' + prod.title;
-          document.getElementById('prod-form-id').value = prod.id;
-          document.getElementById('prod-form-title').value = prod.title || '';
-          document.getElementById('prod-form-category').value = prod.category || 'Belajar Apa?';
-          document.getElementById('prod-form-type').value = prod.type || 'TOOLS';
-          document.getElementById('prod-form-price-current').value = prod.price_current || '';
-          document.getElementById('prod-form-price-promo').value = prod.promo_price || prod.price_promo || '';
-          document.getElementById('prod-form-access-link').value = prod.access_link || '';
-          document.getElementById('prod-form-buy-link').value = prod.buy_link || '';
-          document.getElementById('prod-form-qris-url').value = prod.qris_url || '';
-          document.getElementById('prod-form-popular').checked = prod.popular === true || String(prod.popular).toUpperCase() === 'TRUE';
-          document.getElementById('prod-form-show-hero').checked = prod.show_on_hero === true || String(prod.show_on_hero).toUpperCase() === 'TRUE';
+        if (productId) {
+          const prod = AppState.catalogData.find(p => String(p.id) === String(productId));
+          if (prod) {
+            if (titleEl) titleEl.innerText = 'Edit Produk: ' + prod.title;
+            document.getElementById('prod-form-id').value = prod.id;
+            document.getElementById('prod-form-title').value = prod.title || '';
+            document.getElementById('prod-form-category').value = prod.category || 'Belajar Apa?';
+            document.getElementById('prod-form-type').value = prod.type || 'TOOLS';
+            document.getElementById('prod-form-price-current').value = prod.price_current || '';
+            document.getElementById('prod-form-price-promo').value = prod.promo_price || prod.price_promo || '';
+            document.getElementById('prod-form-access-link').value = prod.access_link || '';
+            document.getElementById('prod-form-buy-link').value = prod.buy_link || '';
+            document.getElementById('prod-form-qris-url').value = prod.qris_url || '';
+            document.getElementById('prod-form-popular').checked = prod.popular === true || String(prod.popular).toUpperCase() === 'TRUE';
+            document.getElementById('prod-form-show-hero').checked = prod.show_on_hero === true || String(prod.show_on_hero).toUpperCase() === 'TRUE';
+          }
+        } else {
+          if (titleEl) titleEl.innerText = 'Tambah Produk Baru';
+          document.getElementById('prod-form-id').value = '';
+          const prodForm = document.getElementById('product-form');
+          if (prodForm) prodForm.reset();
+          document.getElementById('prod-form-show-hero').checked = true;
         }
-      } else {
-        if (titleEl) titleEl.innerText = 'Tambah Produk Baru';
-        document.getElementById('prod-form-id').value = '';
-        const prodForm = document.getElementById('product-form');
-        if (prodForm) prodForm.reset();
-        document.getElementById('prod-form-show-hero').checked = true;
-      }
 
-      toggleModal('product-modal', true);
+        toggleModal('product-modal', true);
+      } catch (err) {
+        console.error('Error opening product modal:', err);
+      }
     }
 
     function handleSaveProduct(e) {
-      e.preventDefault();
+      if (e && typeof e.preventDefault === 'function') e.preventDefault();
       try {
         const payload = {
           id: document.getElementById('prod-form-id').value,
@@ -2057,7 +2162,7 @@
         localStorage.setItem('studihome_cached_catalog', JSON.stringify(AppState.catalogData));
 
         apiRequest('saveProductAdmin', payload).then(res => {
-          showToast(res.message || 'Produk berhasil disimpan!', 'success');
+          showToast((res && res.message) ? res.message : 'Produk berhasil disimpan!', 'success');
           closeModal('product-modal');
           renderCatalog();
         }).catch(() => {
@@ -2072,109 +2177,120 @@
     }
 
     function openModuleViewer(productId) {
-      if (!productId) {
-        showToast('ID Produk tidak valid.', 'error');
-        return;
-      }
-
-      if (!Array.isArray(AppState.modulesData)) {
-        AppState.modulesData = [];
-      }
-
-      const targetId = String(productId).trim();
-      const mod = AppState.modulesData.find(m => m && (String(m.product_id || '').trim() === targetId || String(m.id || '').trim() === targetId));
-
-      const viewerTitle = document.getElementById('viewer-mod-title');
-      const viewerContent = document.getElementById('viewer-mod-content');
-      const mediaBox = document.getElementById('viewer-media-container');
-
-      if (!mod) {
-        showToast('Modul materi belum diunggah oleh admin.', 'info');
-        return;
-      }
-
-      if (viewerTitle) viewerTitle.innerText = mod.title ? String(mod.title) : 'Modul Pembelajaran';
-      
-      if (viewerContent) {
-        const rawContent = typeof mod.content === 'string' ? mod.content : '';
-        let formatted = rawContent
-          .replace(/^# (.*$)/gim, '<h1 class="text-xl font-bold text-[#0b1a48] my-2">$1</h1>')
-          .replace(/^## (.*$)/gim, '<h2 class="text-lg font-bold text-[#0b1a48] my-2">$1</h2>')
-          .replace(/^### (.*$)/gim, '<h3 class="text-base font-bold text-[#0b1a48] my-1">$1</h3>')
-          .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
-          .replace(/\*(.*)\*/gim, '<em>$1</em>')
-          .replace(/^> (.*$)/gim, '<blockquote class="border-l-4 border-[#1b5df0] pl-3 italic text-slate-600 my-2">$1</blockquote>')
-          .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#1b5df0] font-bold underline hover:text-[#f1b32b] inline-flex items-center gap-1">$1 ↗</a>')
-          .replace(/\n/g, '<br>');
-        viewerContent.innerHTML = formatted;
-      }
-
-      if (mediaBox) {
-        const mediaUrl = typeof mod.media_url === 'string' ? mod.media_url.trim() : '';
-        if (mediaUrl) {
-          if (mediaUrl.includes('youtube.com') || mediaUrl.includes('youtu.be')) {
-            const parts = mediaUrl.split('v=');
-            const ytId = parts.length > 1 ? parts[1].split('&')[0] : mediaUrl.split('/').pop();
-            mediaBox.innerHTML = `<iframe class="w-full h-full" src="https://www.youtube.com/embed/${ytId}" title="Video Module" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-            mediaBox.classList.remove('hidden');
-          } else {
-            mediaBox.innerHTML = `<img src="${mediaUrl}" loading="lazy" decoding="async" alt="Media Modul" class="w-full h-full object-cover" onerror="this.parentElement.classList.add('hidden')">`;
-            mediaBox.classList.remove('hidden');
-          }
-        } else {
-          mediaBox.classList.add('hidden');
+      try {
+        if (!productId) {
+          showToast('ID Produk tidak valid.', 'error');
+          return;
         }
-      }
 
-      toggleModal('module-viewer-modal', true);
+        if (!Array.isArray(AppState.modulesData)) {
+          AppState.modulesData = [];
+        }
+
+        const targetId = String(productId).trim();
+        const mod = AppState.modulesData.find(m => m && (String(m.product_id || '').trim() === targetId || String(m.id || '').trim() === targetId));
+
+        const viewerTitle = document.getElementById('viewer-mod-title');
+        const viewerContent = document.getElementById('viewer-mod-content');
+        const mediaBox = document.getElementById('viewer-media-container');
+
+        if (!mod) {
+          showToast('Modul materi belum diunggah oleh admin.', 'info');
+          return;
+        }
+
+        if (viewerTitle) viewerTitle.innerText = mod.title ? String(mod.title) : 'Modul Pembelajaran';
+        
+        if (viewerContent) {
+          const rawContent = typeof mod.content === 'string' ? mod.content : '';
+          let formatted = rawContent
+            .replace(/^# (.*$)/gim, '<h1 class="text-xl font-bold text-[#0b1a48] my-2">$1</h1>')
+            .replace(/^## (.*$)/gim, '<h2 class="text-lg font-bold text-[#0b1a48] my-2">$1</h2>')
+            .replace(/^### (.*$)/gim, '<h3 class="text-base font-bold text-[#0b1a48] my-1">$1</h3>')
+            .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
+            .replace(/\*(.*)\*/gim, '<em>$1</em>')
+            .replace(/^> (.*$)/gim, '<blockquote class="border-l-4 border-[#1b5df0] pl-3 italic text-slate-600 my-2">$1</blockquote>')
+            .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#1b5df0] font-bold underline hover:text-[#f1b32b] inline-flex items-center gap-1">$1 ↗</a>')
+            .replace(/\n/g, '<br>');
+          viewerContent.innerHTML = formatted;
+        }
+
+        if (mediaBox) {
+          const mediaUrl = typeof mod.media_url === 'string' ? mod.media_url.trim() : '';
+          if (mediaUrl) {
+            if (mediaUrl.includes('youtube.com') || mediaUrl.includes('youtu.be')) {
+              const parts = mediaUrl.split('v=');
+              const ytId = parts.length > 1 ? parts[1].split('&')[0] : mediaUrl.split('/').pop();
+              mediaBox.innerHTML = `<iframe class="w-full h-full" src="https://www.youtube.com/embed/${ytId}" title="Video Module" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+              mediaBox.classList.remove('hidden');
+            } else {
+              mediaBox.innerHTML = `<img src="${mediaUrl}" loading="lazy" decoding="async" alt="Media Modul" class="w-full h-full object-cover" onerror="this.parentElement.classList.add('hidden')">`;
+              mediaBox.classList.remove('hidden');
+            }
+          } else {
+            mediaBox.classList.add('hidden');
+          }
+        }
+
+        toggleModal('module-viewer-modal', true);
+      } catch (err) {
+        console.error('Error opening module viewer:', err);
+      }
     }
 
     function showToast(msg, type='info') {
-      const cont = document.getElementById('toast-container');
-      if (!cont) return;
-      const safeMsg = String(msg || '');
-      const toast = document.createElement('div');
-      toast.className = `px-5 py-3 rounded-xl text-xs font-bold text-white shadow-lg transition-all duration-200 ${type==='success'?'bg-emerald-600':(type==='error'?'bg-red-600':'bg-slate-800')}`;
-      toast.innerText = safeMsg;
-      cont.appendChild(toast);
-      setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-2');
-        setTimeout(() => toast.remove(), 200);
-      }, 3000);
+      try {
+        const cont = document.getElementById('toast-container');
+        if (!cont) return;
+        const safeMsg = String(msg || '');
+        const toast = document.createElement('div');
+        toast.className = `px-5 py-3 rounded-xl text-xs font-bold text-white shadow-lg transition-all duration-200 ${type==='success'?'bg-emerald-600':(type==='error'?'bg-red-600':'bg-slate-800')}`;
+        toast.innerText = safeMsg;
+        cont.appendChild(toast);
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'translate-y-2');
+          setTimeout(() => toast.remove(), 200);
+        }, 3000);
+      } catch (err) {
+        console.error('Error showing toast:', err);
+      }
     }
 
     function apiRequest(action, payload = {}) {
       return new Promise((resolve, reject) => {
-        const requestData = {
-          action: action,
-          token: AppState.token || null,
-          payload: payload
-        };
+        try {
+          const requestData = {
+            action: action,
+            token: AppState.token || null,
+            payload: payload
+          };
 
-        if (typeof google !== 'undefined' && google.script && google.script.run) {
-          // Running inside Google Apps Script iFrame
-          google.script.run
-            .withSuccessHandler(res => {
-              try { resolve(typeof res === 'string' ? JSON.parse(res) : res); } catch (e) { resolve(res); }
+          if (typeof google !== 'undefined' && google.script && google.script.run) {
+            google.script.run
+              .withSuccessHandler(res => {
+                try { resolve(typeof res === 'string' ? JSON.parse(res) : res); } catch (e) { resolve(res); }
+              })
+              .withFailureHandler(err => reject(err))
+              .dispatchApiRequest(requestData);
+          } else if (GAS_WEB_APP_URL && GAS_WEB_APP_URL.startsWith("http")) {
+            fetch(GAS_WEB_APP_URL, {
+              method: 'POST',
+              mode: 'cors',
+              headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+              body: JSON.stringify(requestData)
             })
-            .withFailureHandler(err => reject(err))
-            .dispatchApiRequest(requestData);
-        } else if (GAS_WEB_APP_URL && GAS_WEB_APP_URL.startsWith("http")) {
-          // Running on Vercel / Local Host via direct HTTP Fetch POST
-          fetch(GAS_WEB_APP_URL, {
-            method: 'POST',
-            mode: 'cors',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify(requestData)
-          })
-          .then(res => res.json())
-          .then(data => resolve(data))
-          .catch(err => {
-            console.warn('API Error, falling back to local session:', err);
-            resolve({ success: true, message: 'Processed locally' });
-          });
-        } else {
-          resolve({ success: true, message: 'Local simulation success' });
+            .then(res => res.json())
+            .then(data => resolve(data))
+            .catch(err => {
+              console.warn('API Error, falling back to local session:', err);
+              resolve({ success: true, message: 'Processed locally' });
+            });
+          } else {
+            resolve({ success: true, message: 'Local simulation success' });
+          }
+        } catch (err) {
+          console.error('Error in apiRequest:', err);
+          resolve({ success: true, message: 'Fallback local resolution' });
         }
       });
     }
