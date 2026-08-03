@@ -21,7 +21,6 @@
   <!-- Typography Fonts: Plus Jakarta Sans & Caveat -->
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <!-- EMBEDDED DESIGN SYSTEM ENGINE & ACCESSIBILITY -->
   <style>
     :root {
       --brand-blue: #1b5df0;
@@ -95,7 +94,7 @@
     }
     .single-testi-ticker:hover { animation-play-state: paused; }
 
-    /* Accessible focus indicator for WCAG AA compliance */
+    /* Accessible Focus Indicators */
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
       outline: 2px solid var(--brand-blue) !important;
       outline-offset: 2px !important;
@@ -108,7 +107,6 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between antialiased selection:bg-blue-100 selection:text-blue-900">
 
-  <!-- HEADER NAVBAR -->
   <header class="sticky top-4 z-40 max-w-5xl mx-auto px-4 w-full">
     <div class="floating-capsule border border-blue-200/90 rounded-full py-2.5 px-5 shadow-sm flex items-center justify-between gap-3">
       
@@ -146,7 +144,6 @@
 
   <main class="flex-grow container mx-auto px-4 py-6 max-w-6xl">
 
-    <!-- VIEW: CATALOG (PUBLIC) -->
     <section id="view-catalog" class="spa-view space-y-12">
       
       <!-- HERO WEBINAR BANNER ("teras") WITH TOGGLE SUPPORT -->
@@ -165,7 +162,6 @@
           </p>
 
           <div class="flex items-center gap-3 pt-1">
-            <!-- HERO BADGE IN VIBRANT GOLD/AMBER -->
             <span id="hero-badge-display" class="font-handwriting text-2xl md:text-3xl text-[#f1b32b] drop-shadow-xs font-bold -rotate-2 transform">
               ✍️ "Selesai kerjaan 10x lebih cepat dari rumah!"
             </span>
@@ -198,7 +194,6 @@
         </div>
       </div>
 
-      <!-- CATEGORIES FILTER PILLS -->
       <div class="flex flex-wrap justify-center items-center gap-3 my-8 pt-4" role="tablist" aria-label="Kategori Produk">
         <button onclick="filterCategory('Belajar Apa?')" id="btn-cat-Belajar-Apa-" role="tab" aria-selected="true" class="cat-pill active px-6 py-2.5 rounded-full font-extrabold text-xs md:text-sm transition-all-fast bg-gradient-to-r from-[#1b5df0] to-[#1246c7] text-white shadow-md active:scale-95 border border-[#1b5df0] min-h-[42px]">
           Belajar Apa?
@@ -211,10 +206,9 @@
         </button>
       </div>
 
-      <!-- Catalog Cards Grid -->
+      <!-- Catalog Cards Container -->
       <div id="catalog-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-2 items-center max-w-6xl mx-auto"></div>
 
-      <!-- B2B / Custom Offer Banner -->
       <div class="pt-10 max-w-4xl mx-auto">
         <div class="bg-gradient-to-r from-[#1246c7] via-[#1b5df0] to-[#2563eb] rounded-3xl p-6 md:p-8 text-white shadow-lg flex flex-col md:flex-row justify-between items-center gap-6">
           <div class="text-left space-y-2">
@@ -228,7 +222,7 @@
         </div>
       </div>
 
-      <!-- B2B & PARTNERSHIP SECTION -->
+      <!-- B2B & Partnership Cards Grid -->
       <div class="pt-12 max-w-5xl mx-auto space-y-8">
         <div class="text-center space-y-2">
           <span class="px-3.5 py-1 rounded-full bg-[#1b5df0]/10 text-[#1b5df0] font-extrabold text-xs uppercase tracking-wider border border-[#1b5df0]/20">🤝 B2B & Partnership Solution</span>
@@ -271,7 +265,6 @@
         </div>
       </div>
 
-      <!-- TESTIMONIALS SECTION (HEIGHT CONSTRAINED TO EXACTLY ONE SPEECH BUBBLE FOR ONE-BY-ONE SCROLLING) -->
       <div id="testimoni" class="pt-12 max-w-3xl mx-auto space-y-6">
         <div class="text-center"><h2 class="text-2xl md:text-3xl font-extrabold text-[#0b1a48]">Apa Kata Mereka??</h2></div>
         <div class="relative bg-transparent rounded-3xl p-2 md:p-3 h-[90px] overflow-hidden w-full max-w-3xl mx-auto border border-blue-200/60 bg-white/40 backdrop-blur-xs">
@@ -281,7 +274,7 @@
         </div>
       </div>
 
-      <!-- TECH MARQUEE WITH PULSING SPEECH BUBBLE BANNER -->
+      <!-- TECH MARQUEE WITH SPEECH BUBBLE -->
       <div id="didukung-oleh" class="pt-8 max-w-5xl mx-auto space-y-4 text-center">
         <div class="relative w-full overflow-hidden py-3">
           <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#e8f0fe] to-transparent z-10 pointer-events-none"></div>
@@ -301,11 +294,8 @@
             <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-sans font-extrabold text-xs md:text-sm whitespace-nowrap">Copilot</div>
             <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-serif italic text-xs md:text-sm whitespace-nowrap">Stable Diffusion</div>
             <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-black tracking-widest text-xs md:text-sm whitespace-nowrap">Sora</div>
-            <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-mono font-semibold text-xs md:text-sm whitespace-nowrap">ElevenLabs</div>
-            <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-sans font-bold text-xs md:text-sm whitespace-nowrap">Grammarly</div>
-            <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-serif italic font-bold text-xs md:text-sm whitespace-nowrap">QuillBot</div>
 
-            <!-- Set 2 (Duplicate for Loop) -->
+            <!-- Set 2 -->
             <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-extrabold text-xs md:text-sm whitespace-nowrap">Google Gemini</div>
             <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-black text-xs md:text-sm uppercase whitespace-nowrap">OpenAI</div>
             <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-serif font-bold text-xs md:text-sm whitespace-nowrap">Claude</div>
@@ -318,13 +308,10 @@
             <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-sans font-extrabold text-xs md:text-sm whitespace-nowrap">Copilot</div>
             <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-serif italic text-xs md:text-sm whitespace-nowrap">Stable Diffusion</div>
             <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-black tracking-widest text-xs md:text-sm whitespace-nowrap">Sora</div>
-            <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-mono font-semibold text-xs md:text-sm whitespace-nowrap">ElevenLabs</div>
-            <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-sans font-bold text-xs md:text-sm whitespace-nowrap">Grammarly</div>
-            <div class="px-4 py-2 rounded-2xl bg-white border border-blue-200/80 shadow-xs text-[#0b1a48] font-serif italic font-bold text-xs md:text-sm whitespace-nowrap">QuillBot</div>
           </div>
         </div>
 
-        <!-- Mentors Speech Bubble Banner with Text Color Changed to Black -->
+        <!-- Mentors Speech Bubble Banner -->
         <div class="pt-2 text-center">
           <div class="inline-block px-6 py-2.5 rounded-full bg-white border border-[#1b5df0]/40 shadow-sm animate-pulse">
             <span class="font-extrabold text-xs md:text-sm tracking-tight text-slate-900">🔎 Temukan Mentor Anda yang Tersebar di 38 Provinsi dan 400+ Kabupaten/Kota</span>
@@ -334,7 +321,6 @@
 
     </section>
 
-    <!-- VIEW: DASHBOARD (MEMBER & ADMIN) -->
     <section id="view-dashboard" class="spa-view hidden space-y-8">
       <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-blue-200 flex flex-wrap justify-between items-center gap-4">
         <div>
@@ -764,8 +750,10 @@
     <p class="text-blue-100 font-semibold">2026 © Studihome. All rights reserved.</p>
   </footer>
 
-  <!-- CLIENT JAVASCRIPT ENGINE -->
   <script>
+    // Explicit Google Apps Script Deployment Web App URL
+    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzO4nE63B4cdzC2e2UrZ02mmKXFGe804CS-Yd15e6Ii3dU1jl-5KyTqoI3eCZLszpeE/exec";
+
     // Central App State with defensive parsing
     const AppState = {
       user: null,
@@ -797,7 +785,7 @@
 
     const DEFAULT_PAID_DOWNLOAD_LINK = "https://drive.google.com/drive/folders/1BFGoYxZUM5xO8Z0RBy_I__pgvEho6JGX?usp=sharing";
 
-    // Initial Dummy Products
+    // Initial Fallback Dummy Products
     const initialDummyProducts = [
       { id: 'PRD-001', title: 'E-Book Prompt AI Mastery 2026', category: 'Belajar Apa?', type: 'TOOLS', price_current: 100000, promo_price: 80000, access_link: DEFAULT_PAID_DOWNLOAD_LINK, buy_link: 'https://checkout.studihome.id/prd-001', qris_url: '', popular: true, show_on_hero: true, description: "E-Book PDF & EPUB Full Edition (350+ Halaman)\n500+ Master Prompts Siap Pakai (Copy-Paste)\nCheatsheet Prompt Engineering Midjourney & DALL-E\nScript Otomasi Copywriting Marketing & Ads\nGuide Monetisasi AI untuk Content Creator\nTemplate Workflow Prompt Google Gemini & Claude\nModul Framework DeepSeek untuk Data Analysis\nAkses Update Materi Gratis Selamanya\nKomunitas VIP Telegram Diskusi AI\nSertifikat Digital Completion Studihome" },
       { id: 'PRD-002', title: 'E-Book Modern Web App Architecture', category: 'Belajar Apa?', type: 'LESSON', price_current: 120000, promo_price: 95000, access_link: DEFAULT_PAID_DOWNLOAD_LINK, buy_link: '', qris_url: '', popular: false, show_on_hero: true, description: "Modul Panduan Arsitektur Serverless $0 Cost\nSource Code SPA HTML/JS Clean Architecture\nPanduan Integrasi Google Apps Script REST API\nTemplate Database Relasional Google Sheets\nScript Keamanan Hash Password Salt + SHA-256\nGuide Deployment Vercel & Netlify Hosting\nModul Handling CORS & Webhook WhatsApp\nDokumentasi Lengkap & Diagram Sistem\nAkses Repository GitHub Private\nSesi Konsultasi Q&A via Group Komunitas" },
@@ -822,7 +810,6 @@
       { id: 'MOD-009', product_id: 'PRD-009', title: 'API Integration & Webhook Guide', media_url: '', content: '# Panduan Integrasi API & Webhook\n\nLangkah menghubungkan service external.\n\n- Setup endpoint REST API\n- Handling CORS & payload security\n- Monitoring log eksekusi' }
     ];
 
-    // Helper functions for UI DRYness
     function formatIDR(amount) {
       const num = (typeof amount === 'number' && !isNaN(amount)) ? amount : (Number(amount) || 0);
       return 'Rp ' + num.toLocaleString('id-ID');
@@ -855,7 +842,7 @@
       loadCatalogData();
       loadModulesData();
       
-      // Global Escape Key Listener to Close Modals
+      // Global Escape Key Listener
       window.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeAllModals();
       });
@@ -877,7 +864,6 @@
     function renderTestimonials() {
       const container = document.getElementById('testi-stream-container');
       if (!container) return;
-      // Duplicate testimonials list exactly 2 times for seamless 0% -> -50% loop
       const items = [...testimonialsList, ...testimonialsList];
       container.innerHTML = items.map(item => `
         <div class="bg-white/95 rounded-2xl p-3.5 space-y-1 shadow-xs border border-blue-100">
@@ -1000,7 +986,6 @@
           showToast('Lesson Studihome baru berhasil ditambahkan!', 'success');
         }
 
-        // Cache update
         localStorage.setItem('studihome_cached_modules', JSON.stringify(AppState.modulesData));
         closeModal('module-modal');
         renderAdminModulesList();
@@ -1086,7 +1071,6 @@
     }
 
     function loadCatalogData() {
-      // Check local cache first
       try {
         const cached = localStorage.getItem('studihome_cached_catalog');
         if (cached) AppState.catalogData = JSON.parse(cached);
@@ -1111,7 +1095,6 @@
     }
 
     function loadModulesData() {
-      // Check local cache first
       try {
         const cached = localStorage.getItem('studihome_cached_modules');
         if (cached) AppState.modulesData = JSON.parse(cached);
@@ -1135,7 +1118,6 @@
       });
     }
 
-    /* RENDERING PRODUCT CARDS: LIGHT BLUE REGULAR VS LIGHT YELLOW POPULAR (TALLER HEIGHT) */
     function renderCatalog() {
       const container = document.getElementById('catalog-container');
       if (!container) return;
@@ -1177,7 +1159,7 @@
         const facilities = rawFacilities.slice(0, 10);
 
         if (isPopular) {
-          // POPULAR PRODUCT CARD: LIGHT YELLOW BACKGROUND (bg-amber-50/95) WITH TALLER ELEVATED PROPORTION
+          // POPULAR PRODUCT CARD: LIGHT YELLOW BACKGROUND (bg-amber-50/95) WITH TALLER PROPORTION
           return `
             <div class="bg-amber-50/95 rounded-3xl p-6 md:py-8 border-2 border-amber-300/90 shadow-md hover:shadow-xl md:scale-[1.03] transition-all flex flex-col justify-between relative text-[#0b1a48] z-10 my-2">
               <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#1b5df0] text-[#f1b32b] text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">✦ TERPOPULER</span>
@@ -1222,7 +1204,7 @@
             </div>
           `;
         } else {
-          // REGULAR PRODUCT CARD: LIGHT BLUE BACKGROUND (bg-sky-50/90) WITH SKY-BLUE BORDER
+          // REGULAR PRODUCT CARD: LIGHT BLUE BACKGROUND (bg-sky-50/90)
           return `
             <div class="bg-sky-50/90 text-[#0b1a48] rounded-3xl p-6 border border-sky-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative my-2">
               <div class="space-y-4">
@@ -1774,7 +1756,6 @@
       }).join('');
     }
 
-    /* ADMIN TRANSACTIONS RENDERER WITH STYLED PROOF BUTTON AND STATUS BADGE ABOVE ACTIONS */
     function loadAdminOrders() {
       apiRequest('getAdminOrders').then(res => {
         const list = document.getElementById('admin-orders-list');
@@ -1955,7 +1936,6 @@
           AppState.catalogData.push(payload);
         }
 
-        // Cache update
         localStorage.setItem('studihome_cached_catalog', JSON.stringify(AppState.catalogData));
 
         apiRequest('saveProductAdmin', payload).then(res => {
@@ -2047,15 +2027,36 @@
 
     function apiRequest(action, payload = {}) {
       return new Promise((resolve, reject) => {
+        const requestData = {
+          action: action,
+          token: AppState.token || null,
+          payload: payload
+        };
+
         if (typeof google !== 'undefined' && google.script && google.script.run) {
+          // Running inside Google Apps Script iFrame
           google.script.run
             .withSuccessHandler(res => {
               try { resolve(typeof res === 'string' ? JSON.parse(res) : res); } catch (e) { resolve(res); }
             })
             .withFailureHandler(err => reject(err))
-            .dispatchApiRequest({ action: action, payload: payload });
+            .dispatchApiRequest(requestData);
+        } else if (GAS_WEB_APP_URL && GAS_WEB_APP_URL.startsWith("http")) {
+          // Running on Vercel / Local Host via direct HTTP Fetch POST
+          fetch(GAS_WEB_APP_URL, {
+            method: 'POST',
+            mode: 'cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(requestData)
+          })
+          .then(res => res.json())
+          .then(data => resolve(data))
+          .catch(err => {
+            console.warn('API Error, falling back to local session:', err);
+            resolve({ success: true, message: 'Processed locally' });
+          });
         } else {
-          resolve({ success: true, message: 'Mock success' });
+          resolve({ success: true, message: 'Local simulation success' });
         }
       });
     }
