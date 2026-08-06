@@ -6,15 +6,23 @@
   <meta name="google-site-verification" content="p1hKfmYu1aRIYgy_JUzcCrax8bZ_js5aASJkD5cxSSY" />
   <title>Studihome - Solusi Pembelajaran & Layanan AI Modern</title>
 
-  <!-- SEO & Social Metadata -->
-  <meta name="description" content="Studihome - Solusi pembelajaran AI modern, e-book, masterclass ai free, otomasi spreadsheet, dan pengembangan web app kustom terintegrasi.">
-  <meta name="keywords" content="Studihome, Otomasi AI, Prompt Engineering, Google Apps Script, Web App Serverless, Masterclass Ai, E-Book AI, Tools Ai Free, Perangkat Ajar Otomatis, Ai Guru, Ai Pendidikan, Rumah Belajar Ai">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Studihome - Solusi pembelajaran AI modern, e-book, masterclass, otomasi spreadsheet, dan pengembangan web app kustom terintegrasi.">
+  <meta name="keywords" content="Studihome, Otomasi AI, Prompt Engineering, Google Apps Script, Web App Serverless, Masterclass, E-Book AI">
   <meta name="author" content="Studihome">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://studihome.id">
 
-  <!-- Dynamic Animated SVG Retina Blue Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } .star { transform-origin: 50px 50px; animation: spin 6s linear infinite; fill: %231b5df0; font-size: 85px; text-anchor: middle; dominant-baseline: central; font-family: sans-serif; font-weight: bold; }</style><text x='50' y='55' class='star'>✦</text></svg>">
+  <!-- Open Graph / Social Media Metadata -->
+  <meta property="og:site_name" content="Studihome">
+  <meta property="og:title" content="Studihome - Solusi Pembelajaran & Layanan AI Modern">
+  <meta property="og:description" content="Kuasai Otomasi AI dan Aplikasi Modern untuk Produktivitas Tanpa Batas! Akses E-book, Webinar, Masterclass, dan Jasa Development.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://studihome.id">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Dynamic Animated SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } .star { transform-origin: 50px 50px; animation: spin 5s linear infinite; fill: %23f1b32b; font-size: 70px; text-anchor: middle; dominant-baseline: central; font-family: sans-serif; font-weight: bold; }</style><text x='50' y='55' class='star'>✦</text></svg>">
 
   <!-- FontAwesome 6 Solid Glyph Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,6 +35,7 @@
   <style>
     :root {
       --brand-blue: #1b5df0;
+      --brand-blue-dark: #1246c7;
       --brand-gold: #f1b32b;
       --bg-light: #e8f0fe;
       --text-dark: #0b1a48;
@@ -37,60 +46,63 @@
       background-color: var(--bg-light);
       color: var(--text-dark);
       background-image: radial-gradient(circle at 50% 0%, rgba(27, 93, 240, 0.12) 0%, transparent 70%);
+      margin: 0;
+      padding: 0;
     }
     .font-handwriting { font-family: 'Caveat', cursive; }
-    
-    .floating-capsule { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(16px); }
-    .glass-panel { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.8); }
-    
+    .floating-capsule {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
     .transition-all-fast { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
     .modal-hidden { display: none !important; }
     .modal-visible { display: flex !important; }
 
-    /* Animations */
     @keyframes smoothFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
     .animate-float { animation: smoothFloat 4s ease-in-out infinite; }
-    
+
     @keyframes marqueeLeftToRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0%); } }
     .marquee-ltr-track { display: flex; width: max-content; animation: marqueeLeftToRight 30s linear infinite; }
-    
+
     @keyframes seamlessTestiScroll { 0% { transform: translateY(0%); } 100% { transform: translateY(-50%); } }
     .single-testi-ticker { animation: seamlessTestiScroll 16s linear infinite; will-change: transform; }
-    
+    .single-testi-ticker:hover { animation-play-state: paused; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--brand-blue) !important; outline-offset: 2px !important; }
+
     @keyframes skeletonShimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
     .skeleton-loading { background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%); background-size: 200% 100%; animation: skeletonShimmer 1.5s infinite; }
 
-    /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #dbe4ff; }
     ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 9999px; }
-    
-    /* Accessibility Focus */
-    *:focus-visible { outline: 2px solid var(--brand-blue) !important; outline-offset: 2px !important; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between antialiased selection:bg-blue-100 selection:text-blue-900">
 
-  <!-- HEADER NAVBAR -->
   <header class="sticky top-4 z-40 max-w-5xl mx-auto px-4 w-full">
     <nav class="floating-capsule border border-blue-200/90 rounded-full py-2.5 px-5 shadow-sm flex items-center justify-between gap-3">
-      <!-- LOGO: Gold Rotating Star ✦ -->
-      <button class="flex items-center gap-2 cursor-pointer group text-left border-none bg-transparent" onclick="App.ui.navigateTo('catalog')" aria-label="Beranda Studihome">
-        <span class="inline-block text-[#f1b32b] animate-[spin_6s_linear_infinite] origin-center text-2xl md:text-3xl leading-none">✦</span>
-        <span class="font-black text-xl md:text-2xl tracking-tight text-[#0b1a48] leading-none">Studihome</span>
+      <button class="flex items-center gap-2.5 cursor-pointer group text-left border-none bg-transparent" onclick="App.ui.navigateTo('catalog')" aria-label="Beranda Studihome">
+        <span class="inline-block text-[#f1b32b] animate-[spin_6s_linear_infinite] text-2xl leading-none origin-center">✦</span>
+        <div class="flex flex-col">
+          <span class="font-black text-xl md:text-2xl tracking-tight text-[#1b5df0] leading-none">Studihome</span>
+        </div>
       </button>
 
-      <div class="hidden md:flex items-center gap-6 text-xs md:text-sm font-semibold text-slate-600">
-        <button onclick="App.ui.navigateTo('catalog')" class="hover:text-[#1b5df0] transition-colors px-1 py-0.5"><i class="fa-solid fa-house mr-1.5"></i>Teras</button>
-        <button onclick="App.ui.openConsultModal('Konsultasi Rekan Studihome', 'Halo Studihome, saya ingin konsultasi mengenai layanan dan produk.')" class="hover:text-[#1b5df0] transition-colors font-semibold px-1 py-0.5"><i class="fa-solid fa-comments mr-1.5"></i>Konsultasi</button>
+      <nav class="hidden md:flex items-center gap-6 text-xs md:text-sm font-semibold text-slate-600" aria-label="Navigasi Utama">
+        <a href="#teras" onclick="App.ui.navigateTo('catalog')" class="hover:text-[#1b5df0] transition-colors focus-visible:rounded-md px-1 py-0.5"><i class="fa-solid fa-house mr-1.5"></i>Teras</a>
+        <button onclick="App.ui.openConsultModal('Konsultasi Rekan Studihome', 'Halo Studihome, saya ingin konsultasi umum mengenai produk dan layanan.')" class="hover:text-[#1b5df0] transition-colors font-semibold focus-visible:rounded-md px-1 py-0.5"><i class="fa-solid fa-comments mr-1.5"></i>Konsultasi</button>
         <a href="https://www.tiktok.com/@studihome" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#1b5df0] hover:bg-[#1246c7] text-white text-xs font-bold transition-all shadow-sm active:scale-95">
-          <i class="fa-brands fa-tiktok text-cyan-300"></i><span>LIVE</span><span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+          <i class="fa-brands fa-tiktok text-cyan-300"></i>
+          <span>LIVE</span>
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse" aria-hidden="true"></span>
         </a>
-      </div>
+      </nav>
 
       <div class="flex items-center gap-2.5">
         <button onclick="App.auth.handleNavClick()" id="btn-auth-nav" class="bg-[#1b5df0] hover:bg-[#1246c7] active:scale-95 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-sm transition-all-fast min-h-[40px] flex items-center gap-2">
-          <i class="fa-solid fa-right-to-bracket"></i> <span id="nav-auth-text">Masuk</span>
+          <i class="fa-solid fa-right-to-bracket"></i> <span>Masuk</span>
         </button>
       </div>
     </nav>
@@ -98,10 +110,9 @@
 
   <main class="flex-grow container mx-auto px-4 py-6 max-w-6xl">
 
-    <!-- VIEW 1: CATALOG VIEW (PUBLIC) -->
     <section id="view-catalog" class="spa-view space-y-12">
       
-      <!-- HERO WEBINAR BANNER -->
+      <!-- HERO WEBINAR BANNER ("teras") -->
       <article id="teras" class="pt-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
         <div class="lg:col-span-7 space-y-4 text-left">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1b5df0]/10 text-[#1b5df0] text-xs font-extrabold uppercase tracking-wider border border-[#1b5df0]/20">
@@ -131,7 +142,7 @@
         <div class="lg:col-span-5 flex flex-col items-center">
           <div class="relative w-full max-w-sm">
             <div class="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_40px_-15px_rgba(27,93,240,0.3)] border-4 border-white bg-slate-900 animate-float">
-              <img id="hero-img-display" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Webinar Flyer" class="w-full h-full object-cover">
+              <img id="hero-img-display" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Webinar Flyer" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/1b5df0/ffffff?text=Webinar+AI+Studihome'">
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex flex-col justify-end p-5 text-white">
                 <span class="text-[10px] font-black uppercase tracking-widest text-[#f1b32b]"><i class="fa-solid fa-fire"></i> LIMITED SEATS</span>
                 <h2 class="font-extrabold text-base md:text-lg leading-snug mt-1">Masterclass AI Automation & App Integration</h2>
@@ -149,7 +160,6 @@
         </div>
       </article>
 
-      <!-- MODERN CATEGORY TABS -->
       <section aria-labelledby="cat-tabs-heading">
         <h2 id="cat-tabs-heading" class="sr-only">Kategori Produk</h2>
         <div class="flex flex-wrap justify-center items-center gap-4 my-8 pt-4" role="tablist" aria-label="Kategori Produk">
@@ -158,13 +168,9 @@
             <i class="fa-solid fa-lightbulb text-[#f1b32b]"></i> <span>Belajar Apa?</span>
           </button>
           
-          <!-- Event Tab: Custom Container for Rotating Border -->
-          <div id="btn-cat-Event-container" class="relative inline-flex p-[2px] rounded-full overflow-hidden transition-all-fast hover:scale-105 active:scale-95 group cursor-pointer" onclick="App.ui.filterCategory('Event')">
-            <div id="event-border-anim" class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0_260deg,#f1b32b_360deg)] animate-[spin_2.5s_linear_infinite]"></div>
-            <button id="btn-cat-Event" role="tab" aria-selected="false" data-cat="Event" class="cat-pill relative w-full h-full px-7 py-3 md:px-8 md:py-3.5 rounded-full font-black text-sm md:text-base bg-white text-slate-700 flex items-center gap-2.5 border-none outline-none">
-              <i class="fa-solid fa-ticket text-[#1b5df0]"></i> <span>Event</span>
-            </button>
-          </div>
+          <button onclick="App.ui.filterCategory('Event')" id="btn-cat-Event" role="tab" aria-selected="false" data-cat="Event" class="cat-pill px-7 py-3.5 md:px-9 rounded-full font-black text-sm md:text-base transition-all-fast hover:scale-105 active:scale-95 shadow-xs flex items-center justify-center gap-2.5 bg-white text-slate-700 border-2 border-[#f1b32b]">
+            <i class="fa-solid fa-ticket text-[#1b5df0]"></i> <span>Event</span>
+          </button>
           
           <button onclick="App.ui.filterCategory('Bikin Apa?')" id="btn-cat-Bikin-Apa-" role="tab" aria-selected="false" data-cat="Bikin Apa?" class="cat-pill px-7 py-3.5 md:px-9 rounded-full font-black text-sm md:text-base transition-all-fast hover:scale-105 active:scale-95 shadow-xs flex items-center justify-center gap-2.5 bg-white text-slate-700 border border-blue-200/90">
             <i class="fa-solid fa-gears text-[#1b5df0]"></i> <span>Bikin Apa?</span>
@@ -175,7 +181,7 @@
       <!-- PRODUCT CATALOG CONTAINER -->
       <section aria-label="Daftar Produk Katalog">
         <div id="catalog-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-2 items-stretch max-w-6xl mx-auto">
-          <!-- Dynamically Populated via JS -->
+          <!-- Dynamically Populated -->
         </div>
       </section>
 
@@ -193,7 +199,6 @@
         </div>
       </section>
 
-      <!-- B2B & PARTNERSHIP SECTION -->
       <section class="pt-12 max-w-5xl mx-auto space-y-8">
         <div class="text-center space-y-2">
           <span class="px-3.5 py-1 rounded-full bg-[#1b5df0]/10 text-[#1b5df0] font-extrabold text-xs uppercase tracking-wider border border-[#1b5df0]/20"><i class="fa-solid fa-handshake mr-1"></i> B2B & Partnership Solution</span>
@@ -231,24 +236,23 @@
         </div>
       </section>
 
-      <!-- TESTIMONIALS TICKER (WHITE SOLID BACKGROUND) -->
+      <!-- TESTIMONIALS TICKER -->
       <section id="testimoni" class="pt-12 max-w-3xl mx-auto space-y-6">
         <div class="text-center"><h2 class="text-2xl md:text-3xl font-extrabold text-[#0b1a48]">Apa Kata Mereka??</h2></div>
-        <div class="relative bg-transparent h-[120px] overflow-hidden w-full max-w-3xl mx-auto border-none pointer-events-none">
-          <div class="single-testi-ticker space-y-3">
-            <div id="testi-stream-container" class="space-y-3 px-2"></div>
+        <div class="relative bg-transparent rounded-3xl h-[110px] overflow-hidden w-full max-w-3xl mx-auto border-none">
+          <div class="single-testi-ticker space-y-3 px-2">
+            <div id="testi-stream-container" class="space-y-3"></div>
           </div>
         </div>
       </section>
 
-      <!-- TECH MARQUEE (NO BORDER, GRAY ACCENT, IDLE GRAYSCALE -> HOVER FULL COLOR) -->
       <section id="didukung-oleh" class="pt-8 max-w-5xl mx-auto space-y-4 text-center">
         <div class="relative w-full overflow-hidden py-3">
           <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#e8f0fe] to-transparent z-10 pointer-events-none"></div>
           <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#e8f0fe] to-transparent z-10 pointer-events-none"></div>
           
           <div class="marquee-ltr-track flex gap-3 md:gap-4 items-center">
-            <!-- 2 Identical Sets for Seamless Looping -->
+            <!-- Set 1 -->
             <div class="px-5 py-2.5 rounded-full bg-transparent text-slate-600 border-none font-extrabold text-xs md:text-sm whitespace-nowrap filter grayscale opacity-70 hover:filter-none hover:opacity-100 hover:scale-105 transition-all duration-300"><i class="fa-solid fa-cube mr-1 text-[#1b5df0]"></i> Google Gemini</div>
             <div class="px-5 py-2.5 rounded-full bg-transparent text-slate-600 border-none font-black text-xs md:text-sm uppercase whitespace-nowrap filter grayscale opacity-70 hover:filter-none hover:opacity-100 hover:scale-105 transition-all duration-300"><i class="fa-solid fa-brain mr-1 text-emerald-600"></i> OpenAI</div>
             <div class="px-5 py-2.5 rounded-full bg-transparent text-slate-600 border-none font-serif font-bold text-xs md:text-sm whitespace-nowrap filter grayscale opacity-70 hover:filter-none hover:opacity-100 hover:scale-105 transition-all duration-300"><i class="fa-solid fa-robot mr-1 text-amber-600"></i> Claude</div>
@@ -261,8 +265,7 @@
             <div class="px-5 py-2.5 rounded-full bg-transparent text-slate-600 border-none font-sans font-extrabold text-xs md:text-sm whitespace-nowrap filter grayscale opacity-70 hover:filter-none hover:opacity-100 hover:scale-105 transition-all duration-300"><i class="fa-solid fa-terminal mr-1 text-sky-600"></i> Copilot</div>
             <div class="px-5 py-2.5 rounded-full bg-transparent text-slate-600 border-none font-serif italic text-xs md:text-sm whitespace-nowrap filter grayscale opacity-70 hover:filter-none hover:opacity-100 hover:scale-105 transition-all duration-300"><i class="fa-solid fa-wand-magic-sparkles mr-1 text-amber-500"></i> Stable Diffusion</div>
             <div class="px-5 py-2.5 rounded-full bg-transparent text-slate-600 border-none font-black tracking-widest text-xs md:text-sm whitespace-nowrap filter grayscale opacity-70 hover:filter-none hover:opacity-100 hover:scale-105 transition-all duration-300"><i class="fa-solid fa-film mr-1 text-red-600"></i> Sora</div>
-
-            <!-- Repeated Set -->
+            <!-- Set 2 for seamless loop -->
             <div class="px-5 py-2.5 rounded-full bg-transparent text-slate-600 border-none font-extrabold text-xs md:text-sm whitespace-nowrap filter grayscale opacity-70 hover:filter-none hover:opacity-100 hover:scale-105 transition-all duration-300"><i class="fa-solid fa-cube mr-1 text-[#1b5df0]"></i> Google Gemini</div>
             <div class="px-5 py-2.5 rounded-full bg-transparent text-slate-600 border-none font-black text-xs md:text-sm uppercase whitespace-nowrap filter grayscale opacity-70 hover:filter-none hover:opacity-100 hover:scale-105 transition-all duration-300"><i class="fa-solid fa-brain mr-1 text-emerald-600"></i> OpenAI</div>
             <div class="px-5 py-2.5 rounded-full bg-transparent text-slate-600 border-none font-serif font-bold text-xs md:text-sm whitespace-nowrap filter grayscale opacity-70 hover:filter-none hover:opacity-100 hover:scale-105 transition-all duration-300"><i class="fa-solid fa-robot mr-1 text-amber-600"></i> Claude</div>
@@ -278,7 +281,6 @@
           </div>
         </div>
 
-        <!-- Mentors Banner with Solid Glyph Map Icon -->
         <div class="pt-2 text-center">
           <div class="inline-block px-6 py-2.5 rounded-full bg-white shadow-sm animate-pulse border-none">
             <span class="font-semibold text-xs md:text-sm tracking-tight text-slate-900"><i class="fa-solid fa-map-location-dot text-[#f1b32b] mr-2"></i> Temukan Mentor Anda yang Tersebar di 38 Provinsi dan 400+ Kabupaten/Kota.</span>
@@ -305,7 +307,7 @@
         </div>
       </div>
 
-      <!-- USER IDENTITY DETAILS BOX -->
+      <!-- USER IDENTITY DETAILS BOX (EXPLICIT PASSWORD DISPLAYED) -->
       <div id="user-identity-card" class="bg-[#1b5df0] text-white rounded-3xl p-6 shadow-md border border-[#1246c7] space-y-3">
         <div class="text-xs font-bold text-[#f1b32b] uppercase tracking-wider"><i class="fa-solid fa-id-card mr-1"></i> Identitas Akun Saya</div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs pt-1">
@@ -316,10 +318,18 @@
       </div>
 
       <div class="flex border-b border-blue-200 overflow-x-auto" role="tablist">
-        <button onclick="App.ui.switchDashTab('orders')" id="tab-btn-orders" role="tab" aria-selected="true" class="dash-tab-btn border-b-2 border-[#1b5df0] text-[#1b5df0] font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap min-h-[44px]"><i class="fa-solid fa-cart-shopping"></i> Pesanan Saya</button>
-        <button onclick="App.ui.switchDashTab('realtime-transactions')" id="tab-btn-realtime-transactions" role="tab" aria-selected="false" class="dash-tab-btn hidden border-b-2 border-transparent text-slate-500 font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap min-h-[44px]"><i class="fa-solid fa-file-invoice"></i> Daftar Transaksi</button>
-        <button onclick="App.ui.switchDashTab('catalog-admin')" id="tab-btn-catalog-admin" role="tab" aria-selected="false" class="dash-tab-btn hidden border-b-2 border-transparent text-slate-500 font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap min-h-[44px]"><i class="fa-solid fa-box"></i> Kelola Produk</button>
-        <button onclick="App.ui.switchDashTab('modules-admin')" id="tab-btn-modules-admin" role="tab" aria-selected="false" class="dash-tab-btn hidden border-b-2 border-transparent text-slate-500 font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap min-h-[44px]"><i class="fa-solid fa-book"></i> Kelola Modul</button>
+        <button onclick="App.ui.switchDashTab('orders')" id="tab-btn-orders" role="tab" aria-selected="true" class="dash-tab-btn border-b-2 border-[#1b5df0] text-[#1b5df0] font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap min-h-[44px]">
+          <i class="fa-solid fa-cart-shopping"></i> Pesanan Saya
+        </button>
+        <button onclick="App.ui.switchDashTab('realtime-transactions')" id="tab-btn-realtime-transactions" role="tab" aria-selected="false" class="dash-tab-btn hidden border-b-2 border-transparent text-slate-500 font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap min-h-[44px]">
+          <i class="fa-solid fa-file-invoice"></i> Daftar Transaksi
+        </button>
+        <button onclick="App.ui.switchDashTab('catalog-admin')" id="tab-btn-catalog-admin" role="tab" aria-selected="false" class="dash-tab-btn hidden border-b-2 border-transparent text-slate-500 font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap min-h-[44px]">
+          <i class="fa-solid fa-box"></i> Kelola Produk
+        </button>
+        <button onclick="App.ui.switchDashTab('modules-admin')" id="tab-btn-modules-admin" role="tab" aria-selected="false" class="dash-tab-btn hidden border-b-2 border-transparent text-slate-500 font-bold py-3 px-6 text-xs md:text-sm whitespace-nowrap min-h-[44px]">
+          <i class="fa-solid fa-book"></i> Kelola Modul
+        </button>
       </div>
 
       <!-- TAB 1: User Orders -->
@@ -330,26 +340,37 @@
       <!-- TAB 2: Admin Realtime Transactions -->
       <div id="dash-content-realtime-transactions" class="dash-tab-content hidden space-y-6">
         <div class="bg-[#1b5df0] text-white p-6 rounded-3xl shadow-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div><h3 class="text-xl font-bold"><i class="fa-solid fa-file-invoice"></i> Daftar Transaksi Realtime</h3><p class="text-xs text-blue-100">Verifikasi bukti transfer pembeli.</p></div>
-          <button onclick="App.admin.loadOrders()" class="bg-[#1246c7] hover:bg-blue-900 text-white px-4 py-2.5 rounded-full text-xs font-semibold active:scale-95 shadow-xs"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+          <div><h3 class="text-xl font-bold"><i class="fa-solid fa-file-invoice"></i> Daftar Transaksi Realtime</h3><p class="text-xs text-blue-100">Verifikasi bukti transfer pembeli & atur tanggal laporan.</p></div>
+          <div class="flex items-center gap-2">
+            <button onclick="App.admin.loadOrders()" class="bg-[#1246c7] hover:bg-blue-900 text-white px-4 py-2.5 rounded-full text-xs font-semibold active:scale-95 shadow-xs"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+          </div>
         </div>
+
         <div class="bg-white p-4 rounded-2xl border border-blue-200 shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs">
           <div class="flex flex-wrap items-center gap-3">
             <span class="font-extrabold text-[#0b1a48]"><i class="fa-solid fa-filter"></i> Filter Tanggal:</span>
-            <div class="flex items-center gap-1.5"><label class="text-slate-500 font-bold">Dari:</label><input type="date" id="admin-tx-start" class="px-3 py-1.5 rounded-xl border border-blue-200"></div>
-            <div class="flex items-center gap-1.5"><label class="text-slate-500 font-bold">Sampai:</label><input type="date" id="admin-tx-end" class="px-3 py-1.5 rounded-xl border border-blue-200"></div>
+            <div class="flex items-center gap-1.5">
+              <label for="admin-tx-start" class="text-slate-500 font-bold">Dari:</label>
+              <input type="date" id="admin-tx-start" class="px-3 py-1.5 rounded-xl border border-blue-200 focus:border-[#1b5df0]">
+            </div>
+            <div class="flex items-center gap-1.5">
+              <label for="admin-tx-end" class="text-slate-500 font-bold">Sampai:</label>
+              <input type="date" id="admin-tx-end" class="px-3 py-1.5 rounded-xl border border-blue-200 focus:border-[#1b5df0]">
+            </div>
           </div>
           <div class="flex items-center gap-2 shrink-0">
             <button onclick="App.admin.filterOrdersByDate()" class="px-4 py-2 bg-[#1b5df0] hover:bg-[#1246c7] text-white font-bold rounded-xl active:scale-95 transition-all">Saring Data</button>
             <button onclick="App.admin.resetTxDateFilter()" class="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl active:scale-95 transition-all">Reset Filter</button>
           </div>
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="bg-amber-50 border border-amber-200 p-5 rounded-3xl"><span class="text-xs font-extrabold text-amber-800 uppercase">Pending</span><div id="stat-pending-count" class="text-2xl font-black text-amber-900 mt-1">0</div><div id="stat-pending-sum" class="text-xs font-bold text-amber-700 mt-0.5">Rp 0</div></div>
-          <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-3xl"><span class="text-xs font-extrabold text-emerald-800 uppercase">Disetujui</span><div id="stat-approved-count" class="text-2xl font-black text-emerald-900 mt-1">0</div><div id="stat-approved-sum" class="text-xs font-bold text-emerald-700 mt-0.5">Rp 0</div></div>
-          <div class="bg-blue-50 border border-blue-200 p-5 rounded-3xl"><span class="text-xs font-extrabold text-[#1b5df0] uppercase">Total Omset</span><div id="stat-total-revenue" class="text-2xl font-black text-[#1b5df0] mt-1">Rp 0</div></div>
-          <div class="bg-sky-50 border border-sky-200 p-5 rounded-3xl"><span class="text-xs font-extrabold text-sky-800 uppercase">Bulan Ini</span><div id="stat-month-revenue" class="text-2xl font-black text-sky-900 mt-1">Rp 0</div></div>
+          <div class="bg-amber-50 border border-amber-200 p-5 rounded-3xl"><span class="text-xs font-extrabold text-amber-800 uppercase">Pending Verification</span><div id="stat-pending-count" class="text-2xl font-black text-amber-900 mt-1">0</div><div id="stat-pending-sum" class="text-xs font-bold text-amber-700 mt-0.5">Rp 0</div></div>
+          <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-3xl"><span class="text-xs font-extrabold text-emerald-800 uppercase">Disetujui (PAID)</span><div id="stat-approved-count" class="text-2xl font-black text-emerald-900 mt-1">0</div><div id="stat-approved-sum" class="text-xs font-bold text-emerald-700 mt-0.5">Rp 0</div></div>
+          <div class="bg-blue-50 border border-blue-200 p-5 rounded-3xl"><span class="text-xs font-extrabold text-[#1b5df0] uppercase">Total Omset Filter</span><div id="stat-total-revenue" class="text-2xl font-black text-[#1b5df0] mt-1">Rp 0</div></div>
+          <div class="bg-sky-50 border border-sky-200 p-5 rounded-3xl"><span class="text-xs font-extrabold text-sky-800 uppercase">Penjualan Bulan Ini</span><div id="stat-month-revenue" class="text-2xl font-black text-sky-900 mt-1">Rp 0</div></div>
         </div>
+
         <div id="admin-orders-list" class="space-y-4"></div>
       </div>
 
@@ -393,7 +414,7 @@
       </div>
     </section>
 
-    <!-- MODALS SECTION -->
+    <!-- PROOF PREVIEW MODAL -->
     <div id="proof-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 modal-hidden items-center justify-center p-4">
       <div class="bg-white rounded-3xl max-w-xl w-full p-6 shadow-2xl border border-slate-800 space-y-4">
         <div class="flex justify-between items-center pb-3 border-b border-slate-100"><div><span class="text-[10px] font-black uppercase text-[#1b5df0] tracking-widest">Bukti Transfer Pembelian</span><h4 id="proof-modal-order-id" class="font-extrabold text-[#0b1a48] text-sm md:text-base mt-0.5">ORD-000000</h4></div><button onclick="App.ui.closeModal('proof-modal')" class="text-slate-400 hover:text-slate-600 text-2xl font-bold px-2">&times;</button></div>
@@ -432,7 +453,7 @@
       </div>
     </div>
 
-    <!-- CHECKOUT MODAL -->
+    <!-- CHECKOUT MODAL WITH SUBMISSION LOCK -->
     <div id="checkout-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 modal-hidden items-center justify-center p-4">
       <div class="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
         <div class="flex flex-wrap justify-between items-center mb-4 pb-3 border-b border-slate-100 gap-2">
@@ -456,12 +477,12 @@
           <div><label class="block text-xs font-bold text-slate-700">WhatsApp *</label><input type="text" id="chk-phone" required class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200 bg-slate-50" readonly></div>
           <div><label class="block text-xs font-bold text-slate-700">Email *</label><input type="email" id="chk-email" required class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200 bg-slate-50" readonly></div>
           <div><label class="block text-xs font-bold text-slate-700">Unggah Foto Bukti Transfer *</label><input type="file" id="proof-file-input" required accept="image/*" class="w-full text-xs file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:bg-blue-50 file:text-[#1b5df0] file:font-bold border border-blue-200 rounded-xl p-1"></div>
-          <button type="submit" id="chk-submit-btn" class="w-full py-3.5 rounded-xl bg-[#1b5df0] hover:bg-[#1246c7] text-white font-bold text-xs shadow-md disabled:opacity-50"><i class="fa-solid fa-paper-plane"></i> Kirim & Konfirmasi Pesanan</button>
+          <button type="submit" id="chk-submit-btn" class="w-full py-3.5 rounded-xl bg-[#1b5df0] hover:bg-[#1246c7] text-white font-bold text-xs shadow-md"><i class="fa-solid fa-paper-plane"></i> Kirim & Konfirmasi Pesanan</button>
         </form>
       </div>
     </div>
 
-    <!-- PRODUCT MODAL (ADMIN) -->
+    <!-- PRODUCT MODAL -->
     <div id="product-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 modal-hidden items-center justify-center p-4">
       <div class="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
         <div class="flex justify-between items-center mb-4 border-b pb-3"><h3 id="product-modal-title" class="text-xl font-bold text-[#0b1a48]">Kelola Produk</h3><button onclick="App.ui.closeModal('product-modal')" class="text-slate-400 text-2xl font-bold">&times;</button></div>
@@ -477,13 +498,7 @@
             <div><label class="block text-xs font-bold">Harga Promo</label><input type="number" id="prod-form-price-promo" class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200"></div>
           </div>
           <div><label class="block text-xs font-bold">Deskripsi / Paket Fasilitas (Gunakan | untuk harga tepi) *</label><textarea id="prod-form-desc" rows="4" class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200"></textarea></div>
-          
-          <!-- Sync Download Link Feature -->
-          <div class="p-3 bg-blue-50 border border-blue-100 rounded-xl space-y-2">
-            <div><label class="block text-xs font-bold text-blue-800">Sinkronkan dari Modul (Otomatis)</label><select id="prod-form-module-sync" onchange="App.admin.autoFillAccessLink(this.value)" class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200 mt-1"></select></div>
-            <div><label class="block text-xs font-bold">Link Akses Download *</label><input type="url" id="prod-form-access-link" required class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200 mt-1"></div>
-          </div>
-
+          <div><label class="block text-xs font-bold">Link Akses Download *</label><input type="url" id="prod-form-access-link" required class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200"></div>
           <div><label class="block text-xs font-bold">Link Custom Beli (Opsional)</label><input type="url" id="prod-form-buy-link" class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200"></div>
           <div><label class="block text-xs font-bold">URL QRIS (Opsional)</label><input type="url" id="prod-form-qris-url" class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200"></div>
           <div class="space-y-2 pt-1">
@@ -501,7 +516,7 @@
         <div class="flex justify-between items-center mb-4 border-b pb-3"><h3 class="text-xl font-bold">Kelola Lesson</h3><button onclick="App.ui.closeModal('module-modal')" class="text-slate-400 text-2xl font-bold">&times;</button></div>
         <form id="module-form" onsubmit="App.admin.saveModule(event)" class="space-y-4">
           <input type="hidden" id="mod-form-id">
-          <div><label class="block text-xs font-bold">Pilih Produk Terkait *</label><select id="mod-form-product-id" class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200"></select></div>
+          <div><label class="block text-xs font-bold">Pilih Produk Terkait *</label><select id="mod-form-product-id" onchange="App.admin.handleModuleSelectChange(this.value)" class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200"></select></div>
           <div><label class="block text-xs font-bold">Judul *</label><input type="text" id="mod-form-title" required class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200"></div>
           <div><label class="block text-xs font-bold">Link Media Video / Foto (Opsional)</label><input type="url" id="mod-form-media-url" class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200"></div>
           <div><label class="block text-xs font-bold">Isi Modul (Markdown) *</label><textarea id="mod-form-content" rows="6" required class="w-full px-4 py-2.5 text-xs rounded-xl border border-blue-200 font-mono"></textarea></div>
@@ -531,20 +546,20 @@
   <script>
     /**
      * STUDIHOME FRONTEND ENGINE - PRODUCTION ARCHITECTURE
-     * Version 14.0 Ultimate
+     * Version 14.0 Ultimate Enterprise (Extreme Compression, Strict State, SWR Pattern)
      */
 
     const testimonialsList = [
       { name: "Rina S.", role: "Ibu Rumah Tangga", text: "Asli bantu banget buat kelola olshop dari rumah! Modulnya santai dan gampang dicerna.", time: "2m lalu" },
       { name: "Budi P.", role: "Freelance Dev", text: "Gokil parah prompt AI-nya! Pengerjaan project client yang biasanya seminggu sekarang kelar 2 hari.", time: "5m lalu" },
       { name: "Sarah A.", role: "Mahasiswa", text: "Jujur ngebantu bgt buat nyusun skripsi & olah data riset.", time: "8m lalu" },
-      { name: "Anton K.", role: "Digital Marketer", text: "Tools otomasi dari Studihome luar biasa. Waktu kerja saya terpangkas separuh!", time: "12m lalu" },
-      { name: "Lina M.", role: "Kepala Sekolah", text: "Sistem administrasi guru yang disediakan sangat praktis dan menghemat waktu berhari-hari.", time: "20m lalu" }
+      { name: "Anton K.", role: "Digital Marketer", text: "Tools otomasi dari Studihome luar biasa. Waktu kerja saya terpangkas separuh!", time: "12m lalu" }
     ];
 
     const App = {
       config: {
-        apiUrl: "https://script.google.com/macros/s/AKfycbxtCDxz28eb2d17Cu_G8dIMNZEXkHvpf8HnVaifTWZdNByiO5DNAn0MYSppynGHg_WaOg/exec",
+        // GANTI URL INI DENGAN URL APPS SCRIPT DEPLOYMENT ANDA
+        apiUrl: "https://script.google.com/macros/s/AKfycbxPxi2P0m1hvcECw2EYAweVDrEgu5aGqG1Xvh-tGHW-U6BXA0DNwdi832QlSbVd6xvCVg/exec",
         defaultDownloadLink: "https://drive.google.com/drive/folders/1BFGoYxZUM5xO8Z0RBy_I__pgvEho6JGX?usp=sharing"
       },
       state: {
@@ -555,10 +570,11 @@
         modulesData: [],
         userOrders: [],
         adminOrders: [],
-        pendingGuestOrder: null,
-        selectedProductForCheckout: null
+        selectedProductForCheckout: null,
+        adminTxFilteredOrders: null
       },
       init: function() {
+        // Load User from Local Storage gracefully
         try {
           const cachedUser = localStorage.getItem('studihome_user');
           if (cachedUser) App.state.user = JSON.parse(cachedUser);
@@ -566,17 +582,10 @@
           localStorage.removeItem('studihome_user');
         }
 
-        // Expanded 15-facility dummy products
+        // Expanded 15-facility dummy products fallback
         App.state.initialDummyProducts = [
           { id: 'PRD-001', title: 'Administrasi Guru dan Kepala Sekolah', category: 'Belajar Apa?', type: 'TOOLS', price_current: 150000, promo_price: 80000, popular: true, description: "Gratis 150.000 Workbook Administrasi Guru & KOSP|Rp 150k\nGratis Gemini Pro 18 Bulan|Rp 350k\nGratis Canva Pro 1 Tahun|Rp 180k\nTemplate Modul Ajar & RPP AI Siap Pakai|Rp 200k\nOtomasi Olah Nilai & Rapor Kurikulum Merdeka|Rp 250k\nGenerator Soal Ujian & Rubrik Penilaian AI|Rp 150k\nScript Spreadsheet Rekap Absensi & Kas Kelas|Rp 100k\nAkses Update Template Gratis Selamanya|Free\nGrup Komunitas VIP Pendidik Indonesia|Free\nSertifikat Digital Completion Studihome|Free\nKonsultasi Privat Setup Sistem 1 Jam|Rp 500k\nBantuan Teknis Instalasi Setup|Free\nAkses Modul Penilaian Otomatis Harian|Rp 150k\nUpdate File Kurikulum Terbaru|Free\nFormat Raport Standar Nasional|Rp 100k", show_on_hero: true },
-          { id: 'PRD-002', title: 'Konten Kreator, Freelancer, Pendidikan', category: 'Belajar Apa?', type: 'TOOLS', price_current: 120000, promo_price: 95000, popular: false, description: "Gratis 500+ Master Prompt Copywriting Ads|Rp 200k\nGratis ChatGPT Plus Prompt Framework|Rp 250k\nGratis Template Carousel Canva Pro|Rp 150k\nScript Otomasi Content Calendar Sheet|Rp 200k\nCheatsheet Prompt Engineering Midjourney|Rp 150k\nGuide Monetisasi AI untuk Content Creator|Rp 100k\nTemplate Proposal Freelance & Invoice Otomatis|Rp 150k\nAkses Repository Assets Private GitHub|Free\nSesi Konsultasi Q&A via Group Komunitas|Free\nTemplate Notion Workspace Kreator|Rp 150k\nStrategy Guide Viral TikTok Content|Rp 200k\nModul Analisis Algoritma Instagram|Rp 100k\nScript Otomasi Jadwal Upload Video|Rp 150k\nLifetime Support Updates Masterclass|Free\nTemplate Script YouTube Shorts Viral|Rp 150k", show_on_hero: true },
-          { id: 'PRD-003', title: 'Agen Otomasi AI Perusahaan/Lembaga/Instansi', category: 'Belajar Apa?', type: 'TOOLS', price_current: 150000, promo_price: 110000, popular: false, description: "Gratis 50+ Snippet Apps Script Enterprise|Rp 400k\nGratis Template Database Sheet Multi-User|Rp 300k\nGratis Setup Webhook WhatsApp Messaging Bot|Rp 250k\nScript Auto Send Email HTML Notification|Rp 200k\nTutorial LockService & Safety Thread Execution|Rp 150k\nModul Optimalisasi CacheService Fast Response|Rp 150k\nTemplate Form Checkout & Upload Bukti Drive|Rp 200k\nVideo Walkthrough Step-by-Step Bahasa Indonesia|Free\nUndangan Komunitas Exclusive Network GAS|Free\n1x Sesi Audit Alur Kerja Sistem Enterprise|Rp 500k\nModul Integrasi AI to Spreadsheet|Rp 250k\nLaporan & Dashboard Analytics Otomatis|Rp 200k\nDokumentasi Arsitektur Database Bersih|Rp 150k\nPanduan Manajemen Hak Akses Pengguna|Free\nGaransi Setup & Maintenance Awal 30 Hari|Free", show_on_hero: true },
-          { id: 'PRD-004', title: 'Fundamental Ai dan Membuat Master Prompt', category: 'Event', type: 'LESSON', price_current: 200000, promo_price: 160000, popular: true, description: "Gratis Live Zoom Interactive 2.5 Jam Expert|Rp 300k\nGratis Rekaman HD Video Replay Lifetime|Rp 200k\nGratis E-Book Panduan Pendamping Workshop|Rp 150k\nModul Hands-On Demo Pembuatan Master Prompt|Rp 200k\nFramework Prompt Engineering Precision High|Rp 250k\nFile Template Prompt Ready to Copy-Paste|Rp 150k\nSertifikat Digital Resmi dari Studihome|Free\nAkses Q&A Langsung saat Sesi Live|Free\nToolkit Prompt Generator Siap Pakai|Rp 100k\nDiskon Khusus 50% untuk Event Selanjutnya|Free\nKonsultasi Bedah Prompt Privat Singkat|Rp 200k\nMateri Optimasi Parameter Output Model AI|Rp 150k\nStudi Kasus Kesalahan Prompt Umum|Free\nTemplate Custom Instruction ChatGPT|Rp 100k\nAkses Komunitas Alumni Workshop Master|Free", show_on_hero: true },
-          { id: 'PRD-005', title: 'Membuat Berbagai Web Aplikasi', category: 'Event', type: 'LESSON', price_current: 175000, promo_price: 140000, popular: false, description: "Gratis Full Source Code Single Page App SPA|Rp 500k\nGratis Hosting Setup Vercel & Netlify $0 Cost|Rp 250k\nGratis Template UI Tailwind Responsive|Rp 200k\nBlueprint Integrasi Web App ke REST API|Rp 300k\nTutorial Handling CORS & Security Salt SHA-256|Rp 200k\nModul Database Relasional Google Sheets|Rp 250k\nRekaman Video Live Coding HD & PPT Slide|Rp 200k\nSertifikat Kelulusan Masterclass Web App|Free\nLifetime Update Modul & Source Code|Free\nTemplate Landing Page Konversi Tinggi|Rp 150k\nPanduan Custom Domain Name Installation|Rp 100k\nSetup Meta Tags SEO & Open Graph Web|Rp 150k\nGaransi Dukungan Teknis Pengerjaan Web|Free\nFormat Data JSON API Standards Guide|Rp 150k\nSesi Mentoring Kelompok Live Perbaikan Bug|Free", show_on_hero: true },
-          { id: 'PRD-006', title: 'Membuat Otomasi Agen Ai', category: 'Event', type: 'LESSON', price_current: 250000, promo_price: 199000, popular: false, description: "Gratis Blueprint Autonomous AI Agent Suite|Rp 600k\nGratis Script Integration API Gemini & Claude|Rp 350k\nGratis Masterclass HD Video 10+ Jam|Rp 400k\nIntegration Guide AI Agent to Messaging Bot|Rp 300k\nScript Query Data Realtime & Pagination|Rp 250k\nDashboard Analitik Performance & Log Monitoring|Rp 200k\nStudi Kasus Real World E-Commerce AI Agent|Rp 250k\nSertifikat Official Completion Masterclass|Free\nAkses Group Diskusi Privat dengan Mentor|Free\nBot Telegram/Discord Template Code|Rp 250k\nLogika Penjadwalan Prompt Otomatis Cron|Rp 150k\nModul Webhook Data Parsing JSON|Rp 200k\nArsitektur Memori Model Konteks Agen|Rp 300k\nPanduan Setup Serverless Endpoint Backend|Rp 150k\nSesi Evaluasi Agen AI Buatan Peserta|Free", show_on_hero: true },
-          { id: 'PRD-007', title: 'Jasa Konten Teks dan Audio', category: 'Bikin Apa?', type: 'SERVICE', price_current: 1500000, promo_price: 1200000, popular: true, description: "Gratis Konsultasi Strategy & Brief Copywriting|Rp 300k\nGratis Voice Over ElevenLabs Ultra HD Quality|Rp 400k\nGratis Scripting Custom Promos & Article SEO|Rp 350k\nPengerjaan Express Fast Turnaround 24-48 Jam|Rp 200k\nGaransi Revisi Tuntas 100% Sampai Puas|Free\nPenulisan Naskah Iklan, Landing Page & Social|Rp 300k\nAudio Mastering & Noise Reduction Clean Quality|Rp 250k\nHak Cipta Komersial Penuh (Commercial Rights)|Free\nPenyerahan File Master Format MP3, WAV & Doc|Free\nPendampingan Handover & Sesi Q&A Zoom|Free\nPanduan Integrasi Audio untuk Video Promosi|Rp 150k\nOtomasi Transkrip Script Teks ke Berbagai Bahasa|Rp 250k\nFormat Audio Streaming Optimization Standard|Rp 100k\nBank Efek Suara Profesional (BGM & SFX)|Rp 200k\nPenyusunan Metadata Title & Alt Teks untuk SEO|Free", show_on_hero: true },
-          { id: 'PRD-008', title: 'Jasa Konten Visual dan Audio-Visual', category: 'Bikin Apa?', type: 'SERVICE', price_current: 800000, promo_price: 650000, popular: false, description: "Gratis Desain Banner / Poster Canva Pro HD|Rp 250k\nGratis Visual Midjourney Custom Prompts|Rp 300k\nGratis Editing Reels / TikTok Short Video AI|Rp 350k\nPembuatan Video Avatar AI Lip-Sync|Rp 400k\nRendering Video Quality Full HD & 4K Resolution|Rp 200k\nCustom Color Grading & Motion Effects Graphic|Rp 250k\nPenambahan Subtitle / Caption Dynamic Video|Rp 150k\nGaransi Perbaikan & Revisi 60 Hari|Free\nPenyerahan File Master MP4, PNG & Raw Asset|Free\nSesi Pendampingan Content Delivery|Free\nSetup Komposisi Audio BGM Video Profesional|Rp 150k\nPanduan Rasio Video Algoritma Platform Social|Rp 100k\nFile Format Bebas Watermark Resolusi Tinggi|Free\nTransisi & Animasi Visual Menggunakan CapCut/Pr|Rp 250k\nBantuan Penjadwalan Konten Post Media Sosial|Free", show_on_hero: true },
-          { id: 'PRD-009', title: 'Jasa Konten Interaktif dan Pendukung', category: 'Bikin Apa?', type: 'SERVICE', price_current: 600000, promo_price: 490000, popular: false, description: "Gratis Setup Custom SPA|Rp 800k\nGratis Integrasi Google Apps Script REST API|Rp 500k\nGratis Database Spreadsheet Scalable Multi-Table|Rp 400k\nForm Checkout & Upload Bukti Transfer Drive|Rp 300k\nSetup WhatsApp Gateway & Webhook Notification|Rp 350k\nDeployment Hosting Vercel & Custom Domain Setup|Rp 250k\nPenyerahan Full Clean Source Code GitHub|Free\nGaransi Support & Bug Fixing 90 Hari|Free\nPanduan Penggunaan & Manual Book System|Free\nSesi Live Training Handover via Zoom|Free\nOptimasi Kecepatan Loading Laman Web Vitals|Rp 300k\nPembuatan Form Login & Sesi Token Member|Rp 350k\nSistem Verifikasi Pembayaran Transaksi Otomatis|Rp 400k\nExport/Laporan Data Harian ke Format PDF/Excel|Rp 250k\nAudit Keamanan Jalur API dari XSS/CSRF|Free", show_on_hero: true }
+          { id: 'PRD-004', title: 'Fundamental Ai dan Membuat Master Prompt', category: 'Event', type: 'LESSON', price_current: 200000, promo_price: 160000, popular: true, description: "Gratis Live Zoom Interactive 2.5 Jam Expert|Rp 300k\nGratis Rekaman HD Video Replay Lifetime|Rp 200k\nGratis E-Book Panduan Pendamping Workshop|Rp 150k\nModul Hands-On Demo Pembuatan Master Prompt|Rp 200k\nFramework Prompt Engineering Precision High|Rp 250k\nFile Template Prompt Ready to Copy-Paste|Rp 150k\nSertifikat Digital Resmi dari Studihome|Free\nAkses Q&A Langsung saat Sesi Live|Free\nToolkit Prompt Generator Siap Pakai|Rp 100k\nDiskon Khusus 50% untuk Event Selanjutnya|Free\nKonsultasi Bedah Prompt Privat Singkat|Rp 200k\nMateri Optimasi Parameter Output Model AI|Rp 150k\nStudi Kasus Kesalahan Prompt Umum|Free\nTemplate Custom Instruction ChatGPT|Rp 100k\nAkses Komunitas Alumni Workshop Master|Free", show_on_hero: true }
         ];
 
         App.ui.updateAuthUi();
@@ -599,8 +608,9 @@
           cont.appendChild(toast);
           setTimeout(() => { toast.classList.add('opacity-0', 'translate-y-2'); setTimeout(() => toast.remove(), 200); }, 3000);
         },
-        compressImage: (file, maxDim = 1000, q = 0.7) => {
-          return new Promise(resolve => {
+        compressImage: (file, maxDim = 400, q = 0.5) => {
+          // EXTREME COMPRESSION TO FIT IN ONE GOOGLE SHEET CELL (< 50,000 chars base64)
+          return new Promise((resolve, reject) => {
             const reader = new FileReader();
             reader.onload = e => {
               const img = new Image();
@@ -610,13 +620,18 @@
                   if (w > maxDim || h > maxDim) { if (w > h) { h = Math.round((h * maxDim) / w); w = maxDim; } else { w = Math.round((w * maxDim) / h); h = maxDim; } }
                   const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h;
                   canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-                  resolve(canvas.toDataURL('image/jpeg', q));
-                } catch (err) { resolve(e.target.result); }
+                  
+                  let dataUrl = canvas.toDataURL('image/jpeg', q);
+                  // Failsafe resize if still too large for Google Sheets (extremely rare at 400px, but needed)
+                  if(dataUrl.length > 45000) dataUrl = canvas.toDataURL('image/jpeg', 0.3);
+                  
+                  resolve(dataUrl);
+                } catch (err) { reject(err); }
               };
-              img.onerror = () => resolve(e.target.result);
+              img.onerror = () => reject(new Error('Image failed to load'));
               img.src = e.target.result;
             };
-            reader.onerror = () => resolve('');
+            reader.onerror = () => reject(new Error('File reading failed'));
             reader.readAsDataURL(file);
           });
         }
@@ -627,10 +642,10 @@
           return new Promise(resolve => {
             const reqData = { action, token: App.state.token || null, payload };
             if (typeof google !== 'undefined' && google.script && google.script.run) {
-              google.script.run.withSuccessHandler(res => { try { resolve(typeof res === 'string' ? JSON.parse(res) : res); } catch (e) { resolve(res); } }).withFailureHandler(() => resolve({success:true, message:'Local fallback'})).dispatchApiRequest(reqData);
+              google.script.run.withSuccessHandler(res => { try { resolve(typeof res === 'string' ? JSON.parse(res) : res); } catch (e) { resolve(res); } }).withFailureHandler((err) => resolve({success:false, message: err.message})).dispatchApiRequest(reqData);
             } else if (App.config.apiUrl && App.config.apiUrl.startsWith("http")) {
               fetch(App.config.apiUrl, { method: 'POST', mode: 'cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(reqData) })
-              .then(res => res.json()).then(resolve).catch(() => resolve({ success: true, message: 'Local simulation success' }));
+              .then(res => res.json()).then(resolve).catch((err) => resolve({ success: false, message: 'Koneksi gagal: ' + err.message }));
             } else { resolve({ success: true, message: 'Local execution' }); }
           });
         },
@@ -692,7 +707,7 @@
           c.innerHTML = items.map(item => `
             <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-100 transition-all">
               <div class="flex justify-between items-center text-xs">
-                <div class="flex items-center gap-2"><span class="font-extrabold text-[#0b1a48]">${item.name}</span><span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded-full font-semibold">${item.role}</span></div>
+                <div class="flex items-center gap-2"><span class="font-extrabold text-[#0b1a48]">${item.name}</span><span class="text-[10px] text-slate-500 bg-blue-50 px-2 py-0.5 rounded-full font-semibold">${item.role}</span></div>
                 <span class="text-[10px] text-slate-400 font-mono">${item.time}</span>
               </div>
               <p class="text-xs text-slate-600 leading-relaxed font-normal mt-1">"${item.text}"</p>
@@ -705,41 +720,27 @@
         filterCategory: (cat) => {
           App.state.selectedCategory = cat;
           const target = App.utils.normalizeCat(cat);
-          
           document.querySelectorAll('.cat-pill').forEach(btn => {
             const btnCat = App.utils.normalizeCat(btn.getAttribute('data-cat') || btn.innerText);
             const icon = btn.querySelector('i');
-            
             if(btnCat === target) {
               if (btn.id === 'btn-cat-Event') {
-                 // Active Event Tab: Yellow BG, Blue Text
-                 btn.classList.add('bg-[#f1b32b]', 'text-[#1b5df0]', 'border-[#f1b32b]');
-                 btn.classList.remove('bg-white', 'text-slate-700', 'border-blue-200/90');
-                 if(icon) { icon.classList.remove('text-[#f1b32b]', 'text-[#1b5df0]'); icon.classList.add('text-[#1b5df0]'); }
-                 const parentDiv = btn.parentElement;
-                 if(parentDiv && parentDiv.classList.contains('group')) {
-                    const animBorder = parentDiv.querySelector('div.absolute');
-                    if(animBorder) animBorder.classList.add('hidden'); // Hide the rotating border when active
-                 }
+                 btn.classList.add('bg-white'); // Animated border takes care of colors
+                 btn.classList.remove('bg-gradient-to-r', 'from-[#1b5df0]', 'to-[#1246c7]', 'text-white', 'shadow-md');
+                 if(icon) { icon.classList.remove('text-[#1b5df0]'); icon.classList.add('text-[#f1b32b]'); }
               } else {
-                 btn.classList.add('bg-gradient-to-r', 'from-[#1b5df0]', 'to-[#1246c7]', 'text-white', 'shadow-md', 'border-[#1b5df0]');
-                 btn.classList.remove('bg-white', 'text-slate-700', 'border-blue-200/90');
+                 btn.classList.add('bg-gradient-to-r', 'from-[#1b5df0]', 'to-[#1246c7]', 'text-white', 'shadow-md');
+                 btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-blue-200/90');
                  if(icon) { icon.classList.remove('text-[#1b5df0]'); icon.classList.add('text-[#f1b32b]'); }
               }
               btn.setAttribute('aria-selected', 'true');
             } else {
               if (btn.id === 'btn-cat-Event') {
-                 btn.classList.add('bg-white', 'text-slate-700', 'border-white');
-                 btn.classList.remove('bg-[#f1b32b]', 'text-[#1b5df0]', 'border-[#f1b32b]');
-                 if(icon) { icon.classList.remove('text-[#1b5df0]'); icon.classList.add('text-[#1b5df0]'); }
-                 const parentDiv = btn.parentElement;
-                 if(parentDiv && parentDiv.classList.contains('group')) {
-                    const animBorder = parentDiv.querySelector('div.absolute');
-                    if(animBorder) animBorder.classList.remove('hidden'); // Show rotating border when inactive
-                 }
+                 btn.classList.add('bg-white', 'text-slate-700');
+                 if(icon) { icon.classList.remove('text-[#f1b32b]'); icon.classList.add('text-[#1b5df0]'); }
               } else {
                  btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-blue-200/90');
-                 btn.classList.remove('bg-gradient-to-r', 'from-[#1b5df0]', 'to-[#1246c7]', 'text-white', 'shadow-md', 'border-[#1b5df0]');
+                 btn.classList.remove('bg-gradient-to-r', 'from-[#1b5df0]', 'to-[#1246c7]', 'text-white', 'shadow-md');
                  if(icon) { icon.classList.remove('text-[#f1b32b]'); icon.classList.add('text-[#1b5df0]'); }
               }
               btn.setAttribute('aria-selected', 'false');
@@ -808,18 +809,6 @@
         handleConsultSubmit: (e) => { e.preventDefault(); const n = document.getElementById('consult-name').value; const m = document.getElementById('consult-message').value; window.open(`https://wa.me/6285111581115?text=${encodeURIComponent(`Halo Studihome, saya ${n}.\n\n${m}`)}`, '_blank'); App.ui.closeModal('consult-modal'); },
         openProductModal: (id=null) => {
           const t = document.getElementById('product-modal-title');
-          
-          // Populate module sync dropdown
-          const mSync = document.getElementById('prod-form-module-sync');
-          if(mSync) {
-            let opts = `<option value="">-- Pilih Modul / Abaikan --</option>`;
-            App.state.modulesData.forEach(m => {
-              opts += `<option value="${m.id}">${m.title} (${m.id})</option>`;
-            });
-            mSync.innerHTML = opts;
-            mSync.value = ''; // reset
-          }
-
           if(id) {
             const p = App.state.catalogData.find(x=>x.id===id);
             if(p) {
@@ -877,28 +866,60 @@
           e.preventDefault(); const m=document.getElementById('auth-mode').value; const mail=document.getElementById('auth-email').value.trim().toLowerCase(); const pass=document.getElementById('auth-password').value.trim();
           let ru=[]; try { ru=JSON.parse(localStorage.getItem('studihome_reg'))||[]; } catch(err){}
           
+          // Inject Default Dummy Accounts locally if not exist
           if(!ru.find(x => x.email === 'admin@studihome.com')) ru.push({email:'admin@studihome.com',password:'admin',full_name:'Administrator',phone:'085111581115',is_admin:true});
           if(!ru.find(x => x.email === 'user@studihome.com')) ru.push({email:'user@studihome.com',password:'user123',full_name:'Sobat Studihome Member',phone:'081234567890',is_admin:false});
 
+          const btn = document.getElementById('btn-auth-submit');
+          const oriBtnText = btn.innerHTML;
+          btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Memproses...';
+          btn.disabled = true;
+
           if(m==='login') {
+            // Local Admin Bypass First
             if((mail==='admin'||mail==='admin@studihome.com')&&pass==='admin') {
               const u={user_id:'ADM', full_name:'Admin', email:mail, plain_pass:'admin', is_admin:true, session_token:'STOK_ADMIN_'+Date.now()};
               App.state.user=u; App.state.token=u.session_token; localStorage.setItem('studihome_user', JSON.stringify(u)); App.utils.showToast('Login Admin Berhasil!','success');
               App.ui.closeModal('auth-modal'); App.ui.updateAuthUi();
+              btn.innerHTML = oriBtnText; btn.disabled = false;
               if(App.state.pendingCheckoutProductId) { const pid=App.state.pendingCheckoutProductId; App.state.pendingCheckoutProductId=null; App.order.openCheckoutModal(pid); } else App.ui.navigateTo('dashboard');
-              if(App.state.pendingGuestOrder) App.order.executeCreation(App.state.pendingGuestOrder); return;
+              return;
             }
+            
             App.api.request('login',{email:mail,password:pass}).then(res=>{
-              if(res&&res.success&&res.data) { App.state.user=res.data; App.state.token=res.data.session_token; localStorage.setItem('studihome_user', JSON.stringify(res.data)); App.utils.showToast('Berhasil masuk!','success'); App.ui.closeModal('auth-modal'); App.ui.updateAuthUi(); if(App.state.pendingCheckoutProductId){ const p=App.state.pendingCheckoutProductId; App.state.pendingCheckoutProductId=null; App.order.openCheckoutModal(p); } else App.ui.navigateTo('dashboard'); if(App.state.pendingGuestOrder) App.order.executeCreation(App.state.pendingGuestOrder); }
-              else { const x=ru.find(u=>u.email===mail); if(!x) { App.utils.showToast('Akun tidak ditemukan.','error'); App.auth.toggleMode(); } else if(x.password!==pass) { App.utils.showToast('Sandi salah.','error'); } else { const u={user_id:x.user_id||'USR',full_name:x.full_name,email:x.email,phone:x.phone,plain_pass:x.password,is_admin:x.is_admin,session_token:'STOK'}; App.state.user=u; App.state.token=u.session_token; localStorage.setItem('studihome_user', JSON.stringify(u)); App.utils.showToast('Berhasil!','success'); App.ui.closeModal('auth-modal'); App.ui.updateAuthUi(); if(App.state.pendingCheckoutProductId){ const p=App.state.pendingCheckoutProductId; App.state.pendingCheckoutProductId=null; App.order.openCheckoutModal(p); } else App.ui.navigateTo('dashboard'); if(App.state.pendingGuestOrder) App.order.executeCreation(App.state.pendingGuestOrder); } }
-            });
+              if(res&&res.success&&res.data) { 
+                  App.state.user=res.data; App.state.token=res.data.session_token; localStorage.setItem('studihome_user', JSON.stringify(res.data)); 
+                  App.utils.showToast('Berhasil masuk!','success'); App.ui.closeModal('auth-modal'); App.ui.updateAuthUi(); 
+                  if(App.state.pendingCheckoutProductId){ const p=App.state.pendingCheckoutProductId; App.state.pendingCheckoutProductId=null; App.order.openCheckoutModal(p); } else App.ui.navigateTo('dashboard'); 
+              } else { 
+                  const x=ru.find(u=>u.email===mail); 
+                  if(!x) { App.utils.showToast('Akun tidak ditemukan.','error'); App.auth.toggleMode(); } 
+                  else if(x.password!==pass) { App.utils.showToast('Sandi salah.','error'); } 
+                  else { 
+                      const u={user_id:x.user_id||'USR',full_name:x.full_name,email:x.email,phone:x.phone,plain_pass:x.password,is_admin:x.is_admin,session_token:'STOK'}; 
+                      App.state.user=u; App.state.token=u.session_token; localStorage.setItem('studihome_user', JSON.stringify(u)); 
+                      App.utils.showToast('Berhasil!','success'); App.ui.closeModal('auth-modal'); App.ui.updateAuthUi(); 
+                      if(App.state.pendingCheckoutProductId){ const p=App.state.pendingCheckoutProductId; App.state.pendingCheckoutProductId=null; App.order.openCheckoutModal(p); } else App.ui.navigateTo('dashboard'); 
+                  } 
+              }
+            }).finally(() => { btn.innerHTML = oriBtnText; btn.disabled = false; });
+            
           } else {
             const fn=document.getElementById('auth-fullname').value; const ph=document.getElementById('auth-phone').value;
-            if(!fn||!mail||!pass||!ph) return App.utils.showToast('Semua kolom wajib diisi!','error');
-            if(ru.find(u=>u.email===mail)) { App.utils.showToast('Email terdaftar. Masuk akun!','error'); App.auth.toggleMode(); return; }
+            if(!fn||!mail||!pass||!ph) { btn.innerHTML = oriBtnText; btn.disabled = false; return App.utils.showToast('Semua kolom wajib diisi!','error'); }
+            if(ru.find(u=>u.email===mail)) { btn.innerHTML = oriBtnText; btn.disabled = false; App.utils.showToast('Email terdaftar. Masuk akun!','error'); App.auth.toggleMode(); return; }
             const n={user_id:'USR-'+Date.now(),full_name:fn,email:mail,password:pass,plain_pass:pass,phone:ph,is_admin:false,session_token:'STOK'};
             ru.push(n); localStorage.setItem('studihome_reg',JSON.stringify(ru));
-            App.api.request('register',{full_name:fn,email:mail,password:pass,phone:ph}).then(()=>{ App.state.user=n; App.state.token=n.session_token; localStorage.setItem('studihome_user',JSON.stringify(n)); App.utils.showToast('Registrasi Berhasil!','success'); App.ui.closeModal('auth-modal'); App.ui.updateAuthUi(); if(App.state.pendingCheckoutProductId){ const p=App.state.pendingCheckoutProductId; App.state.pendingCheckoutProductId=null; App.order.openCheckoutModal(p); } else App.ui.navigateTo('dashboard'); if(App.state.pendingGuestOrder) App.order.executeCreation(App.state.pendingGuestOrder); });
+            
+            App.api.request('register',{full_name:fn,email:mail,password:pass,phone:ph}).then((res)=>{ 
+              if(res && res.success) {
+                  App.state.user=n; App.state.token=n.session_token; localStorage.setItem('studihome_user',JSON.stringify(n)); 
+                  App.utils.showToast('Registrasi Berhasil!','success'); App.ui.closeModal('auth-modal'); App.ui.updateAuthUi(); 
+                  if(App.state.pendingCheckoutProductId){ const p=App.state.pendingCheckoutProductId; App.state.pendingCheckoutProductId=null; App.order.openCheckoutModal(p); } else App.ui.navigateTo('dashboard'); 
+              } else {
+                  App.utils.showToast(res.message || 'Gagal registrasi', 'error');
+              }
+            }).finally(() => { btn.innerHTML = oriBtnText; btn.disabled = false; });
           }
         },
         handleLogout: () => { App.state.user=null; localStorage.removeItem('studihome_user'); App.ui.updateAuthUi(); App.ui.navigateTo('catalog'); App.utils.showToast('Berhasil keluar.'); }
@@ -908,7 +929,15 @@
         isSubmitting: false,
         handleProtectedCheckout: (id) => {
           if(!App.state.user) {
-            App.state.pendingCheckoutProductId = id; document.getElementById('auth-mode').value='login'; document.getElementById('auth-modal-title').innerText='Masuk Akun'; document.getElementById('field-fullname').classList.add('hidden'); document.getElementById('field-phone').classList.add('hidden'); document.getElementById('btn-auth-submit').innerHTML='<i class="fa-solid fa-right-to-bracket"></i> Masuk Sekarang'; document.getElementById('auth-toggle-text').innerText='Belum punya akun?'; const tb=document.getElementById('btn-auth-toggle'); if(tb) tb.innerHTML='<i class="fa-solid fa-user-plus"></i> Daftar Baru'; App.ui.toggleModal('auth-modal');
+            App.state.pendingCheckoutProductId = id; 
+            document.getElementById('auth-mode').value='register'; 
+            document.getElementById('auth-modal-title').innerText='Daftar Akun Baru'; 
+            document.getElementById('field-fullname').classList.remove('hidden'); 
+            document.getElementById('field-phone').classList.remove('hidden'); 
+            document.getElementById('btn-auth-submit').innerHTML='<i class="fa-solid fa-user-plus"></i> Lanjut Pesanan'; 
+            document.getElementById('auth-toggle-text').innerText='Sudah punya akun?'; 
+            const tb=document.getElementById('btn-auth-toggle'); if(tb) tb.innerHTML='<i class="fa-solid fa-right-to-bracket"></i> Masuk'; 
+            App.ui.toggleModal('auth-modal');
           } else App.order.openCheckoutModal(id);
         },
         openCheckoutModal: (id) => {
@@ -934,7 +963,7 @@
             const fp=(p.promo_price>0&&p.promo_price<p.price_current)?p.promo_price:p.price_current;
             const pay={order_id: idempotencyKey, user_name:document.getElementById('chk-full-name').value, user_phone:document.getElementById('chk-phone').value, user_email:document.getElementById('chk-email').value, product_id:p.id, product_title:p.title, amount:fp, proof_base64:b64};
             App.order.executeCreation(pay);
-          }).catch(()=>{ App.order.resetBtn(); App.utils.showToast('Gagal kompresi.','error'); });
+          }).catch(()=>{ App.order.resetBtn(); App.utils.showToast('Gagal kompresi bukti','error'); });
         },
         resetBtn: () => { App.order.isSubmitting=false; const b=document.getElementById('chk-submit-btn'); if(b){b.disabled=false;b.innerHTML='<i class="fa-solid fa-paper-plane"></i> Kirim & Konfirmasi Pesanan';} },
         executeCreation: (pay) => {
@@ -944,15 +973,40 @@
           if(!App.state.userOrders.find(x=>x.order_id===oid)) App.state.userOrders.unshift(lo);
           try { const uk='sh_ord_'+(pay.user_email).toLowerCase(); const eo=JSON.parse(localStorage.getItem(uk))||[]; if(!eo.find(x=>x.order_id===oid)){eo.unshift(lo);localStorage.setItem(uk,JSON.stringify(eo));} }catch(e){}
           
-          App.api.request('createOrder', pay).then(res=>{ App.utils.showToast(res.message || 'Pesanan terkirim!','success'); }).catch(()=>{ App.utils.showToast('Dicatat lokal.','info'); }).finally(()=>{ App.order.resetBtn(); App.ui.closeModal('checkout-modal'); App.ui.navigateTo('dashboard'); App.ui.switchDashTab('orders'); });
+          App.api.request('createOrder', pay).then(res=>{ 
+            if(res && res.success) {
+                App.utils.showToast(res.message || 'Pesanan terkirim!','success'); 
+            } else {
+                App.utils.showToast(res.message || 'Gagal menyambung server', 'error');
+            }
+          }).catch(()=>{ 
+             App.utils.showToast('Dicatat di lokal sistem.','info'); 
+          }).finally(()=>{ 
+             App.order.resetBtn(); App.ui.closeModal('checkout-modal'); App.ui.navigateTo('dashboard'); App.ui.switchDashTab('orders'); 
+          });
         },
         loadUserOrders: () => {
           const c=document.getElementById('user-orders-list'); if(!c) return;
-          const umail=App.state.user?App.state.user.email.toLowerCase():''; let loc=[]; try{loc=JSON.parse(localStorage.getItem('sh_ord_'+umail))||[];}catch(e){}
+          const umail=App.state.user?App.state.user.email.toLowerCase():''; 
+          let loc=[]; try{loc=JSON.parse(localStorage.getItem('sh_ord_'+umail))||[];}catch(e){}
+          
           App.api.request('getUserOrders', {email:umail}).then(res=>{
-            const srv=(res&&res.data)?res.data:[]; const map=new Map();
-            [...loc, ...App.state.userOrders, ...srv].forEach(o=>{if(o&&o.order_id)map.set(o.order_id,o);});
-            App.order.renderList(Array.from(map.values()), umail);
+            const srv=(res&&res.success&&res.data)?res.data:[]; 
+            const map=new Map();
+            // Prioritize server data, and use `amount || total_amount` internally later
+            srv.forEach(o=>{if(o&&o.order_id)map.set(o.order_id,o);});
+            
+            // Reconcile missing local data (only keep local if less than 1 hour old and not on server)
+            loc.forEach(o=>{
+                if(o&&o.order_id && !map.has(o.order_id)) {
+                    if(Date.now() - new Date(o.created_at).getTime() < 3600000) map.set(o.order_id, o);
+                }
+            });
+            
+            const finalOrders = Array.from(map.values()).sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));
+            App.state.userOrders = finalOrders;
+            localStorage.setItem('sh_ord_'+umail, JSON.stringify(finalOrders));
+            App.order.renderList(finalOrders, umail);
           }).catch(()=>{
             const map=new Map(); [...loc, ...App.state.userOrders].forEach(o=>{if(o&&o.order_id)map.set(o.order_id,o);});
             App.order.renderList(Array.from(map.values()), umail);
@@ -965,7 +1019,8 @@
           c.innerHTML=my.map(o=>{
             const isP=o.status==='PAID'||o.payment_status==='PAID'; const st=isP?'✅ PAID':'⏳ PENDING'; const cl=isP?'text-emerald-600 bg-emerald-50':'text-amber-600 bg-amber-50';
             const isHero=String(o.product_id||'').toUpperCase()==='PRD-HERO'; const mBtn=isHero?'bg-[#f1b32b] text-[#0b1a48]':'bg-[#1b5df0] text-white';
-            return `<div class="bg-white border rounded-2xl p-4 shadow-sm text-xs space-y-3"><div class="flex justify-between border-b pb-2"><span class="font-bold text-[#0b1a48]"><i class="fa-solid fa-box mr-1"></i> ${o.product_title}</span><span class="px-3 py-1 rounded-full font-bold text-[10px] ${cl}">${st}</span></div><div class="flex justify-between text-slate-500"><span>ID: <strong>${o.order_id}</strong></span><span class="text-[#1b5df0] font-bold">${App.utils.formatIDR(o.amount)}</span></div>${isP?`<div class="flex gap-2 pt-2 border-t"><a href="${o.access_link||'#'}" target="_blank" class="px-4 py-2 bg-emerald-600 text-white font-bold rounded-xl"><i class="fa-solid fa-download"></i> Unduh</a><button onclick="App.ui.openModuleViewer('${o.product_id}')" class="px-4 py-2 ${mBtn} font-bold rounded-xl"><i class="fa-solid fa-book-open"></i> Buka Fasilitas</button></div>`:'<div class="text-[11px] text-slate-400 pt-1">⏳ Sedang ditinjau admin.</div>'}</div>`;
+            const amt = Number(o.amount || o.total_amount || 0); // Solid Fallback for Old Spreadsheets
+            return `<div class="bg-white border rounded-2xl p-4 shadow-sm text-xs space-y-3"><div class="flex justify-between border-b pb-2"><span class="font-bold text-[#0b1a48]"><i class="fa-solid fa-box mr-1"></i> ${o.product_title}</span><span class="px-3 py-1 rounded-full font-bold text-[10px] ${cl}">${st}</span></div><div class="flex justify-between text-slate-500"><span>ID: <strong>${o.order_id}</strong></span><span class="text-[#1b5df0] font-bold">${App.utils.formatIDR(amt)}</span></div>${isP?`<div class="flex gap-2 pt-2 border-t"><a href="${o.access_link||'#'}" target="_blank" class="px-4 py-2 bg-emerald-600 text-white font-bold rounded-xl"><i class="fa-solid fa-download"></i> Unduh</a><button onclick="App.ui.openModuleViewer('${o.product_id}')" class="px-4 py-2 ${mBtn} font-bold rounded-xl"><i class="fa-solid fa-book-open"></i> Buka Fasilitas</button></div>`:'<div class="text-[11px] text-slate-400 pt-1">⏳ Sedang ditinjau admin.</div>'}</div>`;
           }).join('');
         }
       },
@@ -989,7 +1044,8 @@
         renderOrders: (ords) => {
           const c=document.getElementById('admin-orders-list'); if(!c) return;
           const pend=ords.filter(o=>o.status!=='PAID'); const paid=ords.filter(o=>o.status==='PAID');
-          const pSum=pend.reduce((a,b)=>a+(Number(b.amount)||0),0); const aSum=paid.reduce((a,b)=>a+(Number(b.amount)||0),0);
+          const pSum=pend.reduce((a,b)=>a+(Number(b.amount || b.total_amount)||0),0); 
+          const aSum=paid.reduce((a,b)=>a+(Number(b.amount || b.total_amount)||0),0);
           document.getElementById('stat-pending-count').innerText=pend.length; document.getElementById('stat-pending-sum').innerText=App.utils.formatIDR(pSum); document.getElementById('stat-approved-count').innerText=paid.length; document.getElementById('stat-approved-sum').innerText=App.utils.formatIDR(aSum); document.getElementById('stat-total-revenue').innerText=App.utils.formatIDR(aSum); document.getElementById('stat-month-revenue').innerText=App.utils.formatIDR(aSum);
           if(!ords.length){c.innerHTML=`<div class="text-center py-8">Kosong.</div>`;return;}
           c.innerHTML=ords.map(o=>`<div class="bg-blue-50/50 border rounded-2xl p-4 text-xs space-y-3"><div class="flex justify-between font-bold"><span class="text-sm"><i class="fa-solid fa-hashtag text-[#1b5df0]"></i> ${o.order_id} - ${o.product_title}</span><span>${o.status==='PAID'?'✅ PAID':'⏳ PENDING'}</span></div><div>Pembeli: <strong>${o.user_name}</strong></div>${o.proof_url?`<button onclick="App.admin.openProof('${o.proof_url}','${o.order_id}')" class="px-3 py-1.5 bg-[#1b5df0] text-white rounded"><i class="fa-solid fa-image"></i> Cek Bukti</button>`:''}<div class="flex gap-2 pt-2 border-t"><button onclick="App.admin.updateStatus('${o.order_id}','PAID')" class="px-3 py-1.5 bg-emerald-600 text-white rounded">Setujui</button><button onclick="App.admin.updateStatus('${o.order_id}','REJECTED')" class="px-3 py-1.5 bg-red-600 text-white rounded">Tolak</button></div></div>`).join('');
@@ -1015,12 +1071,12 @@
           const i=App.state.modulesData.findIndex(x=>x.id===m.id); if(i>-1)App.state.modulesData[i]=m; else App.state.modulesData.push(m);
           localStorage.setItem('studihome_cached_modules',JSON.stringify(App.state.modulesData)); App.ui.closeModal('module-modal'); App.admin.renderModulesList(); App.utils.showToast('Lesson tersimpan!','success');
         },
-        autoFillAccessLink: (moduleId) => {
-          if (!moduleId) return;
-          const targetModule = App.state.modulesData.find(m => m.id === moduleId);
+        handleModuleSelectChange: (selectedProdId) => {
+          if (!selectedProdId) return;
+          const targetModule = App.state.modulesData.find(m => m.product_id === selectedProdId || m.id === selectedProdId);
           if (targetModule && targetModule.media_url) {
-            document.getElementById('prod-form-access-link').value = targetModule.media_url;
-            App.utils.showToast('Link Akses disinkronkan dengan modul', 'success');
+            const accessLinkField = document.getElementById('prod-form-access-link');
+            if (accessLinkField) accessLinkField.value = targetModule.media_url;
           }
         },
         saveHeroSettings: () => {
@@ -1037,9 +1093,8 @@
       }
     };
 
-    // Initialize App On Load
-    App.init();
-
+    // Bootstrap
+    window.onload = App.init;
   </script>
 </body>
-</html>,document_type:GOOGLE_DOC,title:index.html}
+</html>
